@@ -1,5 +1,4 @@
 <div class="sheet-grid-section">
-
   <!-- Title -->
   <div class="sheet-project-title sheet-block" style="display:flex;">
     <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
@@ -7,8 +6,8 @@
         alt="aquila" style="height:100px">
     </div>
     <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
-      <h1>PROJECT: Tempestus</h1>
-      <h4>The Imperial Infantryman's Assessment Report </h4>
+      <h1 id="card_title" data-i18n="project-title-u">PROJECT: Tempestus</h1>
+      <h4 data-i18n="assessment-report-u">The Imperial Infantryman's Assessment Report </h4>
     </div>
     <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
       <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
@@ -19,18 +18,18 @@
   <!-- Soldier's Particulars  -->
   <div class="sheet-soldier-particulars sheet-block">
     <div class="sheet-item" style="width:100%; display: block; margin-bottom: 10px">
-      <h2>Soldier's Particulars</h2>
+      <h2 data-i18n="soldier-particulars-u">Soldier's Particulars</h2>
     </div>
 
     <div class="sheet-row" style="display:flex">
       <div class="sheet-item">
-        <p>Name</p>
+        <p data-i18n="name-u">Name</p>
       </div>
       <div class="sheet-item">
         <textarea name="attr_name" style="width:125px; height:20px;resize:none"></textarea>
       </div>
       <div class="sheet-item">
-        <p>Surname</p>
+        <p data-i18n="surname-u">Surname</p>
       </div>
       <div class="sheet-item">
         <textarea name="attr_surname" style="width:125px; height:20px;resize:none"></textarea>
@@ -40,21 +39,21 @@
 
     <div class="sheet-row" style="display:flex;">
       <div class="sheet-item">
-        <p>Regiment</p>
+        <p data-i18n="regiment-u">Regiment</p>
       </div>
       <div class="sheet-item">
-        <select class="advanceselect" style="width:135px; height:30px; margin:0px;">
-          <option selected>Armageddon</option>
+        <select name="attr_regiment" class="advanceselect" style="width:135px; height:30px; margin:0px;">
+          <option>Armageddon</option>
           <option>Cadia</option>
           <option>Krieg</option>
           <option>Vostroya</option>
         </select>
       </div>
       <div class="sheet-item">
-        <p>Class</p>
+        <p data-i18n="class-u">Class</p>
       </div>
       <div class="sheet-item">
-        <select class="advanceselect" style="width:135px; height:30px; margin:0px;">
+        <select name="attr_class" class="advanceselect" style="width:135px; height:30px; margin:0px;">
           <option selected data-i18n="stormtrooper-u">Stormtrooper</option>
           <option data-i18n="scout-u">Scout</option>
           <option data-i18n="engineer-u">Engineer</option>
@@ -68,13 +67,13 @@
   <!-- Shots rolls : 1,2,3,5, custom -->
   <div class="sheet-shot-rolls sheet-block">
     <div class="sheet-row"
-    style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
-    <h2>Combat</h2>
+      style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+      <h2 data-i18n="combat-u">Combat</h2>
     </div>
     <div class="sheet-row"
       style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
       <div class="sheet-item">
-        <p>Weapon</p>
+        <p data-i18n="weapon-u">Weapon</p>
       </div>
       <div class="sheet-item">
         <p>x1</p>
@@ -89,18 +88,18 @@
         <p>x5</p>
       </div>
       <div class="sheet-item">
-        <p>Custom</p>
+        <p data-i18n="custom-u">Custom</p>
       </div>
       <div class="sheet-item">
-        <p>x{Custom}</p>
+        <p data-i18n="xcustom-u">x{Custom}</p>
       </div>
     </div>
 
     <div class="sheet-row"
       style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
       <div class="sheet-item">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
-          alt="aquila" style="height:60px; width:60px">
+        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png" alt="aquila"
+          style="height:60px; width:60px">
       </div>
       <div class="sheet-item">
         <button name="roll_shot1" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
@@ -130,8 +129,8 @@
     <div class="sheet-row"
       style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
       <div class="sheet-item">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
-          alt="aquila" style="height:60px; width:60px">
+        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png" alt="aquila"
+          style="height:60px; width:60px">
       </div>
       <div class="sheet-item">
         <button name="roll_shot1" value="/r 1d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
@@ -158,20 +157,50 @@
   <div class="sheet-head-and-body sheet-block">
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="head-and-body-u">Head and body</h2>
+        <h2 data-i18n="head-and-body-u" class="head-and-body-u">Head and body</h2>
       </div>
     </div>
 
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-item-left">
-          <p>Face</p>
+          <p data-i18n="face-u">Face</p>
         </div>
         <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="face1-u">Face 1</option>
-            <option data-i18n="face2-u">Face 2</option>
-            <option data-i18n="face3-u">Face 3</option>
+          <select name="attr_face" class="advanceselect">
+            <option selected data-i18n="face1-m-u">M - Marcus</option>
+            <option data-i18n="face2-m-u">M - Varn</option>
+            <option data-i18n="face3-m-u">M - Jimm</option>
+            <option data-i18n="face4-m-u">M - Adrian</option>
+            <option data-i18n="face5-m-u">M - Gunter</option>
+            <option data-i18n="face6-m-u">M - Lee</option>
+            <option data-i18n="face7-m-u">M - Olgierd</option>
+            <option data-i18n="face8-m-u">M - Ralph</option>
+            <option data-i18n="face9-m-u">M - Sean</option>
+            <option data-i18n="face10-m-u">M - Redvald</option>
+            <option data-i18n="face11-m-u">M - Paul</option>
+            <option data-i18n="face12-m-u">M - Dane</option>
+            <option data-i18n="face13-m-u">M - Larry</option>
+            <option data-i18n="face14-m-u">M - Joshua</option>
+            <option data-i18n="face15-m-u">M - George</option>
+            <option data-i18n="face16-m-u">M - Leonard</option>
+            <option data-i18n="face17-m-u">M - Will</option>
+            <option data-i18n="face18-f-u">F - Erma</option>
+            <option data-i18n="face1-f-u">F - Astrid</option>
+            <option data-i18n="face2-f-u">F - Helga</option>
+            <option data-i18n="face3-f-u">F - Kate</option>
+            <option data-i18n="face4-f-u">F - Laura</option>
+            <option data-i18n="face5-f-u">F - Linda</option>
+            <option data-i18n="face6-f-u">F - Martha</option>
+            <option data-i18n="face7-f-u">F - Sayan</option>
+            <option data-i18n="face8-f-u">F - Solveig</option>
+            <option data-i18n="face9-f-u">F - Lara</option>
+            <option data-i18n="face10-f-u">F - Mia</option>
+            <option data-i18n="face11-f-u">F - Juliet</option>
+            <option data-i18n="face12-f-u">F - Lisa</option>
+            <option data-i18n="face13-f-u">F - Pak</option>
+            <option data-i18n="face14-f-u">F - Sarah</option>
+            <option data-i18n="face15-f-u">F - Alice</option>
           </select>
         </div>
       </div>
@@ -180,13 +209,21 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-item-left">
-          <p>Tatoo</p>
+          <p data-i18n="tatoo-u">Tatoo</p>
         </div>
         <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="face1-u">Face 1</option>
-            <option data-i18n="face2-u">Face 2</option>
-            <option data-i18n="face3-u">Face 3</option>
+          <select name="attr_tatoo" class="advanceselect">
+            <option data-i18n="tatoo1-u">Czaszka</option>
+            <option data-i18n="tatoo2-u">Kamuflaż</option>
+            <option data-i18n="tatoo3-u">Nordycki</option>
+            <option data-i18n="tatoo4-u">Gwardia</option>
+            <option data-i18n="tatoo5-u">Geometria</option>
+            <option data-i18n="tatoo6-u">Bandyta</option>
+            <option data-i18n="tatoo7-u">Brud</option>
+            <option data-i18n="tatoo8-u">Tribal</option>
+            <option data-i18n="tatoo9-u">Gładki Wzór</option>
+            <option data-i18n="tatoo10-u">Okręgi</option>
+            <option data-i18n="tatoo11-u">Celtycki</option>
           </select>
         </div>
       </div>
@@ -195,13 +232,12 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-item-left">
-          <p>Augmentics</p>
+          <p data-i18n="augmentics-u">Augmentics</p>
         </div>
         <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="face1-u">Face 1</option>
-            <option data-i18n="face2-u">Face 2</option>
-            <option data-i18n="face3-u">Face 3</option>
+          <select name="attr_augmentics" class="advanceselect">
+            <option data-i18n="augmentics1-u">2T - Bioniczna Ręka</option>
+            <option data-i18n="augmentics2-u">3T - Bioniczne Ręce</option>
           </select>
         </div>
       </div>
@@ -210,13 +246,18 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-item-left">
-          <p>Facial hair</p>
+          <p data-i18n="facial-hair-u">Facial hair</p>
         </div>
         <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="face1-u">Face 1</option>
-            <option data-i18n="face2-u">Face 2</option>
-            <option data-i18n="face3-u">Face 3</option>
+          <select name="attr_facial_hair" class="advanceselect">
+            <option data-i18n="facial-hair1-u">Broda</option>
+            <option data-i18n="facial-hair2-u">Wąs</option>
+            <option data-i18n="facial-hair3-u">Bokobrody</option>
+            <option data-i18n="facial-hair4-u">Broda Vostroyańska</option>
+            <option data-i18n="facial-hair5-u">Jednodniowy</option>
+            <option data-i18n="facial-hair6-u">Broda Kurtynowa</option>
+            <option data-i18n="facial-hair7-u">Admiralski Wąs</option>
+            <option data-i18n="facial-hair8-u">Dłuższa Broda</option>
           </select>
         </div>
       </div>
@@ -225,13 +266,34 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-item-left">
-          <p>Hairstyle</p>
+          <p data-i18n="hairstyle-u">Hairstyle</p>
         </div>
         <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="face1-u">Face 1</option>
-            <option data-i18n="face2-u">Face 2</option>
-            <option data-i18n="face3-u">Face 3</option>
+          <select name="attr_hairstyle" class="advanceselect">
+            <option data-i18n="hairstyle1-m-u">M - Przedziałek</option>
+            <option data-i18n="hairstyle2-m-u">M - Dłuższe Końcówki</option>
+            <option data-i18n="hairstyle3-m-u">M - Irokez</option>
+            <option data-i18n="hairstyle4-m-u">M - Jeż</option>
+            <option data-i18n="hairstyle5-m-u">M - Garnek</option>
+            <option data-i18n="hairstyle6-m-u">M - Podcięty Garnek</option>
+            <option data-i18n="hairstyle7-m-u">M - Wybuch</option>
+            <option data-i18n="hairstyle8-m-u">M - Boczny</option>
+            <option data-i18n="hairstyle9-m-u">M - Długie</option>
+            <option data-i18n="hairstyle10-m-u">M - Zaczesane</option>
+            <option data-i18n="hairstyle11-m-u">M - Kapłańskie</option>
+            <option data-i18n="hairstyle12-m-u">M - Kucyk</option>
+            <option data-i18n="hairstyle1-f-u">F - Bob</option>
+            <option data-i18n="hairstyle2-f-u">F - Chłopięcy</option>
+            <option data-i18n="hairstyle3-f-u">F - Warkocz</option>
+            <option data-i18n="hairstyle4-f-u">F - Jeż</option>
+            <option data-i18n="hairstyle5-f-u">F - Przyjaciółka z Dzieciństwa</option>
+            <option data-i18n="hairstyle6-f-u">F - Dredy</option>
+            <option data-i18n="hairstyle7-f-u">F - Kucyk</option>
+            <option data-i18n="hairstyle8-f-u">F - Irokez</option>
+            <option data-i18n="hairstyle9-f-u">F - Adepta Sororitas</option>
+            <option data-i18n="hairstyle10-f-u">F - Proste Długie</option>
+            <option data-i18n="hairstyle11-f-u">F - Proste</option>
+            <option data-i18n="hairstyle12-f-u">F - Zaczesane</option>
           </select>
         </div>
       </div>
@@ -243,7 +305,7 @@
   <div class="sheet-clothing sheet-block">
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="head-and-body-u">Clothing</h2>
+        <h2 data-i18n="clothing-u" class="head-and-body-u">Clothing</h2>
       </div>
     </div>
 
@@ -366,7 +428,7 @@
   <div class="sheet-gear sheet-block">
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="gear-u">Gear</h2>
+        <h2 data-i18n="gear-u" class="gear-u">Gear</h2>
       </div>
     </div>
 
@@ -549,7 +611,7 @@
 
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="gear-u">Extra information</h2>
+        <h2 data-i18n="extra-information-u" class="gear-u">Extra information</h2>
       </div>
     </div>
 
@@ -563,18 +625,17 @@
   <div class="sheet-skills sheet-block">
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="gear-u">Skill Points</h2>
+        <h2 data-i18n="skill-points-u"="gear-u">Skill Points</h2>
       </div>
     </div>
 
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_marksmanship"
-            value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>
+          <button name="roll_marksmanship" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3>Marksmanship</h3>
+          <h3 data-i18n="marksmanship-u">Marksmanship</h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_marksmanship" value="10">
@@ -588,7 +649,7 @@
           <button name="roll_cqb" value="/r 1d100cs<@{cqb}cf>@{cqb}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3>Close Quarter Combat</h3>
+          <h3 data-i18n="cqb-u">Close Quarter Combat</h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_cqb" value="40">
@@ -602,7 +663,7 @@
           <button name="roll_strength" value="/r 1d100cs<@{strength}cf>@{strength}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Strength </h3>
+          <h3 data-i18n="strength-u"> Strength </h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_strength" value="40">
@@ -617,7 +678,7 @@
           <button name="roll_constitution" value="/r 1d100cs<@{constitution}cf>@{constitution}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Constitution </h3>
+          <h3 data-i18n="constitution-u"> Constitution </h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_constitution" value="40">
@@ -631,7 +692,7 @@
           <button name="roll_agility" value="/r 1d100cs<@{agility}cf>@{agility}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Agility </h3>
+          <h3 data-i18n="agility-u"> Agility </h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_agility" value="40">
@@ -645,7 +706,7 @@
           <button name="roll_knowledge" value="/r 1d100cs<@{knowledge}cf>@{knowledge}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Knowledge </h3>
+          <h3 data-i18n="knowledge-u"> Knowledge </h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_knowledge" value="30">
@@ -659,7 +720,7 @@
           <button name="roll_hp" value="/r 1d6+@{hp}" type="roll" style="display:none"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Health Points </h3>
+          <h3 data-i18n="health-points-u"> Health Points </h3>
         </div>
         <div class="sheet-skill-right">
           <input type="number" name="attr_hp" value="100">
@@ -680,3 +741,5 @@
   </div>
 
 </div>
+
+
