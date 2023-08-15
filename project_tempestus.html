@@ -26,13 +26,13 @@
         <p data-i18n="name-u">Name</p>
       </div>
       <div class="sheet-item">
-        <textarea name="attr_name" style="width:125px; height:20px;resize:none"></textarea>
+        <textarea name="attr_name" style="width:150px; height:20px;resize:none;text-align: center;"></textarea>
       </div>
       <div class="sheet-item">
         <p data-i18n="surname-u">Surname</p>
       </div>
       <div class="sheet-item">
-        <textarea name="attr_surname" style="width:125px; height:20px;resize:none"></textarea>
+        <textarea name="attr_surname" style="width:150px; height:20px;resize:none;text-align: center;"></textarea>
       </div>
     </div>
 
@@ -42,7 +42,7 @@
         <p data-i18n="regiment-u">Regiment</p>
       </div>
       <div class="sheet-item">
-        <select name="attr_regiment" class="advanceselect" style="width:135px; height:30px; margin:0px;">
+        <select name="attr_regiment" class="advanceselect" style="width:160px; height:30px; margin:0px;text-align: center;">
           <option>Armageddon</option>
           <option>Cadia</option>
           <option>Krieg</option>
@@ -53,12 +53,15 @@
         <p data-i18n="class-u">Class</p>
       </div>
       <div class="sheet-item">
-        <select name="attr_class" class="advanceselect" style="width:135px; height:30px; margin:0px;">
-          <option selected data-i18n="stormtrooper-u">Stormtrooper</option>
-          <option data-i18n="scout-u">Scout</option>
-          <option data-i18n="engineer-u">Engineer</option>
+        <select name="attr_class" class="advanceselect" style="width:160px; height:30px; margin:0px;">        
+          <option data-i18n="sargeant-u">[SRŻ] Sierżant</option>
+          <option data-i18n="stormtrooper-u">[SZT] Szturmowiec</option>
+          <option data-i18n="sharpshooter-u">[STR] Strzelec</option>
+          <option data-i18n="grenadier-u">[GRE] Grenadier</option>
+          <option data-i18n="engineer-u">[INŻ] Inżynier</option>
+          <option data-i18n="scout-u">[ZWD] Zwiadowca</option>
+          <option data-i18n="chirurgeon-u">[CHR] Chirurgon</option>
         </select>
-
       </div>
     </div>
   </div>
@@ -213,6 +216,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_tatoo" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="tatoo1-u">Czaszka</option>
             <option data-i18n="tatoo2-u">Kamuflaż</option>
             <option data-i18n="tatoo3-u">Nordycki</option>
@@ -236,6 +240,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_augmentics" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="augmentics1-u">2T - Bioniczna Ręka</option>
             <option data-i18n="augmentics2-u">3T - Bioniczne Ręce</option>
           </select>
@@ -250,6 +255,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_facial_hair" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="facial-hair1-u">Broda</option>
             <option data-i18n="facial-hair2-u">Wąs</option>
             <option data-i18n="facial-hair3-u">Bokobrody</option>
@@ -270,6 +276,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_hairstyle" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="hairstyle1-m-u">M - Przedziałek</option>
             <option data-i18n="hairstyle2-m-u">M - Dłuższe Końcówki</option>
             <option data-i18n="hairstyle3-m-u">M - Irokez</option>
@@ -316,6 +323,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_boots" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="boots-1-u">1T - Cadiańskie Buty </option>
             <option data-i18n="boots-2-u">2T - Szturmówki </option>
             <option data-i18n="boots-3-u">Kriegańskie Okopówki </option>
@@ -335,6 +343,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_pants" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="pants-1-u">Spodnie Mundurowe Standardowe</option>
             <option data-i18n="pants-2-u">Spodnie Mundurowe Wąskie</option>
             <option data-i18n="pants-3-u">Spodnie Mundurowe Krótsze</option>
@@ -351,6 +360,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_leg_armor" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="leg-armor-1-u">1T - Cadiańskie Ochraniacze</option>
             <option data-i18n="leg-armor-2-u">2T - Ochraniacze Flak</option>
             <option data-i18n="leg-armor-3-u">[GRE] 2T - Nagolenniki Grenadierów</option>
@@ -366,6 +376,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_shirt" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="shirt-1-u">Cadiańska Tunika z podwiniętymi rękawami</option>
             <option data-i18n="shirt-2-u">Cadiańska Tunika bez rękawów</option>
             <option data-i18n="shirt-3-u">Cadiańska Tunika</option>
@@ -386,6 +397,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_gloves" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="gloves-1-u">2T - Wzmocnione Rękawice</option>
             <option data-i18n="gloves-2-u">[WET] / [SRŻ] - 2T Vostroyańskie Rękawice Płytowe</option>
             <option data-i18n="gloves-3-u">[GRE] 1T - Rękawice Grenadierów</option>
@@ -406,11 +418,12 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_chest" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="chest-1-u">2T - Pancerz Flak</option>
             <option data-i18n="chest-2-u">4T - Ciężki Pancerz Flak</option>
             <option data-i18n="chest-3-u">[SRŻ] 2T - Kirys Oficerski</option>
             <option data-i18n="chest-4-u">[WET] / [SRŻ]  2T - Vostroyański Ryngraf</option>
-            <option data-i18n="chest-5-u">[STM] 4T - Zbroja Szturmowca</option>
+            <option data-i18n="chest-5-u">[SZT] 4T - Zbroja Szturmowca</option>
             <option data-i18n="chest-6-u">[INŻ] 4T - Zbroja Kriegańskich Inżynierów</option>
             <option data-i18n="chest-7-u">[GRE] 3T - Zbroja Kriegańskiego Grenadiera</option>
             <option data-i18n="chest-8-u">Rozpięta Kamizela</option>
@@ -427,10 +440,11 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_shoulders" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
           <option data-i18n="shoulders-1-u">1T - Patki Czołgistów</option>
           <option data-i18n="shoulders-2-u">2T - Flak Naramienniki</option>
           <option data-i18n="shoulders-3-u">1T - Osłony Kriegańskie</option>
-          <option data-i18n="shoulders-4-u">[STM] 1T - Szturmowe Pagony</option>
+          <option data-i18n="shoulders-4-u">[SZT] 1T - Szturmowe Pagony</option>
           <option data-i18n="shoulders-5-u">[WET] / [SRŻ]  2T - Vostroyański Epolet</option>
           <option data-i18n="shoulders-6-u">[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki</option>
           <option data-i18n="shoulders-7-u">Cadiańskie Galony</option>
@@ -446,6 +460,7 @@
         </div>
         <div class="sheet-item-right">
           <select name="attr_helmet" class="advanceselect">
+            <option data-i18n="item-none-u">Brak</option>
             <option data-i18n="helmet-1-u">2T - Hełm wz. Cadia</option>
             <option data-i18n="helmet-2-u">[CHR] 2T - Hełm Sanitariusza </option>
             <option data-i18n="helmet-3-u">[SRŻ] 2T Vox-Hełm wz. Cadia </option>

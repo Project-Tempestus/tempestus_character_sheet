@@ -1,6 +1,6 @@
 {
    "item-none-u":"Brak",
-   
+
    "project-title-u":"PROJEKT: Tempestus",
    "assessment-report-u":"Imperialnego Piechura Raport Psychofizjologiczny",
    
@@ -10,9 +10,13 @@
    "regiment-u":"Regiment",
    "class-u":"Klasa",
 
-   "stormtrooper-u": "Szturmowiec",
-   "scout-u": "Zwiadowca",
-   "engineer-u": "Inżynier",
+   "sargeant-u":"[SRŻ] Sierżant",
+   "stormtrooper-u":"[SZT] Szturmowiec",
+   "sharpshooter-u":"[STR] Strzelec",
+   "grenadier-u":"[GRE] Grenadier",
+   "engineer-u":"[INŻ] Inżynier",
+   "scout-u":"[ZWD] Zwiadowca",
+   "chirurgeon-u":"[CHR] Chirurgon",
 
    "combat-u":"Walka",
    "weapon-u":"Broń",
@@ -161,7 +165,7 @@
    "chest-2-u":"4T - Ciężki Pancerz Flak",
    "chest-3-u":"[SRŻ] 2T - Kirys Oficerski",
    "chest-4-u":"[WET] / [SRŻ]  2T - Vostroyański Ryngraf",
-   "chest-5-u":"[STM] 4T - Zbroja Szturmowca",
+   "chest-5-u":"[SZT] 4T - Zbroja Szturmowca",
    "chest-6-u":"[INŻ] 4T - Zbroja Kriegańskich Inżynierów",
    "chest-7-u":"[GRE] 3T - Zbroja Kriegańskiego Grenadiera",
    "chest-8-u":"Rozpięta Kamizela",
@@ -172,7 +176,7 @@
    "shoulders-1-u":"1T - Patki Czołgistów",
    "shoulders-2-u":"2T - Flak Naramienniki",
    "shoulders-3-u":"1T - Osłony Kriegańskie",
-   "shoulders-4-u":"[STM] 1T - Szturmowe Pagony",
+   "shoulders-4-u":"[SZT] 1T - Szturmowe Pagony",
    "shoulders-5-u":"[WET] / [SRŻ]  2T - Vostroyański Epolet",
    "shoulders-6-u":"[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki",
    "shoulders-7-u":"Cadiańskie Galony",
