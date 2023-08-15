@@ -1,3 +1,8 @@
+:root {
+	--TempestusGreen: rgb(17, 192, 17);
+	/* --TempestusGreen: green; */
+}
+
 /* Main grid */
 .charsheet .sheet-grid-section {
 	display: grid;
@@ -5,6 +10,7 @@
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas: "project-title project-title"
 		"soldier-particulars soldier-particulars"
+		"shot-rolls shot-rolls"
 		"head-and-body skills"
 		"clothing skills"
 		"gear extra-gear"
@@ -17,7 +23,7 @@
 	display: inline;
 	justify-content: center;
 	padding: 5px;
-	border: 1px dashed green;
+	border: 1px dashed var(--TempestusGreen);
 }
 
 .charsheet div.sheet-project-title {
@@ -28,6 +34,9 @@
 	grid-area: soldier-particulars;
 }
 
+.charsheet div.sheet-shot-rolls {
+	grid-area: shot-rolls;
+}
 
 .charsheet div.sheet-head-and-body {
 	grid-area: head-and-body;
@@ -55,13 +64,13 @@
 
 div.sheet-row {
 	display: flex;
-	border: 0px solid green;
+	border: 0px solid var(--TempestusGreen);
 	width: 100%;
 }
 
 div.sheet-item {
 	display: flex;
-	border: 0px solid green;
+	border: 0px solid var(--TempestusGreen);
 	width: 100%;
 	justify-content: space-around;
 }
@@ -99,19 +108,22 @@ div.sheet-skill-right {
 
 .option-label-text {
 	text-align: center;
-	color: green;
+	color: var(--TempestusGreen);
 }
 
 
-select, option, input, textarea {
+select,
+option,
+input,
+textarea {
 	background-color: black;
-	color: green;
-	border: 1px solid green;
+	color: var(--TempestusGreen);
+	border: 1px solid var(--TempestusGreen);
 }
 
 .charsheet {
 	background-color: black;
-	color: green;
+	color: var(--TempestusGreen);
 }
 
 p,
@@ -121,7 +133,7 @@ h2,
 h3,
 h4,
 h5 {
-	color: green;
+	color: var(--TempestusGreen);
 }
 
 h1,
@@ -146,16 +158,3 @@ p {
 	width: 100%;
 	margin-right: 10px;
 }
-
-/* Head and body grid */
-/*
-.sheet-head-and-body {
-	display: grid;
-	grid-template-columns: 600px 200px;
-	grid-auto-rows: minmax(100px, auto);
-	grid-template-areas: "project-title project-title"
-		"guard-uniform guard-skills"
-		"head-and-body guard-skills"
-		"guard-equipment guard-equipment";
-	grid-gap: 5px;
-} */

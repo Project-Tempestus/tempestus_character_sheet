@@ -1,72 +1,159 @@
 <div class="sheet-grid-section">
 
   <!-- Title -->
-  <div class="sheet-project-title sheet-block">
-    <div class="sheet-item" style="width:100%; display: block; margin-bottom: 10px">
-      <h1>Project Tempestus</h1>
+  <div class="sheet-project-title sheet-block" style="display:flex;">
+    <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+      <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+        alt="aquila" style="height:100px">
     </div>
-    <div class="sheet-item" style="width:100%; display: block; margin-bottom: 10px">
-      <h5>The Imperial Infantryman's Assessment Report </h5>
+    <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
+      <h1>PROJECT: Tempestus</h1>
+      <h4>The Imperial Infantryman's Assessment Report </h4>
+    </div>
+    <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+      <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+        alt="aquila" style="height:100px">
     </div>
   </div>
+
   <!-- Soldier's Particulars  -->
   <div class="sheet-soldier-particulars sheet-block">
     <div class="sheet-item" style="width:100%; display: block; margin-bottom: 10px">
       <h2>Soldier's Particulars</h2>
     </div>
 
-
-    <div class="sheet-row">
+    <div class="sheet-row" style="display:flex">
       <div class="sheet-item">
         <p>Name</p>
       </div>
       <div class="sheet-item">
-        <textarea name="attr_name"></textarea>
+        <textarea name="attr_name" style="width:125px; height:20px;resize:none"></textarea>
       </div>
-    </div>
-
-    <div class="sheet-row">
       <div class="sheet-item">
         <p>Surname</p>
       </div>
       <div class="sheet-item">
-        <textarea name="attr_surname"></textarea>
+        <textarea name="attr_surname" style="width:125px; height:20px;resize:none"></textarea>
       </div>
     </div>
 
-    <div class="sheet-row">
+
+    <div class="sheet-row" style="display:flex;">
       <div class="sheet-item">
-        <div class="sheet-item-left">
-          <p>Regiment</p>
-        </div>
-        <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected>Armageddon</option>
-            <option>Cadia</option>
-            <option>Krieg</option>
-            <option>Vostroya</option>
-          </select>
-        </div>
+        <p>Regiment</p>
       </div>
-    </div>
-
-    <div class="sheet-row">
       <div class="sheet-item">
-        <div class="sheet-item-left">
-          <p>Class</p>
-        </div>
-        <div class="sheet-item-right">
-          <select class="advanceselect">
-            <option selected data-i18n="stormtrooper-u">Stormtrooper</option>
-            <option data-i18n="scout-u">Scout</option>
-            <option data-i18n="engineer-u">Engineer</option>
-          </select>
-        </div>
+        <select class="advanceselect" style="width:135px; height:30px; margin:0px;">
+          <option selected>Armageddon</option>
+          <option>Cadia</option>
+          <option>Krieg</option>
+          <option>Vostroya</option>
+        </select>
+      </div>
+      <div class="sheet-item">
+        <p>Class</p>
+      </div>
+      <div class="sheet-item">
+        <select class="advanceselect" style="width:135px; height:30px; margin:0px;">
+          <option selected data-i18n="stormtrooper-u">Stormtrooper</option>
+          <option data-i18n="scout-u">Scout</option>
+          <option data-i18n="engineer-u">Engineer</option>
+        </select>
+
       </div>
     </div>
-  <!-- Shots : 1,2,3,5, custom -->
-
   </div>
+
+
+  <!-- Shots rolls : 1,2,3,5, custom -->
+  <div class="sheet-shot-rolls sheet-block">
+    <div class="sheet-row"
+    style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+    <h2>Combat</h2>
+    </div>
+    <div class="sheet-row"
+      style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+      <div class="sheet-item">
+        <p>Weapon</p>
+      </div>
+      <div class="sheet-item">
+        <p>x1</p>
+      </div>
+      <div class="sheet-item">
+        <p>x2</p>
+      </div>
+      <div class="sheet-item">
+        <p>x3</p>
+      </div>
+      <div class="sheet-item">
+        <p>x5</p>
+      </div>
+      <div class="sheet-item">
+        <p>Custom</p>
+      </div>
+      <div class="sheet-item">
+        <p>x{Custom}</p>
+      </div>
+    </div>
+
+    <div class="sheet-row"
+      style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+      <div class="sheet-item">
+        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+          alt="aquila" style="height:30px; width:30px">
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot1" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
+          type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot2" value="/r 2d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
+          type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot3" value="/r 3d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
+          type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot5" value="/r 5d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
+          type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <input type="number" name="attr_shots">
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot" value="/r @{shots}d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
+          type="roll"></button>
+      </div>
+    </div>
+
+    <div class="sheet-row"
+      style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+      <div class="sheet-item">
+        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+          alt="aquila" style="height:30px; width:30px">
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot1" value="/r 1d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot2" value="/r 2d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot3" value="/r 3d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot5" value="/r 5d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+      </div>
+      <div class="sheet-item">
+        <input type="number" name="attr_hits">
+      </div>
+      <div class="sheet-item">
+        <button name="roll_shot" value="/r @{hits}d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+      </div>
+    </div>
+  </div>
+
   <!-- Head and body -->
   <div class="sheet-head-and-body sheet-block">
     <div class="sheet-row">
@@ -441,7 +528,7 @@
 
 
   <!-- Extra gear -->
-  <div class="sheet-extra-gear sheet-block">
+  <!-- <div class="sheet-extra-gear sheet-block">
 
     <div class="sheet-row">
       <div class="sheet-item">
@@ -454,11 +541,24 @@
         <p>Extra information</p>
       </div>
       <div class="sheet-item">
-        <textarea name="attr_extra_information"></textarea>
+        <textarea name="attr_extra_information" style="height:378px"></textarea>
+      </div>
+    </div>
+  </div> -->
+  <div class="sheet-extra-gear sheet-block">
+
+    <div class="sheet-row">
+      <div class="sheet-item">
+        <h2 class="gear-u">Extra information</h2>
+      </div>
+    </div>
+
+    <div class="sheet-row">
+      <div class="sheet-item">
+        <textarea name="attr_extra_information" style="height:380px;resize: none;"></textarea>
       </div>
     </div>
   </div>
-
   <!-- Skills -->
   <div class="sheet-skills sheet-block">
     <div class="sheet-row">
@@ -470,13 +570,14 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_marksmanship" value="/r @{strength}d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} " type="roll"></button>
+          <button name="roll_marksmanship"
+            value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
           <h3>Marksmanship</h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_marksmanship">
+          <input type="number" name="attr_marksmanship" value="10">
         </div>
       </div>
     </div>
@@ -484,13 +585,13 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_cqb" value="/r 1d6+@{cqb}" type="roll"></button>
+          <button name="roll_cqb" value="/r 1d100cs<@{cqb}cf>@{cqb}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
           <h3>Close Quarter Combat</h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_cqb">
+          <input type="number" name="attr_cqb" value="40">
         </div>
       </div>
     </div>
@@ -498,13 +599,13 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_strength" value="/r 1d6+@{strength}" type="roll"></button>
+          <button name="roll_strength" value="/r 1d100cs<@{strength}cf>@{strength}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
           <h3> Strength </h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_strength">
+          <input type="number" name="attr_strength" value="40">
         </div>
       </div>
     </div>
@@ -513,13 +614,13 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_condition" value="/r 1d6+@{condition}" type="roll"></button>
+          <button name="roll_constitution" value="/r 1d100cs<@{constitution}cf>@{constitution}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
-          <h3> Condition </h3>
+          <h3> Constitution </h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_condition">
+          <input type="number" name="attr_constitution" value="40">
         </div>
       </div>
     </div>
@@ -527,13 +628,13 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_agility" value="/r 1d6+@{agility}" type="roll"></button>
+          <button name="roll_agility" value="/r 1d100cs<@{agility}cf>@{agility}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
           <h3> Agility </h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_agility">
+          <input type="number" name="attr_agility" value="40">
         </div>
       </div>
     </div>
@@ -541,13 +642,13 @@
     <div class="sheet-row">
       <div class="sheet-item">
         <div class="sheet-skill-left">
-          <button name="roll_knowledge" value="/r 1d6+@{knowledge}" type="roll"></button>
+          <button name="roll_knowledge" value="/r 1d100cs<@{knowledge}cf>@{knowledge}" type="roll"></button>
         </div>
         <div class="sheet-skill-mid">
           <h3> Knowledge </h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_knowledge">
+          <input type="number" name="attr_knowledge" value="30">
         </div>
       </div>
     </div>
@@ -561,7 +662,7 @@
           <h3> Health Points </h3>
         </div>
         <div class="sheet-skill-right">
-          <input type="number" name="attr_hp">
+          <input type="number" name="attr_hp" value="100">
         </div>
       </div>
     </div>
@@ -569,10 +670,11 @@
   </div>
 
   <!-- Aquila -->
-  <div class="sheet-footer sheet-block">
+  <div class="sheet-footer sheet-block" style="border:0px">
     <div class="sheet-row">
       <div class="sheet-item">
-        <h2 class="gear-u">Aquila</h2>
+        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/aquila.png" alt="aquila"
+          style="height:100px">
       </div>
     </div>
   </div>
