@@ -1,0 +1,15 @@
+2T - Hełm wz. Cadia
+[CHR] 2T - Hełm Sanitariusza 
+[SRŻ] 2T Vox-Hełm wz. Cadia 
+4T  - Hełm Czołgisty
+2T - Hełm wz. Armageddon
+2T - Hełm wz. Krieg
+[GRE] 2T - Hełm Grenadiera wz. Krieg
+[SRŻ] 2T - Hełm Oficerski wz. Krieg
+1T - Futrzany Hełm Vostroyański
+1T - Komunikator Vox
+Beret
+Gwardyjskie Kepi
+[SRŻ] Czapka Garnizonowa
+Kapelusz Graniczników
+[ZWD] [STR] Kaptur Zwiadowczy+

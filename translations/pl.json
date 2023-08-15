@@ -1,4 +1,6 @@
 {
+   "item-none-u":"Brak",
+   
    "project-title-u":"PROJEKT: Tempestus",
    "assessment-report-u":"Imperialnego Piechura Raport Psychofizjologiczny",
    
@@ -108,14 +110,90 @@
    "hairstyle12-f-u":"F - Zaczesane",
 
    "clothing-u": "Umundurowanie",
+
    "boots-u": "Obuwie",
+   "boots-1-u":"1T - Cadiańskie Buty",
+   "boots-2-u":"2T - Szturmówki",
+   "boots-3-u":"Kriegańskie Okopówki",
+   "boots-4-u":"Trapery Armageddońskie",
+   "boots-5-u":"Wysokie Trzewiki",
+   "boots-6-u":"Chromówki",
+   "boots-7-u":"Kamasze",
+   "boots-8-u":"Wysokie Skórzane Buty",
+
    "pants-u": "Spodnie",
+   "pants-1-u":"Spodnie Mundurowe Standardowe",
+   "pants-2-u":"Spodnie Mundurowe Wąskie",
+   "pants-3-u":"Spodnie Mundurowe Krótsze",
+   "pants-4-u":"Spodnie Cywilne Opuszczone",
+   "pants-5-u":"Spodnie Cywilne Wąskie",
+
    "leg-armor-u": "Pancerz na nogi",
+   "leg-armor-1-u":"1T - Cadiańskie Ochraniacze",
+   "leg-armor-2-u":"2T - Ochraniacze Flak",
+   "leg-armor-3-u":"[GRE] 2T - Nagolenniki Grenadierów",
+   "leg-armor-4-u":"[ZWD] 2T - Pancerz Zwiadowczy",
+
    "shirt-u": "Koszula",
+   "shirt-1-u":"Cadiańska Tunika z podwiniętymi rękawami",
+   "shirt-2-u":"Cadiańska Tunika bez rękawów",
+   "shirt-3-u":"Cadiańska Tunika",
+   "shirt-4-u":"Płaszcz Stalowego Legionu",
+   "shirt-5-u":"Kriegański Trencz",
+   "shirt-6-u":"Vostroyański Płaszcz",
+   "shirt-7-u":"Tank Top",
+   "shirt-8-u":"Gwardyjska Tunika",
+   "shirt-9-u":"Skórzana Kurta",
+
    "gloves-u": "Rękawice",
+   "gloves-1-u":"2T - Wzmocnione Rękawice",
+   "gloves-2-u":"[WET] / [SRŻ] - 2T Vostroyańskie Rękawice Płytowe",
+   "gloves-3-u":"[GRE] 1T - Rękawice Grenadierów",
+   "gloves-4-u":"[INŻ] 1T - Rękawice z panelem technicznym",
+   "gloves-5-u":"[CHR] 2T - Narthecium",
+   "gloves-6-u":"Skórzane Rękawiczki",
+   "gloves-7-u":"Rękawiczki bez palców",
+   "gloves-8-u":"Rękawice Czołgistów",
+   "gloves-9-u":"Pasy",
+
    "chest-u": "Klatka piersiowa",
+   "chest-1-u":"2T - Pancerz Flak",
+   "chest-2-u":"4T - Ciężki Pancerz Flak",
+   "chest-3-u":"[SRŻ] 2T - Kirys Oficerski",
+   "chest-4-u":"[WET] / [SRŻ]  2T - Vostroyański Ryngraf",
+   "chest-5-u":"[STM] 4T - Zbroja Szturmowca",
+   "chest-6-u":"[INŻ] 4T - Zbroja Kriegańskich Inżynierów",
+   "chest-7-u":"[GRE] 3T - Zbroja Kriegańskiego Grenadiera",
+   "chest-8-u":"Rozpięta Kamizela",
+   "chest-9-u":"Zapięta Kamizela",
+   "chest-10-u":"Pilotka",
+
    "shoulders-u": "Naramiennik",
+   "shoulders-1-u":"1T - Patki Czołgistów",
+   "shoulders-2-u":"2T - Flak Naramienniki",
+   "shoulders-3-u":"1T - Osłony Kriegańskie",
+   "shoulders-4-u":"[STM] 1T - Szturmowe Pagony",
+   "shoulders-5-u":"[WET] / [SRŻ]  2T - Vostroyański Epolet",
+   "shoulders-6-u":"[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki",
+   "shoulders-7-u":"Cadiańskie Galony",
+   "shoulders-8-u":"Naszywki Lotnicze",
+
    "helmet-u": "Nakrycie głowy",
+   "helmet-1-u":"2T - Hełm wz. Cadia",
+   "helmet-2-u":"[CHR] 2T - Hełm Sanitariusza ",
+   "helmet-3-u":"[SRŻ] 2T Vox-Hełm wz. Cadia ",
+   "helmet-4-u":"4T  - Hełm Czołgisty",
+   "helmet-5-u":"2T - Hełm wz. Armageddon",
+   "helmet-6-u":"2T - Hełm wz. Krieg",
+   "helmet-7-u":"[GRE] 2T - Hełm Grenadiera wz. Krieg",
+   "helmet-8-u":"[SRŻ] 2T - Hełm Oficerski wz. Krieg",
+   "helmet-9-u":"1T - Futrzany Hełm Vostroyański",
+   "helmet-10-u":"1T - Komunikator Vox",
+   "helmet-11-u":"Beret",
+   "helmet-12-u":"Gwardyjskie Kepi",
+   "helmet-13-u":"[SRŻ] Czapka Garnizonowa",
+   "helmet-14-u":"Kapelusz Graniczników",
+   "helmet-15-u":"[ZWD] [STR] Kaptur Zwiadowczy+",
 
    "gear-u": "Rynsztunek",
    "backpack-u": "Plecak",
@@ -141,3 +219,6 @@
    "health-points-u":"Punkty Żywotności"
 
 }
+
+
+
