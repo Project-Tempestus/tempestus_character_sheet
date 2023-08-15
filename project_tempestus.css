@@ -1,0 +1,161 @@
+/* Main grid */
+.charsheet .sheet-grid-section {
+	display: grid;
+	grid-template-columns: 550px 250px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas: "project-title project-title"
+		"soldier-particulars soldier-particulars"
+		"head-and-body skills"
+		"clothing skills"
+		"gear extra-gear"
+		"footer footer";
+	grid-gap: 5px;
+}
+
+.charsheet div.sheet-block {
+	/* display: grid; */
+	display: inline;
+	justify-content: center;
+	padding: 5px;
+	border: 1px dashed green;
+}
+
+.charsheet div.sheet-project-title {
+	grid-area: project-title;
+}
+
+.charsheet div.sheet-soldier-particulars {
+	grid-area: soldier-particulars;
+}
+
+
+.charsheet div.sheet-head-and-body {
+	grid-area: head-and-body;
+}
+
+.charsheet div.sheet-clothing {
+	grid-area: clothing;
+}
+
+.charsheet div.sheet-gear {
+	grid-area: gear;
+}
+
+.charsheet div.sheet-extra-gear {
+	grid-area: extra-gear;
+}
+
+.charsheet div.sheet-skills {
+	grid-area: skills;
+}
+
+.charsheet div.sheet-footer {
+	grid-area: footer;
+}
+
+div.sheet-row {
+	display: flex;
+	border: 0px solid green;
+	width: 100%;
+}
+
+div.sheet-item {
+	display: flex;
+	border: 0px solid green;
+	width: 100%;
+	justify-content: space-around;
+}
+
+div.sheet-item-left {
+	width: 40%;
+}
+
+div.sheet-item-right {
+	width: 60%;
+}
+
+div.sheet-skill-left {
+	width: 10%;
+}
+
+div.sheet-skill-mid {
+	width: 70%;
+}
+
+div.sheet-skill-right {
+	width: 20%;
+}
+
+div.sheet-skill-left,
+div.sheet-skill-mid,
+div.sheet-skill-right {
+	height: 50px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.option-label-text {
+	text-align: center;
+	color: green;
+}
+
+
+select, option, input, textarea {
+	background-color: black;
+	color: green;
+	border: 1px solid green;
+}
+
+.charsheet {
+	background-color: black;
+	color: green;
+}
+
+p,
+label,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	text-align: center;
+	font-family: 'Courier New';
+	font-weight: bold;
+}
+
+p {
+	margin: 10px;
+	font-family: 'Courier New';
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.advanceselect {
+	width: 100%;
+	margin-right: 10px;
+}
+
+/* Head and body grid */
+/*
+.sheet-head-and-body {
+	display: grid;
+	grid-template-columns: 600px 200px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas: "project-title project-title"
+		"guard-uniform guard-skills"
+		"head-and-body guard-skills"
+		"guard-equipment guard-equipment";
+	grid-gap: 5px;
+} */
