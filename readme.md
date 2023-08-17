@@ -1,1 +1,8 @@
-This is a basic character sheet for Project: Tempestus. A WH-40k based tactical RPG shooter
+# Character Sheet
+This repository contains the source code for a basic character sheet for PROJECT: Tempestus - a tactical RPG set in WH40k lore.
+
+# Usage
+
+The character sheet is meant to be used with the [Roll20](https://roll20.net/welcome) system for enjoying RPG games online. It is a developer's hope that once an appropriate stage of development is reached, the character sheet will be pulled into the [Roll20 Character Sheets Repository](https://github.com/Roll20/roll20-character-sheets). P:T fork of the Roll20 Character Sheets Repository is not yet created, as all assets in that repository amount to over 1.2GB (at the moment of writing). 
+
+In the mean time, the character sheet is meant to be downloaded and used through Custom Sheet Sandbox (a Pro feature of the Roll20 system).
