@@ -1,0 +1,7 @@
+ITEM_NAME: sheathed_weapon
+ITEM_NAME_TEXT: Broń przy pasie
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "2T - Miecz"
+ - "4T - Miecz Łańcuchowy"
+ - "[WET] / [SRŻ] 5T - Miecz Energetyczny"

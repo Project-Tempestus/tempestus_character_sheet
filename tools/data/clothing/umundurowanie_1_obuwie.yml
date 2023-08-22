@@ -1,0 +1,12 @@
+ITEM_NAME: boots
+ITEM_NAME_TEXT: Obuwie
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "1T - Cadiańskie Buty"
+ - "2T - Szturmówki"
+ - "Kriegańskie Okopówki"
+ - "Trapery Armageddońskie"
+ - "Wysokie Trzewiki"
+ - "Chromówki"
+ - "Kamasze"
+ - "Wysokie Skórzane Buty"

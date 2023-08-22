@@ -1,0 +1,13 @@
+ITEM_NAME: gloves
+ITEM_NAME_TEXT: Rękawice
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "2T - Wzmocnione Rękawice"
+ - "[WET] / [SRŻ] - 2T Vostroyańskie Rękawice Płytowe"
+ - "[GRE] 1T - Rękawice Grenadierów"
+ - "[INŻ] 1T - Rękawice z panelem technicznym"
+ - "[CHR] 2T - Narthecium"
+ - "Skórzane Rękawiczki"
+ - "Rękawiczki bez palców"
+ - "Rękawice Czołgistów"
+ - "Pasy"

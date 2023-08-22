@@ -1,0 +1,22 @@
+ITEM_NAME: firearm
+ITEM_NAME_TEXT: Broń długa
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "3T - Lasgun - wz. Triplex"
+ - "4T - Lasgun - wz. Triplex BAGNET"
+ - "5T - Lasgun - M35 wz. Galaxy"
+ - "6T - Lasgun - M35 wz. Galaxy BAGNET"
+ - "7T - Lasgun - M36 wz. Kantrael"
+ - "8T - Lasgun - M36 wz. Kantrael BAGNET"
+ - "8T - Lasgun - M36 wz. Kantrael CELOWNIK"
+ - "3T - Autogun - Hax-Orthlack Creed-9"
+ - "4T - Autogun - Agripinaa typ II "
+ - "5T - Autogun - Agripinaa typ II BAGNET"
+ - "4T - Autogun - Urdesh wz. U90"
+ - "5T - Autogun - Urdesh wz. U90 BAGNET"
+ - "3T - Ciężki Miotacz wz. Othlack"
+ - "6T - Ciężki Miotacz - wz. Vraks"
+ - "2T - Strzelba - Dubeltówka"
+ - "4T - Strzelba - wz. Vox Legi"
+ - "3T - Karabin Wyborowy - Myśliwski"
+ - "6T - Karabin Wyborowy - wz. Rozgrzeszenie"

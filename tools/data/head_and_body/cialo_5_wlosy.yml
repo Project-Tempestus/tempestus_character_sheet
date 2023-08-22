@@ -1,0 +1,28 @@
+ITEM_NAME: hairstyle
+ITEM_NAME_TEXT: Włosy
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "M - Przedziałek"
+ - "M - Dłuższe Końcówki"
+ - "M - Irokez"
+ - "M - Jeż"
+ - "M - Garnek"
+ - "M - Podcięty Garnek"
+ - "M - Wybuch"
+ - "M - Boczny"
+ - "M - Długie"
+ - "M - Zaczesane"
+ - "M - Kapłańskie"
+ - "M - Kucyk"
+ - "F - Bob"
+ - "F - Chłopięcy"
+ - "F - Warkocz"
+ - "F - Jeż"
+ - "F - Przyjaciółka z Dzieciństwa"
+ - "F - Dredy"
+ - "F - Kucyk"
+ - "F - Irokez"
+ - "F - Adepta Sororitas"
+ - "F - Proste Długie"
+ - "F - Proste"
+ - "F - Zaczesane"

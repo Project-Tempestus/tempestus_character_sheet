@@ -1,0 +1,13 @@
+ITEM_NAME: headgear
+ITEM_NAME_TEXT: Headgear
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "1T - Gogle Uderzeniowe"
+ - "1T - Gogle Taktyczne"
+ - "1T - Bioniczne oko (prawe)"
+ - "1T - Bioniczne oko (lewe)"
+ - "2T - Noktowizor"
+ - "Awiatory"
+ - "Profesorki"
+ - "Przepaska na oko (prawe)"
+ - "Przepaska na oko (lewe)"

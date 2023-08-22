@@ -1,0 +1,12 @@
+ITEM_NAME: waist
+ITEM_NAME_TEXT: Pas
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "1T - Pas na magazynki"
+ - "2T - Pas Gwardzisty"
+ - "2T - Pas z granatem"
+ - "2T - Pas z kaburą"
+ - "2T - Vox-Pas"
+ - "[WET] / [SRŻ] 4T - Pas-Auspex"
+ - "[SRŻ] 2T - Pas Oficerski"
+ - "[CHR] 2T - Pas Medyczny"

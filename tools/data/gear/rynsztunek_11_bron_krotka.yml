@@ -1,0 +1,6 @@
+ITEM_NAME: pistol
+ITEM_NAME_TEXT: Broń krótka
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - "1T - Autopistolet - Sulymann Encarmine"
+ - "3T - Rewolwer - wz. Zarona IIa"
