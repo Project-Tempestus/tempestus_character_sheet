@@ -1,0 +1,50 @@
+name: Character Sheet
+
+# This action works with pull requests and pushes
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      
+      - name: Build HTML from Jinja template
+        run: |
+          pushd tools
+            pip install -r requirements.txt
+            mkdir -p build
+            python build.py
+          popd
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v4.3
+
+      - name: Prepare artifact
+        run: |
+          mkdir -p result
+          cp sheet.json pt_preview.png project_tempestus.css result/
+          cp tools/build/output.html result/project_tempestus.html
+          
+          mkdir -p result/translations
+          cp translations/pl.json result/translations/pl.json
+      
+      - uses: actions/upload-artifact@v3
+        with:
+          name: character-sheet-artifact
+          path: ${{ github.workspace}}/result
+
+      
