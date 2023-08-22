@@ -1,0 +1,6 @@
+{# templates/translation_row.j2 #}
+
+"{{ITEM_NAME}}-u": "{{ITEM_NAME_TEXT}}",
+{% for ID in range(ITEM_OPTIONS_LEN) -%}
+"{{ ITEM_NAME }}-{{ID}}-u":"{{ITEM_OPTIONS[ID]}}",
+{% endfor %}
