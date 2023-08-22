@@ -44,9 +44,9 @@ jobs:
           mkdir -p result
           cp sheet.json pt_preview.png project_tempestus.css result/
           cp tools/build/output.html result/project_tempestus.html
-          
+                    
           mkdir -p result/translations
-          cp translations/pl.json result/translations/pl.json
+          cp tools/build/pl.json result/translations/pl.json
       
       - uses: actions/upload-artifact@v3
         with:
