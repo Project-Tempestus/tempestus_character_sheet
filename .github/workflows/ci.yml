@@ -33,29 +33,30 @@ jobs:
             python build.py
           popd
 
+      - name: Prepare artifact
+        run: |
+          mkdir -p release
+          cp sheet.json pt_preview.png project_tempestus.css release/
+          cp tools/build/output.html release/project_tempestus.html
+                    
+          mkdir -p release/translations
+          cp tools/build/pl.json release/translations/pl.json
+
+          zip -r character_sheet-release-latest.zip release
+
+          rm -rf tools/build
+
+
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --write **/*.{json,html}
           github_token: ${{ secrets.PT_GITHUB_TOKEN }}
 
-
-      - name: Prepare artifact
-        run: |
-          mkdir -p pt_character_sheet
-          cp sheet.json pt_preview.png project_tempestus.css pt_character_sheet/
-          cp tools/build/output.html pt_character_sheet/project_tempestus.html
-                    
-          mkdir -p pt_character_sheet/translations
-          cp tools/build/pl.json pt_character_sheet/translations/pl.json
-
-          zip -r character_sheet-release-latest.zip pt_character_sheet
-      
       - uses: actions/upload-artifact@v3
         with:
           name: character-sheet-artifact
-          path: ${{ github.workspace}}/pt_character_sheet
-
+          path: ${{ github.workspace}}/release
 
       - name: Release
         uses: softprops/action-gh-release@v1
