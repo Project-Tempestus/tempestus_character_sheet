@@ -34,7 +34,8 @@ jobs:
 
       - name: Prepare artifact
         run: |
-          cp -r static/* release                    
+          cp -r static/* release
+          mv release/pl.json release/translations/pl.json                    
           zip -r character_sheet-release-latest.zip release
 
       - name: Prettify code
