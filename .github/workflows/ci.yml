@@ -42,19 +42,19 @@ jobs:
 
       - name: Prepare artifact
         run: |
-          mkdir -p result
-          cp sheet.json pt_preview.png project_tempestus.css result/
-          cp tools/build/output.html result/project_tempestus.html
+          mkdir -p pt_character_sheet
+          cp sheet.json pt_preview.png project_tempestus.css pt_character_sheet/
+          cp tools/build/output.html pt_character_sheet/project_tempestus.html
                     
-          mkdir -p result/translations
-          cp tools/build/pl.json result/translations/pl.json
+          mkdir -p pt_character_sheet/translations
+          cp tools/build/pl.json pt_character_sheet/translations/pl.json
 
-          zip character_sheet-release-latest.zip result
+          zip -r character_sheet-release-latest.zip pt_character_sheet
       
       - uses: actions/upload-artifact@v3
         with:
           name: character-sheet-artifact
-          path: ${{ github.workspace}}/result
+          path: ${{ github.workspace}}/pt_character_sheet
 
 
       - name: Release
