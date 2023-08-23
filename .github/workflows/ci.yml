@@ -2,6 +2,7 @@ name: Character Sheet
 
 # This action works with pull requests and pushes
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -47,10 +48,18 @@ jobs:
                     
           mkdir -p result/translations
           cp tools/build/pl.json result/translations/pl.json
+
+          zip character_sheet-release-latest.zip result
       
       - uses: actions/upload-artifact@v3
         with:
           name: character-sheet-artifact
           path: ${{ github.workspace}}/result
 
-      
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          files: |
+            ${{ github.workspace}}/character_sheet-release-latest.zip
