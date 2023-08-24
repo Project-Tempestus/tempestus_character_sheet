@@ -32,17 +32,17 @@ jobs:
             python build.py
           popd
 
-      - name: Prepare artifact
-        run: |
-          cp -r static/* release
-          mv release/pl.json release/translations/pl.json                    
-          zip -r character_sheet-release-latest.zip release
-
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
           prettier_options: --write **/*.{json,html}
           github_token: ${{ secrets.PT_GITHUB_TOKEN }}
+
+      - name: Prepare artifact
+        run: |
+          cp -r static/* release
+          mv release/pl.json release/translations/pl.json                    
+          zip -r character_sheet-release-latest.zip release
 
       - uses: actions/upload-artifact@v3
         with:
