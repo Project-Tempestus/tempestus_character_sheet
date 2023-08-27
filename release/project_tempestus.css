@@ -1,10 +1,59 @@
+/* Generics */
 :root {
 	--TempestusGreen: rgb(17, 192, 17);
-	/* --TempestusGreen: green; */
 }
 
-/* Main grid */
-.charsheet .sheet-grid-section {
+.charsheet,
+input,
+option,
+select,
+textarea {
+	background-color: black;
+	color: var(--TempestusGreen);
+	border: 1px solid var(--TempestusGreen);
+}
+
+/* Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p,
+select,
+textarea {
+	color: var(--TempestusGreen);
+	text-align: center;
+	font-family: 'Courier New';
+	font-weight: bold;
+}
+
+p {
+	margin: 10px;
+	font-size: 18px;
+}
+
+/* This applies to all select boxes */
+.advanceselect {
+	width: 100%;
+	margin-right: 10px;
+}
+
+/* Tabs */
+.charsheet .sheet-entrypoint,
+.charsheet .sheet-personal
+{
+    display: none;
+}
+.charsheet .sheet-tabstoggle[value="entrypoint"] ~ div.sheet-entrypoint,
+.charsheet .sheet-tabstoggle[value="personal"] ~ div.sheet-personal {
+    display: block;
+}
+
+/* Entrypoint grid */
+.charsheet .sheet-entrypoint-grid{
 	display: grid;
 	grid-template-columns: 550px 250px;
 	grid-auto-rows: minmax(100px, auto);
@@ -18,13 +67,6 @@
 	grid-gap: 5px;
 }
 
-.charsheet div.sheet-block {
-	/* display: grid; */
-	display: inline;
-	justify-content: center;
-	padding: 5px;
-	border: 1px dashed var(--TempestusGreen);
-}
 
 .charsheet div.sheet-project-title {
 	grid-area: project-title;
@@ -61,6 +103,14 @@
 .charsheet div.sheet-footer {
 	grid-area: footer;
 }
+
+.charsheet div.sheet-block {
+	display: inline;
+	justify-content: center;
+	padding: 5px;
+	border: 1px dashed var(--TempestusGreen);
+}
+
 
 div.sheet-row {
 	display: flex;
@@ -106,64 +156,28 @@ div.sheet-skill-right {
 }
 
 
-.option-label-text {
-	text-align: center;
-	color: var(--TempestusGreen);
+
+/* Personal grid */
+.sheet-personal-grid{
+	display: grid;
+	grid-template-columns: 550px 250px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas: "project-title project-title"
+		"head-and-body head-and-body"
+		"clothing clothing"
+		"gear gear"
+		"footer footer";
+	grid-gap: 5px;
 }
 
-
-select,
-option,
-input,
-textarea {
-	background-color: black;
-	color: var(--TempestusGreen);
-	border: 1px solid var(--TempestusGreen);
+div.sheet-head-and-body {
+	grid-area: head-and-body;
 }
 
-.charsheet {
-	background-color: black;
-	color: var(--TempestusGreen);
+div.sheet-clothing {
+	grid-area: clothing;
 }
 
-p,
-label,
-h1,
-h2,
-h3,
-h4,
-h5 {
-	color: var(--TempestusGreen);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-	text-align: center;
-	font-family: 'Courier New';
-	/* font-family: 'Consolas'; */
-	font-weight: bold;
-}
-
-select,
-textarea {
-	/* font-family: 'Courier New'; */
-	font-family: 'Consolas';
-	font-weight: bold;
-}
-
-p {
-	margin: 10px;
-	font-family: 'Courier New';
-	/* font-family: 'Consolas'; */
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.advanceselect {
-	width: 100%;
-	margin-right: 10px;
+div.sheet-gear {
+	grid-area: gear;
 }
