@@ -1,8 +1,23 @@
-<!-- Manage tabs -->
+<!-- Title -->
+<div class="sheet-project-title" style="display:flex;">
+  <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+    <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+      alt="inquisition_glow_green" style="height:100px">
+  </div>
+  <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
+    <h1 id="card_title" data-i18n="project-title-u">PROJECT: Tempestus</h1>
+    <h4 data-i18n="assessment-report-u">The Imperial Infantryman's Assessment Report </h4>
+  </div>
+  <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+    <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
+      alt="inquisition_glow_green" style="height:100px">
+  </div>
+</div>
+<!-- Tabs -->
 <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="entrypoint" />
-<div>
-  <button type="action" name="act_entrypoint" data-i18n="entrypoint-name-u">Main tab</button>
-  <button type="action" name="act_personal" data-i18n="personal-name-u">Personal tab</button>
+<div class="sheet-navigation-tabs">
+  <button type="action" name="act_entrypoint" data-i18n="entrypoint-name-u" class="tab-button">Main tab</button>
+  <button type="action" name="act_personal" data-i18n="personal-name-u" class="tab-button">Personal tab</button>
 </div>
 
 <!-- /////// -->
@@ -10,28 +25,11 @@
 <!-- /////// -->
 <div class="sheet-entrypoint">
   <div class="sheet-entrypoint-grid">
-    <!-- Title -->
-    <div class="sheet-project-title sheet-block" style="display:flex;">
-      <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-          alt="inquisition_glow_green" style="height:100px">
-      </div>
-      <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
-        <h1 id="card_title" data-i18n="project-title-u">PROJECT: Tempestus</h1>
-        <h4 data-i18n="assessment-report-u">The Imperial Infantryman's Assessment Report </h4>
-      </div>
-      <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-          alt="inquisition_glow_green" style="height:100px">
-      </div>
-    </div>
-
     <!-- Soldier's Particulars  -->
-    <div class="sheet-soldier-particulars sheet-block">
-      <div class="sheet-item" style="width:100%; display: block; margin-bottom: 10px">
+    <div class="sheet-soldier-particulars">
+      <div class="sheet-item">
         <h2 data-i18n="soldier-particulars-u">Soldier's Particulars</h2>
       </div>
-
       <div class="sheet-row" style="display:flex">
         <div class="sheet-item">
           <p data-i18n="name-u">Name</p>
@@ -54,7 +52,7 @@
         </div>
         <div class="sheet-item">
           <select name="attr_regiment" class="advanceselect"
-            style="width:160px; height:30px; margin:0px;text-align: center;">
+            style="width:160px; height:30px;text-align: center;">
             <option>Armageddon</option>
             <option>Cadia</option>
             <option>Krieg</option>
@@ -65,7 +63,7 @@
           <p data-i18n="class-u">Class</p>
         </div>
         <div class="sheet-item">
-          <select name="attr_class" class="advanceselect" style="width:160px; height:30px; margin:0px;">
+          <select name="attr_class" class="advanceselect" style="width:160px; height:30px;">
             <option data-i18n="sargeant-u">[SRŻ] Sierżant</option>
             <option data-i18n="stormtrooper-u">[SZT] Szturmowiec</option>
             <option data-i18n="sharpshooter-u">[STR] Strzelec</option>
@@ -78,15 +76,14 @@
       </div>
     </div>
 
-
     <!-- Shots rolls : 1,2,3,5, custom -->
-    <div class="sheet-shot-rolls sheet-block">
+    <div class="sheet-shot-rolls">
       <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
         <h2 data-i18n="combat-u">Combat</h2>
       </div>
       <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
         <div class="sheet-item">
           <p data-i18n="weapon-u">Weapon</p>
         </div>
@@ -111,10 +108,10 @@
       </div>
 
       <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
         <div class="sheet-item">
-          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png" alt="aquila"
-            style="height:60px; width:60px">
+          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
+            alt="rifle_icon" style="height:60px; width:60px">
         </div>
         <div class="sheet-item">
           <button name="roll_shot1" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
@@ -142,10 +139,10 @@
       </div>
 
       <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center; margin:5px">
+        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
         <div class="sheet-item">
           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
-            alt="aquila" style="height:60px; width:60px">
+            alt="shotgun_icon" style="height:60px; width:60px">
         </div>
         <div class="sheet-item">
           <button name="roll_shot1" value="/r 1d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
@@ -168,8 +165,7 @@
       </div>
     </div>
 
-    <div class="sheet-extra-gear sheet-block">
-
+    <div class="sheet-extra-information">
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="extra-information-u" class="gear-u">Extra information</h2>
@@ -178,12 +174,13 @@
 
       <div class="sheet-row">
         <div class="sheet-item">
-          <textarea name="attr_extra_information" style="height:380px;resize: none;"></textarea>
+          <textarea name="attr_extra_information" style="height:100px;resize: none;"></textarea>
         </div>
       </div>
     </div>
+
     <!-- Skills -->
-    <div class="sheet-skills sheet-block">
+    <div class="sheet-skills">
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="skill-points-u"="gear-u">Skill Points</h2>
@@ -305,16 +302,6 @@
 
     </div>
 
-    <!-- Aquila -->
-    <div class="sheet-footer sheet-block" style="border:0px">
-      <div class="sheet-row">
-        <div class="sheet-item">
-          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/aquila.png" alt="aquila"
-            style="height:100px">
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -323,23 +310,8 @@
 <!-- /////// -->
 <div class="sheet-personal">
   <div class="sheet-personal-grid">
-    <!-- Title -->
-    <div class="sheet-project-title sheet-block" style="display:flex;">
-      <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-          alt="inquisition_glow_green" style="height:100px">
-      </div>
-      <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
-        <h1 id="card_title" data-i18n="project-title-u">PROJECT: Tempestus</h1>
-        <h4 data-i18n="assessment-report-u">The Imperial Infantryman's Assessment Report </h4>
-      </div>
-      <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
-        <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-          alt="inquisition_glow_green" style="height:100px">
-      </div>
-    </div>
     <!-- Head and body -->
-    <div class="sheet-head-and-body sheet-block">
+    <div class="sheet-head-and-body">
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="head-and-body-u" class="head-and-body-u">Head and body</h2>
@@ -501,7 +473,7 @@
     </div>
 
     <!-- Clothing -->
-    <div class="sheet-clothing sheet-block">
+    <div class="sheet-clothing">
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="clothing-u" class="head-and-body-u">Clothing</h2>
@@ -698,7 +670,7 @@
     </div>
 
     <!-- Gear -->
-    <div class="sheet-gear sheet-block">
+    <div class="sheet-gear">
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="gear-u" class="gear-u">Gear</h2>
@@ -943,14 +915,16 @@
       </div>
     </div>
 
-    <!-- Aquila -->
-    <div class="sheet-footer sheet-block" style="border:0px">
-      <div class="sheet-row">
-        <div class="sheet-item">
-          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/aquila.png" alt="aquila"
-            style="height:100px">
-        </div>
-      </div>
+  </div>
+</div>
+
+
+<!-- Aquila -->
+<div class="sheet-footer">
+  <div class="sheet-row">
+    <div class="sheet-item">
+      <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/aquila.png" alt="aquila"
+        style="height:100px">
     </div>
   </div>
 </div>

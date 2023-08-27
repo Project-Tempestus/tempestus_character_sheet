@@ -31,96 +31,103 @@ textarea {
 }
 
 p {
-	margin: 10px;
+	/* margin: 10px; */
 	font-size: 18px;
 }
 
 /* This applies to all select boxes */
 .advanceselect {
 	width: 100%;
-	margin-right: 10px;
+	/* margin-right: 10px; */
 }
 
 /* Tabs */
-.charsheet .sheet-entrypoint,
-.charsheet .sheet-personal
+.sheet-entrypoint,
+.sheet-personal
 {
     display: none;
 }
-.charsheet .sheet-tabstoggle[value="entrypoint"] ~ div.sheet-entrypoint,
-.charsheet .sheet-tabstoggle[value="personal"] ~ div.sheet-personal {
+.sheet-tabstoggle[value="entrypoint"] ~ div.sheet-entrypoint,
+.sheet-tabstoggle[value="personal"] ~ div.sheet-personal {
     display: block;
 }
 
+.sheet-navigation-tabs{
+	height:50px;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.tab-button{
+	background-color: black;
+	border: 1px dashed var(--TempestusGreen);
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	border-radius: 2px;
+}
+
+.tab-button:hover {background-color: #3e8e41}
+
+.tab-button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.tab-button:target {
+	color: red;
+}
+
+
 /* Entrypoint grid */
-.charsheet .sheet-entrypoint-grid{
+.sheet-entrypoint-grid{
 	display: grid;
-	grid-template-columns: 550px 250px;
+	grid-template-columns: 60% 40%;
 	grid-auto-rows: minmax(100px, auto);
-	grid-template-areas: "project-title project-title"
-		"soldier-particulars soldier-particulars"
+	grid-template-areas: "soldier-particulars soldier-particulars"
 		"shot-rolls shot-rolls"
-		"head-and-body skills"
-		"clothing skills"
-		"gear extra-gear"
-		"footer footer";
+		"extra-information skills";
 	grid-gap: 5px;
 }
 
-
-.charsheet div.sheet-project-title {
-	grid-area: project-title;
+div.sheet-project-title,
+div.sheet-navigation-tabs,
+div.sheet-soldier-particulars,
+div.sheet-shot-rolls,
+div.sheet-extra-information,
+div.sheet-skills {
+	border-bottom: 2px dashed var(--TempestusGreen);
+	padding: 10px;
 }
-
-.charsheet div.sheet-soldier-particulars {
+div.sheet-footer{
+	padding: 10px;
+}
+div.sheet-soldier-particulars {
 	grid-area: soldier-particulars;
 }
 
-.charsheet div.sheet-shot-rolls {
+div.sheet-shot-rolls {
 	grid-area: shot-rolls;
 }
 
-.charsheet div.sheet-head-and-body {
-	grid-area: head-and-body;
+div.sheet-extra-information {
+	grid-area: extra-information;
 }
 
-.charsheet div.sheet-clothing {
-	grid-area: clothing;
-}
-
-.charsheet div.sheet-gear {
-	grid-area: gear;
-}
-
-.charsheet div.sheet-extra-gear {
-	grid-area: extra-gear;
-}
-
-.charsheet div.sheet-skills {
+div.sheet-skills  {
 	grid-area: skills;
-}
-
-.charsheet div.sheet-footer {
-	grid-area: footer;
-}
-
-.charsheet div.sheet-block {
-	display: inline;
-	justify-content: center;
-	padding: 5px;
-	border: 1px dashed var(--TempestusGreen);
 }
 
 
 div.sheet-row {
 	display: flex;
-	border: 0px solid var(--TempestusGreen);
 	width: 100%;
 }
 
 div.sheet-item {
 	display: flex;
-	border: 0px solid var(--TempestusGreen);
 	width: 100%;
 	justify-content: space-around;
 }
@@ -156,17 +163,14 @@ div.sheet-skill-right {
 }
 
 
-
 /* Personal grid */
 .sheet-personal-grid{
 	display: grid;
-	grid-template-columns: 550px 250px;
+	grid-template-columns: 60% 40%;
 	grid-auto-rows: minmax(100px, auto);
-	grid-template-areas: "project-title project-title"
-		"head-and-body head-and-body"
+	grid-template-areas: "head-and-body head-and-body"
 		"clothing clothing"
-		"gear gear"
-		"footer footer";
+		"gear gear";
 	grid-gap: 5px;
 }
 
