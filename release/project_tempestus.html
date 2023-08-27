@@ -20,6 +20,7 @@
   <button type="action" name="act_personal" data-i18n="personal-name-u" class="tab-button">Personal tab</button>
 </div>
 
+
 <!-- /////// -->
 <!-- Tab one -->
 <!-- /////// -->
@@ -51,8 +52,7 @@
           <p data-i18n="regiment-u">Regiment</p>
         </div>
         <div class="sheet-item">
-          <select name="attr_regiment" class="advanceselect"
-            style="width:160px; height:30px;text-align: center;">
+          <select name="attr_regiment" class="advanceselect" style="width:160px; height:30px;text-align: center;">
             <option>Armageddon</option>
             <option>Cadia</option>
             <option>Krieg</option>
@@ -174,7 +174,7 @@
 
       <div class="sheet-row">
         <div class="sheet-item">
-          <textarea name="attr_extra_information" style="height:100px;resize: none;"></textarea>
+          <textarea name="attr_extra_information" style="height:400px; width: 200px; resize: none;"></textarea>
         </div>
       </div>
     </div>
@@ -188,15 +188,22 @@
       </div>
 
       <div class="sheet-row">
-        <div class="sheet-item">
-          <div class="sheet-skill-left">
-            <button name="roll_marksmanship" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>
-          </div>
-          <div class="sheet-skill-mid">
+        <div class="sheet-skill-item">
+          <div class="sheet-skill-textname">
             <h3 data-i18n="marksmanship-u">Marksmanship</h3>
+            
           </div>
-          <div class="sheet-skill-right">
-            <input type="number" name="attr_marksmanship" value="10">
+          <div class="sheet-skill-value">
+            <input type="number" name="attr_marksmanship_base" value="10">
+          </div>
+          <div class="sheet-skill-value">
+            <input type="number" name="attr_marksmanship_modifier" value="0">
+          </div>
+          <div class="sheet-skill-value">
+            <input type="number" name="attr_marksmanship" value="" readonly>
+          </div>
+          <div class="sheet-skill-roll">
+            <button name="roll_marksmanship" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>     
           </div>
         </div>
       </div>
@@ -302,6 +309,23 @@
 
     </div>
 
+    <!-- Extra gear -->
+    <div class="sheet-extra-gear">
+      <div class="sheet-row">
+        <div class="sheet-item">
+          <h2 data-i18n="extra-gear-u">Extra gear</h2>
+        </div>
+      </div>
+
+      <div class="sheet-row">
+        <div class="sheet-item">
+          <p> Worek </p>
+          <p> Pas </p>
+          <p> Bandolier </p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -310,6 +334,23 @@
 <!-- /////// -->
 <div class="sheet-personal">
   <div class="sheet-personal-grid">
+    <!-- Rank -->
+    <div class="sheet-rank">
+      <div class="sheet-row">
+        <div class="sheet-item">
+          <h2 data-i18n="rank-u">Ranga</h2>
+        </div>
+      </div>
+
+      <div class="sheet-row">
+        <div class="sheet-item">
+          <p> Gwardzista </p>
+          <p> Kapral </p>
+          <p> Sierżant </p>
+        </div>
+      </div>
+
+    </div>
     <!-- Head and body -->
     <div class="sheet-head-and-body">
       <div class="sheet-row">
@@ -939,4 +980,30 @@
             });
         });
     });
+</script>
+
+<!-- Auto update total skill values -->
+<script type="text/worker">
+const int = score => parseInt(score, 10) || 0;
+
+const stats = ["marksmanship"];
+const stat_mod = "marksmanship_modifier";
+const stat_base = "marksmanship_base";
+
+
+stats.forEach(stat => {
+    on(`change:${stat_mod}`, () => {
+        getAttrs([stat_base,stat_mod], values => {
+            let v_base = int(values[stat_base]);
+            console.log(v_base);
+            let v_mod = int(values[stat_mod]);
+            console.log(v_mod);
+            let v = v_base + v_mod
+            console.log(v)
+            setAttrs({
+                [`${stat}`]: v
+            });
+        });
+    });
+});
 </script>
