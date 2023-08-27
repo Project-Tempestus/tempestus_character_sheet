@@ -94,6 +94,7 @@ p {
 		"shot-rolls shot-rolls"
 		"extra-information skills"
 		"extra-gear extra-gear";
+	grid-gap: 5px;
 }
 
 div.sheet-project-title,
@@ -108,7 +109,7 @@ div.sheet-head-and-body,
 div.sheet-clothing,
 div.sheet-gear
  {
-	border-bottom: 2px dashed var(--TempestusGreen);
+	border: 1px dashed var(--TempestusGreen);
 	padding: 10px;
 }
 div.sheet-footer{
@@ -216,6 +217,7 @@ div.sheet-skill-right {
 		"head-and-body head-and-body"
 		"clothing clothing"
 		"gear gear";
+	grid-gap:5px;
 }
 
 div.sheet-rank {
