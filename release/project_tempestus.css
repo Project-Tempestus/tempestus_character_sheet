@@ -107,6 +107,7 @@ div.sheet-extra-gear,
 div.sheet-rank,
 div.sheet-head-and-body,
 div.sheet-clothing,
+div.sheet-armor-points,
 div.sheet-gear
  {
 	border: 1px dashed var(--TempestusGreen);
@@ -138,6 +139,8 @@ div.sheet-extra-gear  {
 div.sheet-row {
 	display: flex;
 	width: 100%;
+	margin-bottom: 6px;
+	margin-top: 6px;
 }
 
 div.sheet-item {
@@ -159,6 +162,7 @@ div.sheet-skill-item {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+	padding: 8px;
 }
 
 div.sheet-skill-textname {
@@ -167,6 +171,10 @@ div.sheet-skill-textname {
 
 div.sheet-skill-value{
 	width: 15%;
+	flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
 div.sheet-skill-roll {
@@ -211,11 +219,11 @@ div.sheet-skill-right {
 /* Personal grid */
 .sheet-personal-grid{
 	display: grid;
-	grid-template-columns: 60% 40%;
+	grid-template-columns: 70% 30%;
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas: "rank rank"
 		"head-and-body head-and-body"
-		"clothing clothing"
+		"clothing armor-points"
 		"gear gear";
 	grid-gap:5px;
 }
@@ -232,6 +240,9 @@ div.sheet-clothing {
 	grid-area: clothing;
 }
 
+div.sheet-armor-points {
+	grid-area: armor-points;
+}
 div.sheet-gear {
 	grid-area: gear;
 }
@@ -246,3 +257,11 @@ input:read-only {
 	text-align: center;
 }
   
+.ui-dialog .charsheet input[type=number]{
+	width: 50px;
+}
+
+div.sheet-project-title,
+div.sheet-navigation-tabs{
+	margin-bottom: 5px;
+}
