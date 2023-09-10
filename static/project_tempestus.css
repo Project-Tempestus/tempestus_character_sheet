@@ -88,7 +88,7 @@ p {
 /* Entrypoint grid */
 .sheet-entrypoint-grid{
 	display: grid;
-	grid-template-columns: min-content;
+	grid-template-columns: max-content;
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas: "soldier-particulars soldier-particulars"
 		"shot-rolls shot-rolls"
@@ -264,4 +264,118 @@ input:read-only {
 div.sheet-project-title,
 div.sheet-navigation-tabs{
 	margin-bottom: 5px;
+}
+
+
+/* Roll template */
+
+.sheet-rolltemplate-test  div.sheet-template-container {
+	border: 2px solid rgb(17, 192, 17) !important;
+	border-radius: 3px 3px 3px 3px;
+}
+.sheet-rolltemplate-test  .sheet-template-header {
+	background-color: black;
+	color:rgb(17, 192, 17) !important;
+	padding: 2px;
+	border-bottom: 1px dashed rgb(17, 192, 17);
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-test div {
+	padding: 5px;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-test  div:nth-child(odd) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-test div:nth-child(even) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-test .inlinerollresult{
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid black;
+	background-color:white !important;
+	color: black !important;
+}
+.sheet-rolltemplate-test .inlinerollresult .basicdiceroll {
+	border: 2px solid rgb(17, 192, 17);
+	background-color:rgb(17, 192, 17) !important;
+	color: black !important;
+	font-family: 'Courier New';
+	width: 28px;
+}
+
+.sheet-rolltemplate-test .inlinerollresult.fullcrit {
+	border: 2px solid rgb(17, 192, 17);
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
+	font-family: 'Courier New';
+	width: 28px;
+}
+.sheet-rolltemplate-test  .inlinerollresult.fullfail {
+	border: 2px solid #FF4019;
+	background-color:black !important;
+	color: #FF4019 !important;
+	font-family: 'Courier New';
+	width: 28px;
+}
+.sheet-rolltemplate-test .inlinerollresult.importantroll {
+	border: 2px solid rgb(17, 192, 17);
+	background-color:rgb(17, 192, 17) !important;
+	color: black !important;
+	font-family: 'Courier New';
+	width: 28px;
+}
+
+
+.sheet-rolltemplate-test .sheet-template-signature{
+	display: flex;
+	justify-content: center;
+}
+
+button[type=action].roll_button::before {
+    font-family:'dicefontd20';
+    content:'t';
+	font-size:50px;
+	color:var(--TempestusGreen);
+	background-color:black;
+}
+
+.ui-dialog .charsheet button[type=action].roll_button{
+	width:66%;
+	line-height:5em;
+	border: 0px;
+	padding: 0px;
+	background-color:black;
+}
+
+.ui-dialog .charsheet button[type=action].roll_button:hover{
+	scale:1.2;
+}
+
+.ui-dialog .charsheet button[type=roll].roll_button::before {
+    font-family:'dicefontd20';
+    content:'t';
+	font-size:50px;
+	color:var(--TempestusGreen);
+	background-color:black;
+	border:none;
+	height:100%;
+}
+
+.ui-dialog .charsheet button[type=roll].roll_button{
+	font-family:'dicefontd20';
+    content:'t';
+	width:0%;
+	height:0%;
+	border: 0px;
+	padding: 0px;
+	margin:0px;
+	background-color:black;
+	border:none;
 }

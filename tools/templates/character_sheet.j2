@@ -401,11 +401,14 @@
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center; color:var(--TempestusGreen)" class="sheet-template-text">Poziom cechy: {{character_skill}}</h4>
           <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
           <div style="padding:2px;" class="sheet-results">
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}} </h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll9}} {{computed::roll10}} {{computed::roll11}} {{computed::roll12}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll13}} {{computed::roll14}} {{computed::roll15}} {{computed::roll16}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll17}} {{computed::roll18}} {{computed::roll19}} {{computed::roll20}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}} {% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}} {% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll9}} {{computed::roll10}} {{computed::roll11}} {{computed::roll12}}{% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll13}} {{computed::roll14}} {{computed::roll15}} {{computed::roll16}}{% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll17}} {{computed::roll18}} {{computed::roll19}} {{computed::roll20}}{% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll21}} {{computed::roll22}} {{computed::roll23}} {{computed::roll24}}{% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll25}} {{computed::roll26}} {{computed::roll27}} {{computed::roll28}}{% endraw %}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{% raw %}{{computed::roll29}} {{computed::roll30}} {{computed::roll31}} {{computed::roll32}}{% endraw %}</h4>
            </div>
            <div class="sheet-template-signature">
            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
@@ -557,7 +560,7 @@
 
 </div>
 
-
+{% raw %}
 <!-- Manage tabs -->
 <script type="text/worker">
   const buttonlist = ["entrypoint","personal"];
@@ -1080,3 +1083,4 @@
       });
   });
 </script>
+{% endraw %}

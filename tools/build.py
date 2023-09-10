@@ -78,7 +78,7 @@ if __name__ == "__main__":
         os.makedirs(outputDir)
     
     outputHTML = os.path.join(outputDir,"project_tempestus.html")
-    outputJSON = os.path.join(outputDir,"pl.json")
+    outputJSON = os.path.join(outputDir,"translations","pl.json")
 
     build_file(outputHTML, filesDict,"sheet_row.j2","character_sheet.j2")
     build_file(outputJSON, filesDict,"translation_row.j2", "pl.j2")
