@@ -34,8 +34,7 @@ jobs:
 
       - name: Prepare artifact
         run: |
-          cp -r static/* release
-          mv release/pl.json release/translations/pl.json                    
+          cp -r static/* release                  
           
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
