@@ -1,27 +1,37 @@
 {# templates/character_sheet.j2 #}
 
 <!-- Title -->
-<div class="sheet-project-title" style="display:flex;">
-  <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+<div class="sheet-project-title" style="display: flex">
+  <div class="sheet-item" style="width: 25%; display: flex; justify-content: space-around">
     <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-      alt="inquisition_glow_green" style="height:100px">
+      alt="inquisition_glow_green" style="height: 100px" />
   </div>
-  <div class="sheet-item" style="width:50%; display: flex; justify-content: space-evenly; flex-direction: column;">
+  <div class="sheet-item" style="
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+    ">
     <h1 id="card_title" data-i18n="project-title-u">PROJECT: Tempestus</h1>
-    <h4 data-i18n="assessment-report-u">The Imperial Infantryman's Assessment Report </h4>
+    <h4 data-i18n="assessment-report-u">
+      The Imperial Infantryman's Assessment Report
+    </h4>
   </div>
-  <div class="sheet-item" style="width:25%; display: flex; justify-content: space-around;">
+  <div class="sheet-item" style="width: 25%; display: flex; justify-content: space-around">
     <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/inquisition_glow_green.png"
-      alt="inquisition_glow_green" style="height:100px">
+      alt="inquisition_glow_green" style="height: 100px" />
   </div>
 </div>
 <!-- Tabs -->
 <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="entrypoint" />
 <div class="sheet-navigation-tabs">
-  <button type="action" name="act_entrypoint" data-i18n="entrypoint-name-u" class="tab-button">Main tab</button>
-  <button type="action" name="act_personal" data-i18n="personal-name-u" class="tab-button">Personal tab</button>
+  <button type="action" name="act_entrypoint" data-i18n="entrypoint-name-u" class="tab-button">
+    Main tab
+  </button>
+  <button type="action" name="act_personal" data-i18n="personal-name-u" class="tab-button">
+    Personal tab
+  </button>
 </div>
-
 
 <!-- /////// -->
 <!-- Tab one -->
@@ -33,28 +43,27 @@
       <div class="sheet-item">
         <h2 data-i18n="soldier-particulars-u">Soldier's Particulars</h2>
       </div>
-      <div class="sheet-row" style="display:flex">
+      <div class="sheet-row" style="display: flex">
         <div class="sheet-item">
           <p data-i18n="name-u">Name</p>
         </div>
         <div class="sheet-item">
-          <textarea name="attr_name" style="width:200px; height:20px;resize:none;text-align: center;"></textarea>
+          <textarea name="attr_name" style="width: 200px; height: 20px; resize: none; text-align: center"></textarea>
         </div>
         <div class="sheet-item">
           <p data-i18n="surname-u">Surname</p>
         </div>
         <div class="sheet-item">
-          <textarea name="attr_surname" style="width:200px; height:20px;resize:none;text-align: center;"></textarea>
+          <textarea name="attr_surname" style="width: 200px; height: 20px; resize: none; text-align: center"></textarea>
         </div>
       </div>
 
-
-      <div class="sheet-row" style="display:flex;">
+      <div class="sheet-row" style="display: flex">
         <div class="sheet-item">
           <p data-i18n="regiment-u">Regiment</p>
         </div>
         <div class="sheet-item">
-          <select name="attr_regiment" class="advanceselect" style="width:210px; height:30px;text-align: center;">
+          <select name="attr_regiment" class="advanceselect" style="width: 210px; height: 30px; text-align: center">
             <option>Armageddon</option>
             <option>Cadia</option>
             <option>Krieg</option>
@@ -65,7 +74,7 @@
           <p data-i18n="class-u">Class</p>
         </div>
         <div class="sheet-item">
-          <select name="attr_class" class="advanceselect" style="width:210px; height:30px;">
+          <select name="attr_class" class="advanceselect" style="width: 210px; height: 30px">
             <option data-i18n="sargeant-u">[SRŻ] Sierżant</option>
             <option data-i18n="stormtrooper-u">[SZT] Szturmowiec</option>
             <option data-i18n="sharpshooter-u">[STR] Strzelec</option>
@@ -80,12 +89,24 @@
 
     <!-- Shots rolls : 1,2,3,5, custom -->
     <div class="sheet-shot-rolls">
-      <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
+      <div class="sheet-row" style="
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+        ">
         <h2 data-i18n="combat-u">Combat</h2>
       </div>
-      <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
+      <div class="sheet-row" style="
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+        ">
         <div class="sheet-item">
           <p data-i18n="weapon-u">Weapon</p>
         </div>
@@ -109,60 +130,67 @@
         </div>
       </div>
 
-      <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
+      <div class="sheet-row" style="
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+        ">
         <div class="sheet-item">
           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
-            alt="rifle_icon" style="height:60px; width:60px">
+            alt="rifle_icon" style="height: 60px; width: 60px" />
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button  type="action" name="act_button_shot_1" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button  type="action" name="act_button_shot_2" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button  type="action" name="act_button_shot_3" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button  type="action" name="act_button_shot_5" class="roll_button"></button>
         </div>
         <div class="sheet-item">
-          <button name="roll_shot1" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
-            type="roll"></button>
+          <input type="number" name="attr_shots" />
         </div>
-        <div class="sheet-item">
-          <button name="roll_shot2" value="/r 2d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
-            type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot3" value="/r 3d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
-            type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot5" value="/r 5d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
-            type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <input type="number" name="attr_shots">
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot" value="/r @{shots}d100cs<@{marksmanship}cf>@{marksmanship}<@{marksmanship} "
-            type="roll"></button>
+        <div class="sheet-item" style="height:63px;">
+          <button  type="action" name="act_button_shots" class="roll_button"></button>
         </div>
       </div>
 
-      <div class="sheet-row"
-        style="display: flex; align-content: center; justify-content: center; flex-wrap: nowrap; flex-direction: row; align-items: center;">
+      <div class="sheet-row" style="
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          flex-direction: row;
+          align-items: center;
+        ">
         <div class="sheet-item">
           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
-            alt="shotgun_icon" style="height:60px; width:60px">
+            alt="shotgun_icon" style="height: 60px; width: 60px" />
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button type="action" name="act_button_hit_1" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button type="action" name="act_button_hit_2" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button type="action" name="act_button_hit_3" class="roll_button"></button>
+        </div>
+        <div class="sheet-item" style="height:63px;">
+          <button type="action" name="act_button_hit_5" class="roll_button"></button>
         </div>
         <div class="sheet-item">
-          <button name="roll_shot1" value="/r 1d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+          <input type="number" name="attr_hits" />
         </div>
-        <div class="sheet-item">
-          <button name="roll_shot2" value="/r 2d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot3" value="/r 3d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot5" value="/r 5d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
-        </div>
-        <div class="sheet-item">
-          <input type="number" name="attr_hits">
-        </div>
-        <div class="sheet-item">
-          <button name="roll_shot" value="/r @{hits}d100cs<@{cqb}cf>@{cqb}<@{cqb} " type="roll"></button>
+        <div class="sheet-item" style="height:63px;">
+          <button type="action" name="act_button_hits" class="roll_button"></button>
         </div>
       </div>
     </div>
@@ -170,13 +198,21 @@
     <div class="sheet-extra-information">
       <div class="sheet-row">
         <div class="sheet-item">
-          <h2 data-i18n="extra-information-u" class="gear-u">Extra information</h2>
+          <h2 data-i18n="extra-information-u" class="gear-u">
+            Extra information
+          </h2>
         </div>
       </div>
 
       <div class="sheet-row">
         <div class="sheet-item">
-          <textarea name="attr_extra_information" style="height:357px; width: 200px; resize: none;"></textarea>
+          <textarea name="attr_extra_information" style="height: 357px; width: 100%; resize: none;	text-align:left;"></textarea>
+        </div>
+      </div>
+      <div class="sheet-row">
+        <div class="sheet-item">
+          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/stamp_classified.png"
+            alt="restricted_access" style="height: 150px" />
         </div>
       </div>
     </div>
@@ -195,22 +231,21 @@
             <h3 data-i18n="marksmanship-u">Marksmanship</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_marksmanship_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_marksmanship_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship" value="0" readonly>
+            <input type="number" name="attr_marksmanship" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_marksmanship" value="/r 1d100cs<@{marksmanship}cf>@{marksmanship}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;">
+            <button style="line-height:2em;" type="action" name="act_button_marksmanship" class="roll_button"></button>
           </div>
         </div>
       </div>
-
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
@@ -218,40 +253,40 @@
             <h3 data-i18n="cqb-u">cqb</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_cqb_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_cqb_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb" value="0" readonly>
+            <input type="number" name="attr_cqb" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_cqb" value="/r 1d100cs<@{cqb}cf>@{cqb}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;">
+            <button style="line-height:2em;" type="action" name="act_button_cqb" class="roll_button"></button>
           </div>
         </div>
       </div>
-
+      
       <div class="sheet-row">
         <div class="sheet-skill-item">
           <div class="sheet-skill-textname">
             <h3 data-i18n="strength-u">strength</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_strength_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_strength_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_strength_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_strength_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_strength" value="0" readonly>
+            <input type="number" name="attr_strength" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_strength" value="/r 1d100cs<@{strength}cf>@{strength}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;">
+            <button style="line-height:2em;" type="action" name="act_button_strength" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -262,18 +297,18 @@
             <h3 data-i18n="constitution-u">constitution</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_constitution_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_constitution_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_constitution_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_constitution_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_constitution" value="0" readonly>
+            <input type="number" name="attr_constitution" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_constitution" value="/r 1d100cs<@{constitution}cf>@{constitution}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;">
+            <button style="line-height:2em;" type="action" name="act_button_constitution" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -284,18 +319,18 @@
             <h3 data-i18n="agility-u">agility</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_agility_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_agility_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_agility_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_agility_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_agility" value="0" readonly>
+            <input type="number" name="attr_agility" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_agility" value="/r 1d100cs<@{agility}cf>@{agility}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;" >
+            <button  style="line-height:2em;" type="action" name="act_button_agility" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -306,49 +341,82 @@
             <h3 data-i18n="knowledge-u">knowledge</h3>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_knowledge_base" value="0" readonly>
-            <p> + </p>
+            <input type="number" name="attr_knowledge_base" value="0" readonly />
+            <p>+</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_knowledge_modifier" value="0">
-            <p> = </p>
+            <input type="number" name="attr_knowledge_modifier" value="0" />
+            <p>=</p>
           </div>
           <div class="sheet-skill-value">
-            <input type="number" name="attr_knowledge" value="0" readonly>
+            <input type="number" name="attr_knowledge" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll">
-            <button name="roll_knowledge" value="/r 1d100cs<@{knowledge}cf>@{knowledge}" type="roll"></button>
+          <div class="sheet-skill-roll" style="line-height:2em;" >
+            <button  style="line-height:2em;"  type="action" name="act_button_knowledge" class="roll_button"></button>
           </div>
         </div>
       </div>
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width:50%;">
-            <h3 data-i18n="health-points-u" style="text-align:right;">health-points</h3>
+          <div class="sheet-skill-textname" style="width: 50%">
+            <h3 data-i18n="initiative-u"  style="text-align: right">initiative</h3>
           </div>
-          <div class="sheet-skill-value" style="width: 33%;justify-content: flex-start;">
+          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
+            <button style="line-height:2em;" type="action" name="act_button_initiative" class="roll_button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-row">
+        <div class="sheet-skill-item">
+          <div class="sheet-skill-textname" style="width: 50%">
+            <h3 data-i18n="health-points-u" style="text-align: right">
+              health-points
+            </h3>
+          </div>
+          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
             <input type="number" name="attr_health-points_base" value="0" readonly />
           </div>
-
         </div>
       </div>
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width:50%;">
-            <h3 data-i18n="cash-u" style="text-align:right;"> Imperialne Trony </h3>
+          <div class="sheet-skill-textname" style="width: 50%">
+            <h3 data-i18n="cash-u" style="text-align: right">
+              Imperialne Trony
+            </h3>
           </div>
-          <div class="sheet-skill-value" style="width: 33%;justify-content: flex-start;">
-            <input type="number" name="attr_cash" value="10">
+          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
+            <input type="number" name="attr_cash" value="10" />
           </div>
         </div>
       </div>
+
+      <rolltemplate class="sheet-rolltemplate-test">
+        <div class="sheet-template-container">
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">{{character_name}}</h4>
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Test: {{test_name}}</h4>
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center; color:var(--TempestusGreen)" class="sheet-template-text">Poziom cechy: {{character_skill}}</h4>
+          <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+          <div style="padding:2px;" class="sheet-results">
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}} </h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll9}} {{computed::roll10}} {{computed::roll11}} {{computed::roll12}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll13}} {{computed::roll14}} {{computed::roll15}} {{computed::roll16}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll17}} {{computed::roll18}} {{computed::roll19}} {{computed::roll20}}</h4>
+           </div>
+           <div class="sheet-template-signature">
+           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
+            alt="restricted_access" style="height: 20px;" />
+          </div>
+        </div>
+      </rolltemplate>
     </div>
 
     <!-- Extra gear -->
     <div class="sheet-extra-gear">
-
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="extra-gear-u">Extra gear</h2>
@@ -366,10 +434,9 @@
       <div class="sheet-row">
         <div class="sheet-item">
           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/stamp_classified.png"
-            alt="restricted_access" style="height:150px;">
+            alt="restricted_access" style="height: 150px" />
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -381,7 +448,6 @@
   <div class="sheet-personal-grid">
     <!-- Rank -->
     <div class="sheet-rank">
-
       <div class="sheet-row">
         <div class="sheet-item">
           <h2 data-i18n="rank-u">Stopień wojskowy</h2>
@@ -391,7 +457,7 @@
       <div class="sheet-row">
         <div class="sheet-item">
           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/stamp_classified.png"
-            alt="restricted_access" style="height:150px;">
+            alt="restricted_access" style="height: 150px" />
         </div>
       </div>
     </div>
@@ -400,14 +466,18 @@
     <div class="sheet-head-and-body">
       <div class="sheet-row">
         <div class="sheet-item">
-          <h2 data-i18n="head-and-body-u" class="head-and-body-u">Head and body</h2>
+          <h2 data-i18n="head-and-body-u" class="head-and-body-u">
+            Head and body
+          </h2>
         </div>
       </div>
+    <!-- REMOVE THIS TEXT -->
       {{ FACE }}
       {{ TATOO }}
       {{ AUGMENTICS }}
       {{ FACIAL_HAIR }}
       {{ HAIRSTYLE }}
+    <!-- END: REMOVE THIS TEXT -->
     </div>
 
     <!-- Clothing -->
@@ -417,6 +487,7 @@
           <h2 data-i18n="clothing-u" class="head-and-body-u">Clothing</h2>
         </div>
       </div>
+    <!-- REMOVE THIS TEXT -->
       {{ BOOTS }}
       {{ PANTS }}
       {{ LEG_ARMOR }}
@@ -425,6 +496,7 @@
       {{ CHEST }}
       {{ SHOULDERS }}
       {{ HELMET }}
+    <!-- END: REMOVE THIS TEXT -->
     </div>
 
     <!-- Armor points -->
@@ -437,10 +509,9 @@
         <div class="sheet-row">
           <div class="sheet-item">
             <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/stamp_classified.png"
-              alt="restricted_access" style="height:150px;">
+              alt="restricted_access" style="height: 150px" />
           </div>
         </div>
-
       </div>
     </div>
 
@@ -451,6 +522,7 @@
           <h2 data-i18n="gear-u" class="gear-u">Gear</h2>
         </div>
       </div>
+      <!-- REMOVE THIS TEXT -->
       {{ BACKPACK}}
       {{ CLOAK }}
       {{ SHEATHED_WEAPON}}
@@ -462,68 +534,68 @@
       {{ MASK }}
       {{ FIREARM }}
       {{ PISTOL }}
+      <!-- END: REMOVE THIS TEXT -->
     </div>
-
   </div>
 </div>
-
 
 <!-- Aquila -->
 <div class="sheet-footer">
   <div class="sheet-row">
     <div class="sheet-item">
       <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/aquila.png" alt="aquila"
-        style="height:100px">
+        style="height: 100px" />
     </div>
     <div class="sheet-item">
       <h4>"Jedyną rozumną odpowiedzią na obecność Xenos jest nienawiść"</h4>
     </div>
     <div class="sheet-item">
-      <h5> - Wersety Macrologica 17.4</h5>
+      <h5>- Wersety Macrologica 17.4</h5>
     </div>
   </div>
+
+
 </div>
+
 
 <!-- Manage tabs -->
 <script type="text/worker">
-    const buttonlist = ["entrypoint","personal"];
-    buttonlist.forEach(button => {
-        on(`clicked:${button}`, function() {
-            setAttrs({
-                sheetTab: button
-            });
-        });
-    });
+  const buttonlist = ["entrypoint","personal"];
+  buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+          setAttrs({
+              sheetTab: button
+          });
+      });
+  });
 </script>
 
 <!-- Update total skill value if modifier changes -->
 <script type="text/worker">
-const int = score => parseInt(score, 10) || 0;
+  const int = score => parseInt(score, 10) || 0;
 
-const a_regiment = "regiment";
-const a_class = "class";
+  const a_regiment = "regiment";
+  const a_class = "class";
 
-var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
-var stat_mod = stat.map(i => i + "_modifier");
-var stat_base = stat.map(i => i + "_base");
+  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+  var stat_mod = stat.map(i => i + "_modifier");
+  var stat_base = stat.map(i => i + "_base");
 
-for (let i = 0; i < stat.length ; i++) {
-  on(`change:${stat_mod[i]}`, () => {
-    getAttrs([stat_base[i],stat_mod[i]], values => {
-        let v_base = int(values[stat_base[i]]);
-        console.log(v_base);
-        let v_mod = int(values[stat_mod[i]]);
-        console.log(v_mod);
-        let v = v_base + v_mod
-        console.log(v)
-        setAttrs({
-            [`${stat[i]}`]: v
-        });
+  for (let i = 0; i < stat.length ; i++) {
+    on(`change:${stat_mod[i]}`, () => {
+      getAttrs([stat_base[i],stat_mod[i]], values => {
+          let v_base = int(values[stat_base[i]]);
+          console.log(v_base);
+          let v_mod = int(values[stat_mod[i]]);
+          console.log(v_mod);
+          let v = v_base + v_mod
+          console.log(v)
+          setAttrs({
+              [`${stat[i]}`]: v
+          });
+      });
     });
-  });
-} 
-
-
+  }
 </script>
 
 <!-- Update base skill value if class or regiment changes -->
@@ -635,8 +707,8 @@ for (let i = 0; i < stat.length ; i++) {
       let agility_value = BASE_AGILITY + agility_regiment_bonus + agility_class_bonus;
       let knowledge_value = BASE_KNOWLEDGE + knowledge_regiment_bonus + knowledge_class_bonus;
       let hp_value = BASE_HP + hp_regiment_bonus + hp_class_bonus;
-  
-     
+
+
       console.log(marksmanship_value);
       console.log(cqb_value);
       console.log(strength_value);
@@ -644,7 +716,7 @@ for (let i = 0; i < stat.length ; i++) {
       console.log(agility_value);
       console.log(knowledge_value);
       console.log(hp_value);
-      
+
       setAttrs({
         [`${a_marksmanship_base}`]: marksmanship_value,
       });
@@ -658,5 +730,353 @@ for (let i = 0; i < stat.length ; i++) {
 
     });
   });
+</script>
 
+
+<script type="text/worker">
+  on('clicked:button_hits', (info) => {    
+      getAttrs(["hits"], function(values) {
+          var l_hits = values.hits;
+          var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+          var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+          for (let i = 1; i <= l_hits; i++) {
+            roll_text += "{{" +"roll" + i + h_content +"}}";
+          }
+          startRoll( roll_text, (results) => {
+              console.log(results);
+              finishRoll(
+                  results.rollId,
+                  {
+                  }
+              );
+          });
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_hit_5', (info) => {    
+      var l_hits = 5;
+      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_hit_3', (info) => {    
+      var l_hits = 3;
+      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_hit_2', (info) => {    
+      var l_hits = 2;
+      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_hit_1', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_shots', (info) => {    
+      getAttrs(["shots"], function(values) {
+          var l_hits = values.shots;
+          var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+          var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+          for (let i = 1; i <= l_hits; i++) {
+            roll_text += "{{" +"roll" + i + h_content +"}}";
+          }
+          startRoll( roll_text, (results) => {
+              console.log(results);
+              finishRoll(
+                  results.rollId,
+                  {
+                  }
+              );
+          });
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_shot_5', (info) => {    
+      var l_hits = 5;
+      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_shot_3', (info) => {    
+      var l_hits = 3;
+      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_shot_2', (info) => {    
+      var l_hits = 2;
+      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_shot_1', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<!-- Individual stats -->
+
+<script type="text/worker">
+  on('clicked:button_marksmanship', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_cqb', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_strength', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Siła}} {{character_skill=@{strength}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{strength}cf>@{strength}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_constitution', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Wytrzymałość}} {{character_skill=@{constitution}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{constitution}cf>@{constitution}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_constitution', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Wytrzymałość}} {{character_skill=@{constitution}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{constitution}cf>@{constitution}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_agility', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Zwinność}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{agility}cf>@{agility}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_knowledge', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Wiedza}} {{character_skill=@{knowledge}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[1d100cs<@{knowledge}cf>@{knowledge}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
+</script>
+
+<script type="text/worker">
+  on('clicked:button_initiative', (info) => {    
+      var l_hits = 1;
+      var roll_text = "&{template:test} {{test_name=Inicjatywa}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
+      var h_content = "=[[2d20cs>0+@{agility}]]";
+      for (let i = 1; i <= l_hits; i++) {
+        roll_text += "{{" +"roll" + i + h_content +"}}";
+      }
+      startRoll( roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {
+              }
+          );
+      });
+  });
 </script>
