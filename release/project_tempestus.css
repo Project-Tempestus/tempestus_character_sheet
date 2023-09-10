@@ -326,8 +326,8 @@ div.sheet-navigation-tabs{
 }
 .sheet-rolltemplate-test .inlinerollresult.importantroll {
 	border: 2px solid rgb(17, 192, 17);
-	background-color:rgb(17, 192, 17) !important;
-	color: black !important;
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
 	font-family: 'Courier New';
 	width: 28px;
 }
