@@ -47,13 +47,19 @@ jobs:
           name: character-sheet-artifact
           path: ${{ github.workspace}}/release
 
-      - name: zip release
+      - name: Zip release
         run: |
           zip -r character_sheet-release-latest.zip release
+
+      - name: Date
+        id: date
+        run: |
+          REL_DATE=`date +%Y-%m-%d`
+          echo "REL_DATE=$REL_DATE" | tee "$GITHUB_OUTPUT"
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: latest
+          tag_name: latest-${{ steps.date.outputs.REL_DATE }}
           files: |
             ${{ github.workspace}}/character_sheet-release-latest.zip
