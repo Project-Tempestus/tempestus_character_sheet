@@ -379,3 +379,22 @@ button[type=action].roll_button::before {
 	background-color:black;
 	border:none;
 }
+
+#extra-gear-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.charsheet button.repcontrol_edit, .charsheet button.repcontrol_add {
+	font-family: "Courier New";
+	color: var(--TempestusGreen);
+	background-color: black;
+	border: 1px solid var(--TempestusGreen);
+	background-image: var(--TempestusGreen);
+	text-shadow: none;
+	margin: 5px;
+  }
+
+.ui-dialog .charsheet .repcontainer .repitem {
+margin: 5px;
+}
