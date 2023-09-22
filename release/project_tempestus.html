@@ -71,60 +71,130 @@
       <div class="sheet-item">
         <h2 data-i18n="soldier-particulars-u">Soldier's Particulars</h2>
       </div>
-      <div class="sheet-row" style="display: flex">
-        <div class="sheet-item">
-          <p data-i18n="name-u">Name</p>
-        </div>
-        <div class="sheet-item">
-          <textarea
-            name="attr_name"
-            style="width: 200px; height: 20px; resize: none; text-align: center"
-          ></textarea>
-        </div>
-        <div class="sheet-item">
-          <p data-i18n="surname-u">Surname</p>
-        </div>
-        <div class="sheet-item">
-          <textarea
-            name="attr_surname"
-            style="width: 200px; height: 20px; resize: none; text-align: center"
-          ></textarea>
-        </div>
-      </div>
+      <div style="display: flex">
+        <div style="width: 60%">
+          <div class="sheet-row" style="display: flex">
+            <div class="sheet-item">
+              <p data-i18n="name-u">Name</p>
+            </div>
+            <div class="sheet-item">
+              <textarea
+                name="attr_name"
+                style="
+                  width: 200px;
+                  height: 20px;
+                  resize: none;
+                  text-align: center;
+                "
+              ></textarea>
+            </div>
+          </div>
+          <div class="sheet-row" style="display: flex">
+            <div class="sheet-item">
+              <p data-i18n="surname-u">Surname</p>
+            </div>
+            <div class="sheet-item">
+              <textarea
+                name="attr_surname"
+                style="
+                  width: 200px;
+                  height: 20px;
+                  resize: none;
+                  text-align: center;
+                "
+              ></textarea>
+            </div>
+          </div>
 
-      <div class="sheet-row" style="display: flex">
-        <div class="sheet-item">
-          <p data-i18n="regiment-u">Regiment</p>
+          <div class="sheet-row" style="display: flex">
+            <div class="sheet-item">
+              <p data-i18n="regiment-u">Regiment</p>
+            </div>
+            <div class="sheet-item">
+              <select
+                name="attr_regiment"
+                class="advanceselect"
+                style="width: 210px; height: 30px; text-align: center"
+              >
+                <option>Armageddon</option>
+                <option>Cadia</option>
+                <option>Krieg</option>
+                <option>Vostroya</option>
+              </select>
+            </div>
+          </div>
+          <div class="sheet-row" style="display: flex">
+            <div class="sheet-item">
+              <p data-i18n="class-u">Class</p>
+            </div>
+            <div class="sheet-item">
+              <select
+                name="attr_class"
+                class="advanceselect"
+                style="width: 210px; height: 30px"
+              >
+                <option data-i18n="sargeant-u">[SRŻ] Sierżant</option>
+                <option data-i18n="stormtrooper-u">[SZT] Szturmowiec</option>
+                <option data-i18n="sharpshooter-u">[STR] Strzelec</option>
+                <option data-i18n="grenadier-u">[GRE] Grenadier</option>
+                <option data-i18n="engineer-u">[INŻ] Inżynier</option>
+                <option data-i18n="scout-u">[ZWD] Zwiadowca</option>
+                <option data-i18n="chirurgeon-u">[CHR] Chirurgon</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="sheet-item">
-          <select
-            name="attr_regiment"
-            class="advanceselect"
-            style="width: 210px; height: 30px; text-align: center"
-          >
-            <option>Armageddon</option>
-            <option>Cadia</option>
-            <option>Krieg</option>
-            <option>Vostroya</option>
-          </select>
-        </div>
-        <div class="sheet-item">
-          <p data-i18n="class-u">Class</p>
-        </div>
-        <div class="sheet-item">
-          <select
-            name="attr_class"
-            class="advanceselect"
-            style="width: 210px; height: 30px"
-          >
-            <option data-i18n="sargeant-u">[SRŻ] Sierżant</option>
-            <option data-i18n="stormtrooper-u">[SZT] Szturmowiec</option>
-            <option data-i18n="sharpshooter-u">[STR] Strzelec</option>
-            <option data-i18n="grenadier-u">[GRE] Grenadier</option>
-            <option data-i18n="engineer-u">[INŻ] Inżynier</option>
-            <option data-i18n="scout-u">[ZWD] Zwiadowca</option>
-            <option data-i18n="chirurgeon-u">[CHR] Chirurgon</option>
-          </select>
+        <div style="width: 40%">
+          <div class="sheet-row">
+            <div
+              class="sheet-item"
+              style="justify-content: center; margin: 5px"
+            >
+              <button
+                type="action"
+                name="act_rank_demotion"
+                class="rank-button"
+                style="
+                  margin: 5px;
+                  margin-top: 45px;
+                  transform: rotate(-225deg);
+                  -webkit-transform: rotate(-225deg);
+                "
+              ></button>
+              <img
+                name="attr_current_rank"
+                alt="rank_404"
+                style="height: 120px; margin: 5px"
+              />
+              <button
+                type="action"
+                name="act_rank_promotion"
+                class="rank-button"
+                style="
+                  margin: 5px;
+                  margin-top: 45px;
+                  transform: rotate(-315deg);
+                  -webkit-transform: rotate(315deg);
+                "
+              ></button>
+            </div>
+            <div
+              class="sheet-item"
+              style="justify-content: center; margin: 5px"
+            >
+              <input
+                readonly
+                name="attr_current_rank_name"
+                value="Gwardzista"
+                style="
+                  border: 0px;
+                  font-family: &quot;Courier New&quot;;
+                  font-size: large;
+                  font-weight: 600;
+                "
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -715,25 +785,6 @@
 <!-- /////// -->
 <div class="sheet-personal">
   <div class="sheet-personal-grid">
-    <!-- Rank -->
-    <div class="sheet-rank">
-      <div class="sheet-row">
-        <div class="sheet-item">
-          <h2 data-i18n="rank-u">Stopień wojskowy</h2>
-        </div>
-      </div>
-
-      <div class="sheet-row">
-        <div class="sheet-item">
-          <img
-            src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/stamp_classified.png"
-            alt="restricted_access"
-            style="height: 150px"
-          />
-        </div>
-      </div>
-    </div>
-
     <!-- Head and body -->
     <div class="sheet-head-and-body">
       <div class="sheet-row">
@@ -2041,5 +2092,205 @@
               }
           );
       });
+  });
+</script>
+
+<!-- Rank system -->
+
+<script type="text/worker">
+  const buttonlist = ["rank_promotion"];
+  const a_current_rank= "current_rank";
+  const a_current_rank_name= "current_rank_name";
+
+  const rankURLlist = [
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
+  ];
+  const rankNames = [
+    "Gwardzista",
+    "Starszy Gwardzista",
+    "Kapral",
+    "Starszy Kapral",
+    "Plutonowy",
+    "Starszy Plutonowy",
+    "Sierżant",
+    "Starszy Sierżant",
+    "Sierżant Sztabowy",
+    "Podchorąży",
+    "Chorąży",
+    "Podporucznik",
+    "Porucznik",
+  ]
+
+  const num_ranks = rankNames.length;
+
+  buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+        getAttrs([a_current_rank], values => {
+
+          curr_url = values[a_current_rank];
+          console.log("Current URL");
+          console.log(curr_url);
+
+          curr_index = rankURLlist.findIndex((element) => element == curr_url);
+          console.log("Current index");
+          console.log(curr_index);
+
+          if (curr_index ==  (num_ranks-1)) {
+            new_index = 0;
+          } else {
+            new_index = curr_index + 1;
+          }
+
+          console.log("New index");
+          console.log(new_index);
+
+          new_url = rankURLlist[new_index];
+          console.log("New URL");
+          console.log(new_url);
+
+          new_rank_name = rankNames[new_index];
+          setAttrs({ [`${a_current_rank}`]: new_url});
+          setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
+        });
+      });
+  });
+</script>
+
+<script type="text/worker">
+  const buttonlist = ["rank_demotion"];
+  const a_current_rank= "current_rank";
+  const a_current_rank_name= "current_rank_name";
+
+  const rankURLlist = [
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
+  ];
+  const rankNames = [
+    "Gwardzista",
+    "Starszy Gwardzista",
+    "Kapral",
+    "Starszy Kapral",
+    "Plutonowy",
+    "Starszy Plutonowy",
+    "Sierżant",
+    "Starszy Sierżant",
+    "Sierżant Sztabowy",
+    "Podchorąży",
+    "Chorąży",
+    "Podporucznik",
+    "Porucznik",
+  ]
+
+  const num_ranks = rankNames.length;
+
+  buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+        getAttrs([a_current_rank], values => {
+
+          curr_url = values[a_current_rank];
+          console.log("Current URL");
+          console.log(curr_url);
+
+          curr_index = rankURLlist.findIndex((element) => element == curr_url);
+          console.log("Current index");
+          console.log(curr_index);
+
+          if (curr_index ==  0 ) {
+            new_index = num_ranks - 1;
+          } else {
+            new_index = curr_index - 1;
+          }
+
+          console.log("New index");
+          console.log(new_index);
+
+          new_url = rankURLlist[new_index];
+          console.log("New URL");
+          console.log(new_url);
+
+          new_rank_name = rankNames[new_index];
+          setAttrs({ [`${a_current_rank}`]: new_url});
+          setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
+        });
+      });
+  });
+</script>
+
+<script type="text/worker">
+  const a_current_rank= "current_rank";
+  const a_current_rank_name= "current_rank_name";
+
+  const rankURLlist = [
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
+    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
+  ];
+  const rankNames = [
+    "Gwardzista",
+    "Starszy Gwardzista",
+    "Kapral",
+    "Starszy Kapral",
+    "Plutonowy",
+    "Starszy Plutonowy",
+    "Sierżant",
+    "Starszy Sierżant",
+    "Sierżant Sztabowy",
+    "Podchorąży",
+    "Chorąży",
+    "Podporucznik",
+    "Porucznik",
+  ]
+
+  const num_ranks = rankNames.length;
+
+  on(`sheet:opened`, function() {
+    getAttrs([a_current_rank], values => {
+      curr_url = values[a_current_rank];
+      curr_index = rankURLlist.findIndex((element) => element == curr_url);
+
+      if (curr_index ==  -1 ) {
+        new_index = 0;
+        new_url = rankURLlist[new_index];
+        console.log("New URL");
+        console.log(new_url);
+
+        new_rank_name = rankNames[new_index];
+        setAttrs({ [`${a_current_rank}`]: new_url});
+        setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
+      }
+    });
   });
 </script>

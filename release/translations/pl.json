@@ -318,5 +318,8 @@
 
   "uniform-color-u": "Barwa munduru",
   "skin-color-u": "Karnacja skóry",
-  "hair-color-u": "Kolor włosów"
+  "hair-color-u": "Kolor włosów",
+
+  "demotion-u": "Degradacja",
+  "promotion-u": "Promocja"
 }
