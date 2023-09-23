@@ -435,3 +435,45 @@ button[type=action].roll_button::before {
 	margin: 5px;
 	font-family: 'Courier New';
 }
+
+/* Armor points */
+
+div.sheet-item-armor-trio-left{
+	width:25%;
+}
+
+div.sheet-item-armor-trio-mid{
+	width:50%;
+}
+
+div.sheet-item-armor-trio-right{
+	width:25%;
+}
+
+
+div.sheet-item-armor-duo-left{
+	width:50%;
+}
+
+div.sheet-item-armor-duo-right{
+	width:16%;
+}
+
+textarea.sheet-item-armor-text{
+	width: 48px;
+	height: 24px;
+	resize: none;
+}
+
+div.sheet-item-armor-trio-mid > *,
+div.sheet-item-armor-duo-right > *,
+div.sheet-item-armor-duo-left > *,
+div.sheet-item-armor-trio-left > *,
+div.sheet-item-armor-trio-right > *{
+	padding: 2px;
+	margin: 0px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 21px;
+    height: 21px;
+}
