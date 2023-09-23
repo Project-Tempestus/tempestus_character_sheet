@@ -432,5 +432,6 @@ button[type=action].roll_button::before {
   }
 
 .ui-dialog .charsheet .repcontainer .repitem {
-margin: 5px;
+	margin: 5px;
+	font-family: 'Courier New';
 }
