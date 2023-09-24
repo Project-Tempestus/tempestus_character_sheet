@@ -1235,25 +1235,6 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_constitution', (info) => {    
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Wytrzymałość}} {{character_skill=@{constitution}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{constitution}cf>@{constitution}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
   on('clicked:button_agility', (info) => {    
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Zwinność}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
