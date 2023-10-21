@@ -1816,7 +1816,7 @@
   const a_knowledge_base = "knowledge_base";
   const a_hp_base = "health-points_base";
 
-  const BASE_MARKSMANSHIP = 10;
+  const BASE_MARKSMANSHIP = 15;
   const BASE_CQB = 40;
   const BASE_STRENGTH = 40;
   const BASE_constitution = 40;
@@ -1854,8 +1854,9 @@
           agility_regiment_bonus = 10;
           knowledge_regiment_bonus = 30;
       } else if (v_regiment == "Vostroya") {
-          constitution_regiment_bonus = 15;
-          hp_regiment_bonus = 20;
+          constitution_regiment_bonus = 10;
+          strength_regiment_bonus = 10;
+          hp_regiment_bonus = 30;
       } else {
           marksmanship_regiment_bonus = 0;
           cqb_regiment_bonus = 0;
@@ -1889,7 +1890,7 @@
           agility_class_bonus = 30;
           knowledge_class_bonus = 10;
       } else if (v_class == "[STR] Strzelec") {
-          marksmanship_class_bonus = 10;
+          marksmanship_class_bonus = 5;
       } else if (v_class == "[SZT] Szturmowiec") {
           cqb_class_bonus = 15;
           agility_class_bonus = 15;
