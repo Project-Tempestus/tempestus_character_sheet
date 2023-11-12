@@ -2,12 +2,12 @@ ITEM_NAME: shirt
 ITEM_NAME_TEXT: Koszula
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - ["Cadiańska Tunika z podwiniętymi rękawami",[""],[""]]
- - ["Cadiańska Tunika bez rękawów",[""],[""]]
- - ["Cadiańska Tunika",[""],[""]]
+ - ["Cadiańska Tunika z podwiniętymi rękawami",[""],["CADIA"]]
+ - ["Cadiańska Tunika bez rękawów",[""],["CADIA"]]
+ - ["Cadiańska Tunika",[""],["CADIA"]]
  - ["Płaszcz Stalowego Legionu",[""],[""]]
- - ["Kriegański Trencz",[""],[""]]
- - ["Vostroyański Płaszcz",[""],[""]]
+ - ["Kriegański Trencz",[""],["KRIEG"]]
+ - ["Vostroyański Płaszcz",[""],["VOSTROYA"]]
  - ["Tank Top",[""],[""]]
  - ["Gwardyjska Tunika",[""],[""]]
  - ["Skórzana Kurta",[""],[""]]
