@@ -1,0 +1,11 @@
+ITEM_NAME: additional_headgear
+ITEM_NAME_TEXT: Dodatkowy headgear
+INCLUDE_NONE: 1
+ITEM_OPTIONS:
+ - ["1T - Zestaw Vox", [""], [""]]
+ - ["1T - Maska Przeciwgazowa", [""], [""]]
+ - ["1T - Maska p.gaz. wz. Armageddon", [""], [""]]
+ - ["1T - Maska p.gaz. wz. Cadia", [""], [""]]
+ - ["Shemagh", [""], [""]]
+ - ["Balaclava", [""], [""]]
+ - ["Uniesiona Chusta", [""], [""]]

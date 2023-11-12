@@ -2,8 +2,8 @@ ITEM_NAME: mask
 ITEM_NAME_TEXT: Maska
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "1T - Maska Vostroyańska"
- - "[SZT] 1T - Maska Szturmowa"
- - "[GRE] Maska p.gaz. wz. Krieg"
- - "[INŻ] Maska p.gaz. wz. Krieg"
- - "Maska p.gaz. wz. Krieg"
+ - ["1T - Maska Vostroyańska", [""], [""]]
+ - ["[SZT] 1T - Maska Szturmowa", [""], [""]]
+ - ["[GRE] Maska p.gaz. wz. Krieg", [""], [""]]
+ - ["[INŻ] Maska p.gaz. wz. Krieg", [""], [""]]
+ - ["Maska p.gaz. wz. Krieg", [""], [""]]

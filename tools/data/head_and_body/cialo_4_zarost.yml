@@ -2,11 +2,11 @@ ITEM_NAME: facial_hair
 ITEM_NAME_TEXT: Zarost
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "Broda"
- - "Wąs"
- - "Bokobrody"
- - "Broda Vostroyańska"
- - "Jednodniowy"
- - "Broda Kurtynowa"
- - "Admiralski Wąs"
- - "Dłuższa Broda"
+ - ["Broda", [""], [""]]
+ - ["Wąs", [""], [""]]
+ - ["Bokobrody", [""], [""]]
+ - ["Broda Vostroyańska", [""], [""]]
+ - ["Jednodniowy", [""], [""]]
+ - ["Broda Kurtynowa", [""], [""]]
+ - ["Admiralski Wąs", [""], [""]]
+ - ["Dłuższa Broda", [""], [""]]

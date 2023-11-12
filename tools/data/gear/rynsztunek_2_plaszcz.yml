@@ -2,5 +2,5 @@ ITEM_NAME: cloak
 ITEM_NAME_TEXT: Płaszcz
 INCLUDE_NONE: 1 
 ITEM_OPTIONS:
- - "1T - Płaszcz Kamuflujący"
- - "Poszarpany Płaszcz"
+ - ["1T - Płaszcz Kamuflujący", [""], [""]]
+ - ["Poszarpany Płaszcz", [""], [""]]
