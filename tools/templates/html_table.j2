@@ -1,0 +1,19 @@
+{# templates/html_table.j2 #}
+
+<table id="{{ ITEM_NAME }}">
+  <caption> {{ITEM_NAME_TEXT}} </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Klasy</th>
+    <th>Regimenty</th>
+  </tr>
+  {% for ID in range(ITEM_OPTIONS_LEN) -%}
+  <tr>
+  <td>{{ID}}</td>
+  <td>{{ITEM_OPTIONS[ID][0]}}</td>
+  <td>{{ITEM_OPTIONS[ID][1]}}</td>
+  <td>{{ITEM_OPTIONS[ID][2]}}</td>
+  </tr>
+  {% endfor %}
+</table> 

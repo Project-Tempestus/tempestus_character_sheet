@@ -1,0 +1,11 @@
+{# templates/csvtable.j2 #}
+
+
+.. csv-table:: "{{ITEM_NAME_TEXT}}"
+    :header: "L.p.","Przedmiot"
+    :widths: 15, 45
+    
+    {% for ID in range(ITEM_OPTIONS_LEN) -%}
+    {{ID}},"{{ITEM_OPTIONS[ID]}}"
+    {% endfor %}
+   

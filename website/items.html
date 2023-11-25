@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<head>
+    <script src="js/items.js"></script>
+</head>
+
+<div style="display:flex;margin: 20px;">
+  <div style="margin: 10px;">
+    <p> Wybierz regimenty </p>
+    <input type="checkbox" id="regiment_0" value="">
+    <label for="regiment_0"> Armageddon </label><br>
+    <input type="checkbox" id="regiment_1" value="">
+    <label for="regiment_1"> Cadia </label><br>
+    <input type="checkbox" id="regiment_2" value="">
+    <label for="regiment_2"> Krieg </label><br>
+    <input type="checkbox" id="regiment_3" value="">
+    <label for="regiment_3"> Vostroya </label><br>
+  </div> 
+
+  <div style="margin: 10px;">
+    <p> Wybierz klasy </p>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Chirurgon </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Inżynier </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Grenadier </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Sierżant </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Zwiadowca </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Strzelec </label><br>
+    <input type="checkbox" id="class_0" value="">
+    <label for="class_0"> Szturmowiec </label><br>
+  </div>
+
+  <div style="margin: 10px;">
+    <p>Dodatkowe opcje</p>
+    <input type="checkbox" id="config_0" value="">
+    <label for="config_0"> Pokazuj przedmioty dostępne dla wszystkich </label><br>
+    <input type="checkbox" id="config_1" value="">
+    <label for="config_1"> Pokazuj "Ciało" (Twarz, Tatuże, etc.) </label><br>
+  </div>
+</div>
+
+<body>
+    
+
+<table id="face">
+  <caption> Twarz </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>M - Marcus</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>M - Varn</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>M - Jimm</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>M - Adrian</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>M - Gunter</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>M - Lee</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>M - Olgierd</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>M - Ralph</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>M - Sean</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>M - Redvald</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>M - Paul</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>11</td>
+  <td>M - Dane</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>12</td>
+  <td>M - Larry</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>13</td>
+  <td>M - Joshua</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>14</td>
+  <td>M - George</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>15</td>
+  <td>M - Leonard</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>16</td>
+  <td>M - Will</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>17</td>
+  <td>F - Erma</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>18</td>
+  <td>F - Astrid</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>19</td>
+  <td>F - Helga</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>20</td>
+  <td>F - Kate</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>21</td>
+  <td>F - Laura</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>22</td>
+  <td>F - Linda</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>23</td>
+  <td>F - Martha</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>24</td>
+  <td>F - Sayan</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>25</td>
+  <td>F - Solveig</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>26</td>
+  <td>F - Lara</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>27</td>
+  <td>F - Mia</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>28</td>
+  <td>F - Juliet</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>29</td>
+  <td>F - Lisa</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>30</td>
+  <td>F - Pak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>31</td>
+  <td>F - Sarah</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>32</td>
+  <td>F - Alice</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="tatoo">
+  <caption> Tatuaże </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>Czaszka</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Kamuflaż</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Nordycki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Gwardia</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Geometria</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Bandyta</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Brud</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Tribal</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Gładki Wzór</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>Okręgi</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>Celtycki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="augmentics">
+  <caption> Augmentacje </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>2T - Bioniczna Ręka</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>3T - Bioniczne Ręce</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="facial_hair">
+  <caption> Zarost </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>Broda</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Wąs</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Bokobrody</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Broda Vostroyańska</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Jednodniowy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Broda Kurtynowa</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Admiralski Wąs</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Dłuższa Broda</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="hairstyle">
+  <caption> Włosy </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>M - Przedziałek</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>M - Dłuższe Końcówki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>M - Irokez</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>M - Jeż</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>M - Garnek</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>M - Podcięty Garnek</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>M - Wybuch</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>M - Boczny</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>M - Długie</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>M - Zaczesane</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>M - Kapłańskie</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>11</td>
+  <td>M - Kucyk</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>12</td>
+  <td>F - Bob</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>13</td>
+  <td>F - Chłopięcy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>14</td>
+  <td>F - Warkocz</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>15</td>
+  <td>F - Jeż</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>16</td>
+  <td>F - Przyjaciółka z Dzieciństwa</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>17</td>
+  <td>F - Dredy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>18</td>
+  <td>F - Kucyk</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>19</td>
+  <td>F - Irokez</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>20</td>
+  <td>F - Adepta Sororitas</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>21</td>
+  <td>F - Proste Długie</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>22</td>
+  <td>F - Proste</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>23</td>
+  <td>F - Zaczesane</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="boots">
+  <caption> Obuwie </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Cadiańskie Buty</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>2T - Szturmówki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Kriegańskie Okopówki</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Trapery Armageddońskie</td>
+  <td>['']</td>
+  <td>['ARMAGEDDON']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Wysokie Trzewiki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Chromówki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Kamasze</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Wysokie Skórzane Buty</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="pants">
+  <caption> Spodnie </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>Spodnie Mundurowe Standardowe</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Spodnie Mundurowe Wąskie</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Spodnie Mundurowe Krótsze</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Spodnie Cywilne Opuszczone</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Spodnie Cywilne Wąskie</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="leg_armor">
+  <caption> Pancerz na nogi </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Cadiańskie Ochraniacze</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>2T - Ochraniacze Flak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[GRE] 2T - Nagolenniki Grenadierów</td>
+  <td>['GRE']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>[ZWD] 2T - Pancerz Zwiadowczy</td>
+  <td>['ZWD']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="shirt">
+  <caption> Koszula </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>Cadiańska Tunika z podwiniętymi rękawami</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Cadiańska Tunika bez rękawów</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Cadiańska Tunika</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Płaszcz Stalowego Legionu</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Kriegański Trencz</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Vostroyański Płaszcz</td>
+  <td>['']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Tank Top</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Gwardyjska Tunika</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Skórzana Kurta</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="gloves">
+  <caption> Rękawice </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>2T - Wzmocnione Rękawice</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>[WET] / [SRŻ] - 2T Vostroyańskie Rękawice Płytowe</td>
+  <td>['WET', 'SRŻ']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[GRE] 1T - Rękawice Grenadierów</td>
+  <td>['GRE']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>[INŻ] 1T - Rękawice z panelem technicznym</td>
+  <td>['INŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>[CHR] 2T - Narthecium</td>
+  <td>['CHR']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Skórzane Rękawiczki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Rękawiczki bez palców</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Rękawice Czołgistów</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Pasy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="chest">
+  <caption> Klatka piersiowa </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>2T - Pancerz Flak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>4T - Ciężki Pancerz Flak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[SRŻ] 2T - Kirys Oficerski</td>
+  <td>['SRŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>[WET] / [SRŻ]  2T - Vostroyański Ryngraf</td>
+  <td>['WET', 'SRŻ']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>[SZT] 4T - Zbroja Szturmowca</td>
+  <td>['SZT']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>[INŻ] 4T - Zbroja Kriegańskich Inżynierów</td>
+  <td>['INŻ']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>[GRE] 3T - Zbroja Kriegańskiego Grenadiera</td>
+  <td>['GRE']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Rozpięta Kamizela</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Zapięta Kamizela</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>Pilotka</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="shoulders">
+  <caption> Naramienniki </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Patki Czołgistów</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>2T - Flak Naramienniki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>1T - Osłony Kriegańskie</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>[SZT] 1T - Szturmowe Pagony</td>
+  <td>['SZT']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>[WET] / [SRŻ]  2T - Vostroyański Epolet</td>
+  <td>['WET', 'SRŻ']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki</td>
+  <td>['INŻ']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Cadiańskie Galony</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Naszywki Lotnicze</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="helmet">
+  <caption> Nakrycie głowy </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>2T - Hełm wz. Cadia</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>[CHR] 2T - Hełm Sanitariusza </td>
+  <td>['CHR']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[SRŻ] 2T Vox-Hełm wz. Cadia </td>
+  <td>['SRŻ']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>4T  - Hełm Czołgisty</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>2T - Hełm wz. Armageddon</td>
+  <td>['']</td>
+  <td>['ARMAGEDDON']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>2T - Hełm wz. Krieg</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>[GRE] 2T - Hełm Grenadiera wz. Krieg</td>
+  <td>['GRE']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>[SRŻ] 2T - Hełm Oficerski wz. Krieg</td>
+  <td>['SRŻ']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>1T - Futrzany Hełm Vostroyański</td>
+  <td>['']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>[SZT] 2T - Hełm Szturmowy</td>
+  <td>['SZT']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>1T - Komunikator Vox</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>11</td>
+  <td>Beret</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>12</td>
+  <td>Gwardyjskie Kepi</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>13</td>
+  <td>[SRŻ] Czapka Garnizonowa</td>
+  <td>['SRŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>14</td>
+  <td>Kapelusz Graniczników</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>15</td>
+  <td>[ZWD][STR] Kaptur Zwiadowczy</td>
+  <td>['ZWD', 'STR']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="backpack">
+  <caption> Plecak </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>Worek</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>1T - Standardowy Plecak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>2T - Ciężki Plecak</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="cloak">
+  <caption> Płaszcz </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Płaszcz Kamuflujący</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Poszarpany Płaszcz</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="sheathed_weapon">
+  <caption> Broń przy pasie </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>2T - Miecz</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>4T - Miecz Łańcuchowy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[WET] / [SRŻ] 5T - Miecz Energetyczny</td>
+  <td>['WET', 'SRŻ']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="shoulderbag">
+  <caption> Podwieszka </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Kabura na pistolet</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>1T - Pas Amunicyjny</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>2T - Bandolier</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>2T - Bandolier z Nożem</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>3T - Vox-Kamizela</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>[SZT] 2T Szturmowy Bandolier</td>
+  <td>['SZT']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>[SZT] [INŻ] 2T - Bandolier do strzelby</td>
+  <td>['SZT', 'INŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>[WET] Koalicyjka Weterańska</td>
+  <td>['WET']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="waist">
+  <caption> Pas </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Pas na magazynki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>2T - Pas Gwardzisty</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>2T - Pas z granatem</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>2T - Pas z kaburą</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>2T - Vox-Pas</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>[WET] / [SRŻ] / [INŻ] 4T - Pas-Auspex</td>
+  <td>['WET', 'SRŻ', 'INŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>[SRŻ] 2T - Pas Oficerski</td>
+  <td>['SRŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>[CHR] 2T - Pas Medyczny</td>
+  <td>['CHR']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="necklace">
+  <caption> Szyja </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Gogle</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>1T - Maska p.gaz wz. Armageddon</td>
+  <td>['']</td>
+  <td>['ARMAGEDDON']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>1T - Maska p.gaz wz. Cadia</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Maska p.gaz wz. Krieg</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Chusta</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Nieśmiertelniki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Mały szalik</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="headgear">
+  <caption> Headgear </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Gogle Uderzeniowe</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>1T - Gogle Taktyczne</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>1T - Bioniczne oko (prawe)</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>1T - Bioniczne oko (lewe)</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>2T - Noktowizor</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Awiatory</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Profesorki</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Przepaska na oko (prawe)</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Przepaska na oko (lewe)</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="additional_headgear">
+  <caption> Dodatkowy headgear </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Zestaw Vox</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>1T - Maska Przeciwgazowa</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>1T - Maska p.gaz. wz. Armageddon</td>
+  <td>['']</td>
+  <td>['ARMAGEDDON']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>1T - Maska p.gaz. wz. Cadia</td>
+  <td>['']</td>
+  <td>['CADIA']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Shemagh</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Balaclava</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Uniesiona Chusta</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="mask">
+  <caption> Maska </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Maska Vostroyańska</td>
+  <td>['']</td>
+  <td>['VOSTROYA']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>[SZT] 1T - Maska Szturmowa</td>
+  <td>['SZT']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>[GRE] Maska p.gaz. wz. Krieg</td>
+  <td>['GRE']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>[INŻ] Maska p.gaz. wz. Krieg</td>
+  <td>['INŻ']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Maska p.gaz. wz. Krieg</td>
+  <td>['']</td>
+  <td>['KRIEG']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="firearm">
+  <caption> Broń długa </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>3T - Lasgun - wz. Triplex</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>4T - Lasgun - wz. Triplex BAGNET</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>5T - Lasgun - M35 wz. Galaxy</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>6T - Lasgun - M35 wz. Galaxy BAGNET</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>7T - Lasgun - M36 wz. Kantrael</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>8T - Lasgun - M36 wz. Kantrael BAGNET</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>8T - Lasgun - M36 wz. Kantrael CELOWNIK</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>3T - Autogun - Hax-Orthlack Creed-9</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>4T - Autogun - Agripinaa typ II </td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>5T - Autogun - Agripinaa typ II BAGNET</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>4T - Autogun - Urdesh wz. U90</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>11</td>
+  <td>5T - Autogun - Urdesh wz. U90 BAGNET</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>12</td>
+  <td>3T - Ciężki Miotacz wz. Othlack</td>
+  <td>['GRE']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>13</td>
+  <td>6T - Ciężki Miotacz - wz. Vraks</td>
+  <td>['GRE']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>14</td>
+  <td>2T - Strzelba - Dubeltówka</td>
+  <td>['SZT', 'INŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>15</td>
+  <td>4T - Strzelba - wz. Vox Legi</td>
+  <td>['SZT', 'INŻ']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>16</td>
+  <td>3T - Karabin Wyborowy - Myśliwski</td>
+  <td>['STR']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>17</td>
+  <td>6T - Karabin Wyborowy - wz. Rozgrzeszenie</td>
+  <td>['STR']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+    
+
+<table id="pistol">
+  <caption> Broń krótka </caption>
+  <tr>
+    <th>L.p.</th>
+    <th>Przedmiot</th>
+    <th>Regimenty</th>
+    <th>Klasy</th>
+  </tr>
+  <tr>
+  <td>0</td>
+  <td>1T - Autopistolet - Sulymann Encarmine</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>3T - Rewolwer - wz. Zarona IIa</td>
+  <td>['']</td>
+  <td>['']</td>
+  </tr>
+  
+</table> 
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{# templates/digraph.j2 #}
+
+.. graphviz::
+
+    digraph "{{ITEM_NAME_TEXT}}"{
+      size="4,4";
+      labelloc="t";
+      label="{{ITEM_NAME_TEXT}}";
+      {% for ID in range(ITEM_OPTIONS_LEN) -%}
+      "{{ITEM_OPTIONS[ID]}}" [shape=rectangle];
+      {% endfor %}
+    }
