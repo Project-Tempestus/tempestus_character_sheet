@@ -1801,7 +1801,6 @@
   }
 </script>
 
-<!-- Update base skill value if class or regiment changes -->
 <script type="text/worker">
   const int = score => parseInt(score, 10) || 0;
 
@@ -1823,6 +1822,10 @@
   const BASE_AGILITY = 40;
   const BASE_KNOWLEDGE = 30;
   const BASE_HP = 100;
+
+  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+  var stat_mod = stat.map(i => i + "_modifier");
+  var stat_base = stat.map(i => i + "_base");
 
   on(`change:${a_regiment} change:${a_class} sheet:opened`, () => {
     getAttrs([a_regiment, a_class], values => {
@@ -1932,6 +1935,17 @@
       setAttrs({ [`${a_knowledge_base}`]: knowledge_value});
       setAttrs({ [`${a_hp_base}`]: hp_value});
 
+      for (let i = 0; i < stat.length ; i++) {
+          getAttrs([stat_base[i],stat_mod[i]], values => {
+            console.log(values);
+            let v_base = int(values[stat_base[i]]);
+            let v_mod = int(values[stat_mod[i]]);
+            let v = v_base + v_mod;
+            setAttrs({
+                [`${stat[i]}`]: v
+            });
+        });
+      }
     });
   });
 </script>
