@@ -1801,7 +1801,6 @@
   }
 </script>
 
-<!-- Update base skill value if class or regiment changes -->
 <script type="text/worker">
   const int = score => parseInt(score, 10) || 0;
 
@@ -1936,7 +1935,7 @@
       setAttrs({ [`${a_knowledge_base}`]: knowledge_value});
       setAttrs({ [`${a_hp_base}`]: hp_value});
 
-      for (let i = 0; i < stat.length ; i++) {  
+      for (let i = 0; i < stat.length ; i++) {
           getAttrs([stat_base[i],stat_mod[i]], values => {
             console.log(values);
             let v_base = int(values[stat_base[i]]);
@@ -1945,7 +1944,7 @@
             setAttrs({
                 [`${stat[i]}`]: v
             });
-        });  
+        });
       }
     });
   });
