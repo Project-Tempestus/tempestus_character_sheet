@@ -3,4 +3,8 @@ ITEM_NAME_TEXT: Broń krótka
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["1T - Autopistolet - Sulymann Encarmine", [""], [""]]
- - ["3T - Rewolwer - wz. Zarona IIa", [""], [""]]
+ - ["2T - Hecuter 9/5", [""], [""]]
+ - ["2T - Rewolwer - wz. Zarona Ila", [""], [""]]
+ - ["3T - Laspistol Kantrael wz. Obrońca", [""], [""]]
+ - ["3T - Voss wz. nr 10", [""], [""]]
+ 

@@ -6,7 +6,7 @@ ITEM_OPTIONS:
  - ["[CHR] 2T - Hełm Sanitariusza ", ["CHR"],[""]]
  - ["[SRŻ] 2T Vox-Hełm wz. Cadia ", ["SRŻ"],["CADIA"]]
  - ["4T  - Hełm Czołgisty", [""],[""]]
- - ["2T - Hełm wz. Armageddon", [""],["ARMAGEDDON"]]
+ - ["1T - Hełm wz. Armageddon", [""],["ARMAGEDDON"]]
  - ["2T - Hełm wz. Krieg", [""],["KRIEG"]]
  - ["[GRE] 2T - Hełm Grenadiera wz. Krieg", ["GRE"],["KRIEG"]]
  - ["[SRŻ] 2T - Hełm Oficerski wz. Krieg", ["SRŻ"],["KRIEG"]]
