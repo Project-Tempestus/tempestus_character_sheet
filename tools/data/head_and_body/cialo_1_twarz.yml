@@ -2,36 +2,36 @@ ITEM_NAME: face
 ITEM_NAME_TEXT: Twarz
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "M - Marcus"
- - "M - Varn"
- - "M - Jimm"
- - "M - Adrian"
- - "M - Gunter"
- - "M - Lee"
- - "M - Olgierd"
- - "M - Ralph"
- - "M - Sean"
- - "M - Redvald"
- - "M - Paul"
- - "M - Dane"
- - "M - Larry"
- - "M - Joshua"
- - "M - George"
- - "M - Leonard"
- - "M - Will"
- - "F - Erma"
- - "F - Astrid"
- - "F - Helga"
- - "F - Kate"
- - "F - Laura"
- - "F - Linda"
- - "F - Martha"
- - "F - Sayan"
- - "F - Solveig"
- - "F - Lara"
- - "F - Mia"
- - "F - Juliet"
- - "F - Lisa"
- - "F - Pak"
- - "F - Sarah"
- - "F - Alice"
+ - ["M - Marcus", [""], [""]]
+ - ["M - Varn", [""], [""]]
+ - ["M - Jimm", [""], [""]]
+ - ["M - Adrian", [""], [""]]
+ - ["M - Gunter", [""], [""]]
+ - ["M - Lee", [""], [""]]
+ - ["M - Olgierd", [""], [""]]
+ - ["M - Ralph", [""], [""]]
+ - ["M - Sean", [""], [""]]
+ - ["M - Redvald", [""], [""]]
+ - ["M - Paul", [""], [""]]
+ - ["M - Dane", [""], [""]]
+ - ["M - Larry", [""], [""]]
+ - ["M - Joshua", [""], [""]]
+ - ["M - George", [""], [""]]
+ - ["M - Leonard", [""], [""]]
+ - ["M - Will", [""], [""]]
+ - ["F - Erma", [""], [""]]
+ - ["F - Astrid", [""], [""]]
+ - ["F - Helga", [""], [""]]
+ - ["F - Kate", [""], [""]]
+ - ["F - Laura", [""], [""]]
+ - ["F - Linda", [""], [""]]
+ - ["F - Martha", [""], [""]]
+ - ["F - Sayan", [""], [""]]
+ - ["F - Solveig", [""], [""]]
+ - ["F - Lara", [""], [""]]
+ - ["F - Mia", [""], [""]]
+ - ["F - Juliet", [""], [""]]
+ - ["F - Lisa", [""], [""]]
+ - ["F - Pak", [""], [""]]
+ - ["F - Sarah", [""], [""]]
+ - ["F - Alice", [""], [""]]

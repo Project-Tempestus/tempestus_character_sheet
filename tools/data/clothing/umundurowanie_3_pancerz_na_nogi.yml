@@ -2,7 +2,7 @@ ITEM_NAME: leg_armor
 ITEM_NAME_TEXT: Pancerz na nogi
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "1T - Cadiańskie Ochraniacze"
- - "2T - Ochraniacze Flak"
- - "[GRE] 2T - Nagolenniki Grenadierów"
- - "[ZWD] 2T - Pancerz Zwiadowczy"
+ - ["1T - Cadiańskie Ochraniacze",[""],["CADIA"]]
+ - ["2T - Ochraniacze Flak",[""],[""]]
+ - ["[GRE] 2T - Nagolenniki Grenadierów",["GRE"],[""]]
+ - ["[ZWD] 2T - Pancerz Zwiadowczy",["ZWD"],[""]]

@@ -2,14 +2,14 @@ ITEM_NAME: tatoo
 ITEM_NAME_TEXT: Tatuaże
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "Czaszka"
- - "Kamuflaż"
- - "Nordycki"
- - "Gwardia"
- - "Geometria"
- - "Bandyta"
- - "Brud"
- - "Tribal"
- - "Gładki Wzór"
- - "Okręgi"
- - "Celtycki"
+ - ["Czaszka", [""], [""]]
+ - ["Kamuflaż", [""], [""]]
+ - ["Nordycki", [""], [""]]
+ - ["Gwardia", [""], [""]]
+ - ["Geometria", [""], [""]]
+ - ["Bandyta", [""], [""]]
+ - ["Brud", [""], [""]]
+ - ["Tribal", [""], [""]]
+ - ["Gładki Wzór", [""], [""]]
+ - ["Okręgi", [""], [""]]
+ - ["Celtycki", [""], [""]]

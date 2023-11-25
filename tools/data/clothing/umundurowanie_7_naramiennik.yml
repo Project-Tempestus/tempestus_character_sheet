@@ -2,11 +2,11 @@ ITEM_NAME: shoulders
 ITEM_NAME_TEXT: Naramienniki
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "1T - Patki Czołgistów"
- - "2T - Flak Naramienniki"
- - "1T - Osłony Kriegańskie"
- - "[SZT] 1T - Szturmowe Pagony"
- - "[WET] / [SRŻ]  2T - Vostroyański Epolet"
- - "[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki"
- - "Cadiańskie Galony"
- - "Naszywki Lotnicze"
+ - ["1T - Patki Czołgistów", [""], [""]]
+ - ["2T - Flak Naramienniki", [""], [""]]
+ - ["1T - Osłony Kriegańskie", [""], ["KRIEG"]]
+ - ["[SZT] 1T - Szturmowe Pagony", ["SZT"], [""]]
+ - ["[WET] / [SRŻ]  2T - Vostroyański Epolet", ["WET", "SRŻ"], ["VOSTROYA"]]
+ - ["[INŻ] 2T - Kriegańskie Inżynieryjne Naramienniki", ["INŻ"], ["KRIEG"]]
+ - ["Cadiańskie Galony", [""], ["CADIA"]]
+ - ["Naszywki Lotnicze", [""], [""]]

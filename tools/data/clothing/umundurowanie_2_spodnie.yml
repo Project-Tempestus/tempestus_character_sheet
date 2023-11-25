@@ -2,8 +2,8 @@ ITEM_NAME: pants
 ITEM_NAME_TEXT: Spodnie
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "Spodnie Mundurowe Standardowe"
- - "Spodnie Mundurowe Wąskie"
- - "Spodnie Mundurowe Krótsze"
- - "Spodnie Cywilne Opuszczone"
- - "Spodnie Cywilne Wąskie"
+ - ["Spodnie Mundurowe Standardowe", [""], [""]]
+ - ["Spodnie Mundurowe Wąskie", [""], [""]]
+ - ["Spodnie Mundurowe Krótsze", [""], [""]]
+ - ["Spodnie Cywilne Opuszczone", [""], [""]]
+ - ["Spodnie Cywilne Wąskie", [""], [""]]

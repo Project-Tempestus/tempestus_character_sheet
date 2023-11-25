@@ -2,11 +2,11 @@ ITEM_NAME: shoulderbag
 ITEM_NAME_TEXT: Podwieszka
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "1T - Kabura na pistolet"
- - "1T - Pas Amunicyjny"
- - "2T - Bandolier"
- - "2T - Bandolier z Nożem"
- - "3T - Vox-Kamizela"
- - "[SZT] 2T Szturmowy Bandolier"
- - "[SZT] [INŻ] 2T - Bandolier do strzelby"
- - "[WET] Koalicyjka Weterańska"
+ - ["1T - Kabura na pistolet", [""], [""]]
+ - ["1T - Pas Amunicyjny", [""], [""]]
+ - ["2T - Bandolier", [""], [""]]
+ - ["2T - Bandolier z Nożem", [""], [""]]
+ - ["3T - Vox-Kamizela", [""], [""]]
+ - ["[SZT] 2T Szturmowy Bandolier", ["SZT"], [""]]
+ - ["[SZT] [INŻ] 2T - Bandolier do strzelby", ["SZT", "INŻ"], [""]]
+ - ["[WET] Koalicyjka Weterańska", ["WET"], [""]]

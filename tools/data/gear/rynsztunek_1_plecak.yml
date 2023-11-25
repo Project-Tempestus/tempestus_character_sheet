@@ -2,6 +2,6 @@ ITEM_NAME: backpack
 ITEM_NAME_TEXT: Plecak
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "Worek"
- - "1T - Standardowy Plecak"
- - "2T - Ciężki Plecak"
+ - ["Worek", [""], [""]]
+ - ["1T - Standardowy Plecak", [""], [""]]
+ - ["2T - Ciężki Plecak", [""], [""]]

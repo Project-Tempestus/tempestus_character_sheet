@@ -2,13 +2,13 @@ ITEM_NAME: chest
 ITEM_NAME_TEXT: Klatka piersiowa
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
- - "2T - Pancerz Flak"
- - "4T - Ciężki Pancerz Flak"
- - "[SRŻ] 2T - Kirys Oficerski"
- - "[WET] / [SRŻ]  2T - Vostroyański Ryngraf"
- - "[SZT] 4T - Zbroja Szturmowca"
- - "[INŻ] 4T - Zbroja Kriegańskich Inżynierów"
- - "[GRE] 3T - Zbroja Kriegańskiego Grenadiera"
- - "Rozpięta Kamizela"
- - "Zapięta Kamizela"
- - "Pilotka"
+ - ["2T - Pancerz Flak",[""],[""]]
+ - ["4T - Ciężki Pancerz Flak",[""],[""]]
+ - ["[SRŻ] 2T - Kirys Oficerski",["SRŻ"],[""]]
+ - ["[WET] / [SRŻ]  2T - Vostroyański Ryngraf",["WET","SRŻ"],["VOSTROYA"]]
+ - ["[SZT] 4T - Zbroja Szturmowca",["SZT"],[""]]
+ - ["[INŻ] 4T - Zbroja Kriegańskich Inżynierów",["INŻ"],["KRIEG"]]
+ - ["[GRE] 3T - Zbroja Kriegańskiego Grenadiera",["GRE"],["KRIEG"]]
+ - ["Rozpięta Kamizela",[""],[""]]
+ - ["Zapięta Kamizela",[""],[""]]
+ - ["Pilotka",[""],[""]]
