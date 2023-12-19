@@ -3,5 +3,6 @@ ITEM_NAME_TEXT: Broń przy pasie
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["2T - Miecz", [""], [""]]
+ - ["3T - Nóż Catachański", [""], [""]]
  - ["4T - Miecz Łańcuchowy", [""], [""]]
  - ["[WET] / [SRŻ] 5T - Miecz Energetyczny", ["WET", "SRŻ"], [""]]

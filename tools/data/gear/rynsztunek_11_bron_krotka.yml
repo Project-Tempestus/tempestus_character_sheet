@@ -1,5 +1,5 @@
 ITEM_NAME: pistol
-ITEM_NAME_TEXT: Broń krótka
+ITEM_NAME_TEXT: Pierwsza broń krótka
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["1T - Autopistolet - Sulymann Encarmine", [""], [""]]

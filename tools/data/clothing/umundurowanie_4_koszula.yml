@@ -8,9 +8,13 @@ ITEM_OPTIONS:
  - ["Płaszcz Stalowego Legionu",[""],[""]]
  - ["Kriegański Trencz",[""],["KRIEG"]]
  - ["Vostroyański Płaszcz",[""],["VOSTROYA"]]
+ - ["Koszula Catachańska z podwiniętymi rękawami",[""],["CATACHAN"]]
+ - ["Koszula Catachańska",[""],["CATACHAN"]]
  - ["Tank Top",[""],[""]]
  - ["Gwardyjska Tunika",[""],[""]]
  - ["Skórzana Kurta",[""],[""]]
  - ["[Ranga 7. Sierżant] Płaszcz Oficerskiego Kadeta", [""],[""]]
  - ["[Ranga 9. Srż. Sztabowy] Płaszcz Oficerski", [""],[""]]
  - ["[Ranga 11. Chorąży] Tunika Komisarska", [""],[""]]
+
+

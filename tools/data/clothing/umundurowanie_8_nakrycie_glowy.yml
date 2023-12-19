@@ -11,6 +11,8 @@ ITEM_OPTIONS:
  - ["[GRE] 2T - Hełm Grenadiera wz. Krieg", ["GRE"],["KRIEG"]]
  - ["[SRŻ] 2T - Hełm Oficerski wz. Krieg", ["SRŻ"],["KRIEG"]]
  - ["1T - Futrzany Hełm Vostroyański", [""],["VOSTROYA"]]
+ - ["1T - Bandana Catachańska", [""],["CATACHAN"]]
+ - ["1T - Chusta Catachańska", [""],["CATACHAN"]]
  - ["[SZT] 2T - Hełm Szturmowy", ["SZT"],[""]]
  - ["1T - Komunikator Vox", [""],[""]]
  - ["Beret", [""],[""]]
@@ -18,3 +20,5 @@ ITEM_OPTIONS:
  - ["[SRŻ] Czapka Garnizonowa", ["SRŻ"],[""]]
  - ["Kapelusz Graniczników", [""],[""]]
  - ["[ZWD][STR] Kaptur Zwiadowczy", ["ZWD", "STR"],[""]]
+
+
