@@ -252,7 +252,7 @@ div.sheet-skill-right {
 /* Personal grid */
 .sheet-personal-grid{
 	display: grid;
-	grid-template-columns: max-content;
+	grid-template-columns: auto;
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas: "head-and-body head-and-body"
 		"clothing armor-points"
@@ -471,17 +471,14 @@ div.sheet-item-armor-trio-right > *{
 }
 
 
+#label_pref_uniform,
+#label_pref_mask {
+	width: 66%;
+}
+
 #label_pref_mask,
 #chkbox_pref_mask,
 #label_pref_uniform,
 #chkbox_pref_uniform{
 	color:var(--TempestusGreen);
-}
-
-input:checked ~
-#label_pref_mask,
-#chkbox_pref_mask,
-#label_pref_uniform,
-#chkbox_pref_uniform {
-	background-color: #000000;
 }
