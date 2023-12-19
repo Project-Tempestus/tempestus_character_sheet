@@ -28,7 +28,14 @@ def build_elements(filesDict, templatePath):
     template = load_template(path=templatePath)
     for key, value in filesDict.items():
         yaml_text = load_yml(path="data/"+value)
+        # TODO: Dirty hack for special skill case
+        if templatePath != "translation_row.j2":        
+            if key is "SPECIAL_SKILL":
+                template = load_template(path="skill_input.j2")
+
         elements_dict[key] = render_template(template=template,data=yaml_text)
+        
+    
     return elements_dict
 
 
