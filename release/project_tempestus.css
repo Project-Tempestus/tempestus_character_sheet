@@ -469,3 +469,19 @@ div.sheet-item-armor-trio-right > *{
 	line-height: 21px;
     height: 21px;
 }
+
+
+#label_pref_mask,
+#chkbox_pref_mask,
+#label_pref_uniform,
+#chkbox_pref_uniform{
+	color:var(--TempestusGreen);
+}
+
+input:checked ~
+#label_pref_mask,
+#chkbox_pref_mask,
+#label_pref_uniform,
+#chkbox_pref_uniform {
+	background-color: #000000;
+}
