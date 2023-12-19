@@ -4,5 +4,6 @@ INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["1T - Cadiańskie Ochraniacze",[""],["CADIA"]]
  - ["2T - Ochraniacze Flak",[""],[""]]
+ - ["3T - Catachańskie Biegacze",[""],["CATACHAN"]]
  - ["[GRE] 2T - Nagolenniki Grenadierów",["GRE"],[""]]
  - ["[ZWD] 2T - Pancerz Zwiadowczy",["ZWD"],[""]]

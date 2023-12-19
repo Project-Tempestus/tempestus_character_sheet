@@ -24,5 +24,6 @@ FILES_DICT = {
     "ADDITIONAL_HEADGEAR" : "gear/rynsztunek_8_dodatkowy_headgear.yml",
     "MASK" : "gear/rynsztunek_9_maska.yml",
     "FIREARM" : "gear/rynsztunek_10_bron_dluga.yml",
-    "PISTOL" : "gear/rynsztunek_11_bron_krotka.yml"
+    "PISTOL" : "gear/rynsztunek_11_bron_krotka.yml",
+    "SPECIAL_SKILL" : "skill/special_skill.yml"
 }

@@ -1,0 +1,7 @@
+<select name="attr_{{ ITEM_NAME }}" class="advanceselect">
+{% if INCLUDE_NONE == 1 %}<option data-i18n="item-none-u">Brak</option>
+{% endif %}            
+{% for ID in range(ITEM_OPTIONS_LEN) -%}
+<option data-i18n="{{ ITEM_NAME }}-{{ID}}-u">{{ITEM_OPTIONS[ID][0]}}</option>
+{% endfor %}
+</select>
