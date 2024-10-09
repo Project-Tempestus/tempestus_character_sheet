@@ -5,4 +5,4 @@ ITEM_OPTIONS:
  - ["2T - Miecz", [""], [""]]
  - ["3T - Nóż Catachański", [""], [""]]
  - ["4T - Miecz Łańcuchowy", [""], [""]]
- - ["[WET] / [SRŻ] 5T - Miecz Energetyczny", ["WET", "SRŻ"], [""]]
+ - ["[WET][SRŻ] 5T - Miecz Energetyczny", ["WET", "SRŻ"], [""]]

@@ -20,6 +20,6 @@ ITEM_OPTIONS:
  - ["[SRŻ] Czapka Garnizonowa", ["SRŻ"],[""]]
  - ["Kapelusz Graniczników", [""],[""]]
  - ["[ZWD][STR] Kaptur Zwiadowczy", ["ZWD", "STR"],[""]]
- - ["[WET] [SZT] 2P - Hełm wz. Tempestus", ["WET", "SZT"], [""]]
+ - ["[WET][SZT] 2P - Hełm wz. Tempestus", ["WET", "SZT"], [""]]
 
 
