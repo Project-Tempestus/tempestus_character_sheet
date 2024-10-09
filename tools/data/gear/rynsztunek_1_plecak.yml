@@ -5,3 +5,6 @@ ITEM_OPTIONS:
  - ["Worek", [""], [""]]
  - ["1T - Standardowy Plecak", [""], [""]]
  - ["2T - Ciężki Plecak", [""], [""]]
+ - ["2T - Power-Pack wz. Krieg", [""], [""]]
+ - ["4T - Power-Pack wz. Tempestus", [""], [""]]
+ - ["6T - Power-Pack wz. Hellgun", [""], [""]]
