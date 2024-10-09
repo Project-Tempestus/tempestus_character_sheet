@@ -29,18 +29,18 @@ def build_elements(filesDict, templatePath):
     for key, value in filesDict.items():
         yaml_text = load_yml(path="data/"+value)
         # TODO: Dirty hack for special skill case
-        if templatePath != "translation_row.j2":        
-            if key is "SPECIAL_SKILL":
+        if templatePath != "translation_row.j2":
+            if key == "SPECIAL_SKILL":
                 template = load_template(path="skill_input.j2")
 
         elements_dict[key] = render_template(template=template,data=yaml_text)
-        
-    
+
+
     return elements_dict
 
 
 def build_file(outputFile, filesDict, entryTemplate, fullTemplate ):
-    elements_dict = build_elements(filesDict, templatePath=entryTemplate)   
+    elements_dict = build_elements(filesDict, templatePath=entryTemplate)
     template = load_template(path = fullTemplate)
     content = render_template(template=template, data=elements_dict)
     with open(outputFile, "w", encoding="utf-8") as file:
@@ -57,10 +57,10 @@ if __name__ == "__main__":
     outputDir=args.output_dir
     if not os.path.exists(outputDir):
         os.makedirs(outputDir)
-    
+
     outputHTML = os.path.join(outputDir,"project_tempestus.html")
     outputJSON = os.path.join(outputDir,"translations","pl.json")
 
     build_file(outputHTML, common.FILES_DICT, "sheet_row.j2", "character_sheet.j2")
     build_file(outputJSON, common.FILES_DICT, "translation_row.j2", "pl.j2")
-    
+
