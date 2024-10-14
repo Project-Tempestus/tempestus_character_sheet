@@ -4,8 +4,8 @@ INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["2T - Hełm wz. Cadia", [""],["CADIA"]]
  - ["[CHR] 2T - Hełm Sanitariusza ", ["CHR"],[""]]
- - ["[SRŻ] 2T Vox-Hełm wz. Cadia ", ["SRŻ"],["CADIA"]]
- - ["4T  - Hełm Czołgisty", [""],[""]]
+ - ["[SRŻ] 2T - Vox-Hełm wz. Cadia ", ["SRŻ"],["CADIA"]]
+ - ["4T - Hełm Czołgisty", [""],[""]]
  - ["1T - Hełm wz. Armageddon", [""],["ARMAGEDDON"]]
  - ["2T - Hełm wz. Krieg", [""],["KRIEG"]]
  - ["[GRE] 2T - Hełm Grenadiera wz. Krieg", ["GRE"],["KRIEG"]]
@@ -19,6 +19,7 @@ ITEM_OPTIONS:
  - ["Gwardyjskie Kepi", [""],[""]]
  - ["[SRŻ] Czapka Garnizonowa", ["SRŻ"],[""]]
  - ["Kapelusz Graniczników", [""],[""]]
- - ["[ZWD][STR] Kaptur Zwiadowczy", ["ZWD", "STR"],[""]]
+ - ["[ZWD]/[STR] Kaptur Zwiadowczy", ["ZWD", "STR"],[""]]
+ - ["[WET][SZT] 2P - Hełm wz. Tempestus", ["WET", "SZT"], [""]]
 
 

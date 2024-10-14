@@ -67,7 +67,7 @@
               ></textarea>
             </div>
           </div>
-          
+
           <div class="sheet-row" style="display: flex">
             <div class="sheet-item">
               <p data-i18n="regiment-u">Regiment</p>
@@ -321,7 +321,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="sheet-row">
         <div class="sheet-skill-item">
           <div class="sheet-skill-textname">
@@ -607,7 +607,7 @@
         </div>
       </div>
 
-     
+
 
     </div>
 
@@ -706,7 +706,7 @@
               <textarea name="attr_armor_forearm_P" class="sheet-item-armor-text"></textarea>
             </div>
             <div class="sheet-item-armor-trio-mid">
-              <p data-i18n="armor-forearm-u">Forearm</p>       
+              <p data-i18n="armor-forearm-u">Forearm</p>
             </div>
             <div class="sheet-item-armor-trio-right">
               <textarea name="attr_armor_forearm_L" class="sheet-item-armor-text"></textarea>
@@ -802,7 +802,7 @@
               <div class="sheet-item-right">
                 <select name="attr_pistol_offhand" class="advanceselect">
                 <option data-i18n="item-none-u">Brak</option>
-                <option data-i18n="shield-u">2T - Tarcza Arbites</option>               
+                <option data-i18n="shield-u">2T - Tarcza Arbites</option>
                 </select>
               </div>
           </div>
@@ -820,10 +820,10 @@
         style="height: 100px" />
     </div>
     <div class="sheet-item">
-      <h4>"Jedyną rozumną odpowiedzią na obecność Xenos jest nienawiść"</h4>
+      <h4>"Ziarna herezji kiełkują w umysłach oświeconych"</h4>
     </div>
     <div class="sheet-item">
-      <h5>- Wersety Macrologica 17.4</h5>
+      <h5>- Gilbran Quail, Archiwalia Schola Progenium </h5>
     </div>
   </div>
 
@@ -1010,7 +1010,7 @@
       setAttrs({ [`${a_knowledge_base}`]: knowledge_value});
       setAttrs({ [`${a_hp_base}`]: hp_value});
 
-      for (let i = 0; i < stat.length ; i++) {  
+      for (let i = 0; i < stat.length ; i++) {
           getAttrs([stat_base[i],stat_mod[i]], values => {
             console.log(values);
             let v_base = int(values[stat_base[i]]);
@@ -1019,7 +1019,7 @@
             setAttrs({
                 [`${stat[i]}`]: v
             });
-        });  
+        });
       }
     });
   });
@@ -1027,7 +1027,7 @@
 
 
 <script type="text/worker">
-  on('clicked:button_hits', (info) => {    
+  on('clicked:button_hits', (info) => {
       getAttrs(["hits"], function(values) {
           var l_hits = values.hits;
           var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
@@ -1048,7 +1048,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_hit_5', (info) => {    
+  on('clicked:button_hit_5', (info) => {
       var l_hits = 5;
       var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
@@ -1067,7 +1067,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_hit_3', (info) => {    
+  on('clicked:button_hit_3', (info) => {
       var l_hits = 3;
       var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
@@ -1086,7 +1086,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_hit_2', (info) => {    
+  on('clicked:button_hit_2', (info) => {
       var l_hits = 2;
       var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
@@ -1105,7 +1105,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_hit_1', (info) => {    
+  on('clicked:button_hit_1', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
@@ -1124,7 +1124,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_shots', (info) => {    
+  on('clicked:button_shots', (info) => {
       getAttrs(["shots"], function(values) {
           var l_hits = values.shots;
           var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
@@ -1145,7 +1145,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_shot_5', (info) => {    
+  on('clicked:button_shot_5', (info) => {
       var l_hits = 5;
       var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
@@ -1164,7 +1164,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_shot_3', (info) => {    
+  on('clicked:button_shot_3', (info) => {
       var l_hits = 3;
       var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
@@ -1183,7 +1183,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_shot_2', (info) => {    
+  on('clicked:button_shot_2', (info) => {
       var l_hits = 2;
       var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
@@ -1202,7 +1202,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_shot_1', (info) => {    
+  on('clicked:button_shot_1', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
@@ -1223,7 +1223,7 @@
 <!-- Individual stats -->
 
 <script type="text/worker">
-  on('clicked:button_marksmanship', (info) => {    
+  on('clicked:button_marksmanship', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
@@ -1242,7 +1242,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_cqb', (info) => {    
+  on('clicked:button_cqb', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
@@ -1261,7 +1261,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_strength', (info) => {    
+  on('clicked:button_strength', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Siła}} {{character_skill=@{strength}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{strength}cf>@{strength}]]";
@@ -1280,7 +1280,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_constitution', (info) => {    
+  on('clicked:button_constitution', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Wytrzymałość}} {{character_skill=@{constitution}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{constitution}cf>@{constitution}]]";
@@ -1299,7 +1299,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_agility', (info) => {    
+  on('clicked:button_agility', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Zwinność}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{agility}cf>@{agility}]]";
@@ -1318,7 +1318,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_knowledge', (info) => {    
+  on('clicked:button_knowledge', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Wiedza}} {{character_skill=@{knowledge}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{knowledge}cf>@{knowledge}]]";
@@ -1337,7 +1337,7 @@
 </script>
 
 <script type="text/worker">
-  on('clicked:button_initiative', (info) => {    
+  on('clicked:button_initiative', (info) => {
       var l_hits = 1;
       var roll_text = "&{template:test} {{test_name=Inicjatywa}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
       var h_content = "=[[2d20cs>0+@{agility}]]";
@@ -1398,28 +1398,28 @@
   buttonlist.forEach(button => {
       on(`clicked:${button}`, function() {
         getAttrs([a_current_rank], values => {
-          
+
           curr_url = values[a_current_rank];
           console.log("Current URL");
           console.log(curr_url);
-          
+
           curr_index = rankURLlist.findIndex((element) => element == curr_url);
           console.log("Current index");
           console.log(curr_index);
-          
+
           if (curr_index ==  (num_ranks-1)) {
             new_index = 0;
           } else {
             new_index = curr_index + 1;
           }
-          
+
           console.log("New index");
           console.log(new_index);
-          
+
           new_url = rankURLlist[new_index];
           console.log("New URL");
           console.log(new_url);
-          
+
           new_rank_name = rankNames[new_index];
           setAttrs({ [`${a_current_rank}`]: new_url});
           setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
@@ -1469,28 +1469,28 @@
   buttonlist.forEach(button => {
       on(`clicked:${button}`, function() {
         getAttrs([a_current_rank], values => {
-          
+
           curr_url = values[a_current_rank];
           console.log("Current URL");
           console.log(curr_url);
-          
+
           curr_index = rankURLlist.findIndex((element) => element == curr_url);
           console.log("Current index");
           console.log(curr_index);
-          
+
           if (curr_index ==  0 ) {
             new_index = num_ranks - 1;
           } else {
             new_index = curr_index - 1;
           }
-          
+
           console.log("New index");
           console.log(new_index);
-          
+
           new_url = rankURLlist[new_index];
           console.log("New URL");
           console.log(new_url);
-          
+
           new_rank_name = rankNames[new_index];
           setAttrs({ [`${a_current_rank}`]: new_url});
           setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
@@ -1546,11 +1546,11 @@
         new_url = rankURLlist[new_index];
         console.log("New URL");
         console.log(new_url);
-        
+
         new_rank_name = rankNames[new_index];
         setAttrs({ [`${a_current_rank}`]: new_url});
         setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
-      }    
+      }
     });
   });
 </script>

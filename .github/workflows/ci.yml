@@ -16,15 +16,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.2.1
         with:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5.2.0
         with:
-          python-version: '3.10' 
-      
+          python-version: '3.12'
+
       - name: Build HTML from Jinja template
         run: |
           pushd tools
@@ -34,15 +34,19 @@ jobs:
 
       - name: Prepare artifact
         run: |
-          cp -r static/* release                  
-          
-      - name: Prettify code
-        uses: creyD/prettier_action@v4.3
-        with:
-          prettier_options: --write **/*.{json,html}
-          github_token: ${{ secrets.PT_GITHUB_TOKEN }}
+          cp -r static/* release
 
-      - uses: actions/upload-artifact@v3
+
+      - uses: actions/setup-node@v4.0.4
+        with:
+          node-version: 22.9.0
+
+      - name: Prettify json, html
+        run: |
+          npm install --silent prettier
+          npx prettier . --write **/*.{json,html}
+
+      - uses: actions/upload-artifact@v4.4.3
         with:
           name: character-sheet-artifact
           path: ${{ github.workspace}}/release
@@ -58,7 +62,7 @@ jobs:
           echo "REL_DATE=$REL_DATE" | tee "$GITHUB_OUTPUT"
 
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.0.8
         with:
           tag_name: latest-${{ steps.date.outputs.REL_DATE }}
           files: |

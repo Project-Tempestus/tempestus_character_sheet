@@ -30,3 +30,5 @@ ITEM_OPTIONS:
  - ["4T - Strzelba - wz. Vox Legi", ["SZT", "INŻ"], [""]]
  - ["3T - Karabin Wyborowy - Myśliwski", ["STR"], [""]]
  - ["6T - Karabin Wyborowy - wz. Rozgrzeszenie", ["STR"], [""]]
+ - ["[WET] 20T - Hot-Shot wz. Tempestus", ["WET"], [""]]
+ - ["[WET] 15T - Miotacz Plazmy", ["WET"], [""]]

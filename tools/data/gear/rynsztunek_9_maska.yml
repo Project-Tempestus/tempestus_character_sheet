@@ -7,3 +7,4 @@ ITEM_OPTIONS:
  - ["[GRE] Maska p.gaz. wz. Krieg", ["GRE"], ["KRIEG"]]
  - ["[INŻ] Maska p.gaz. wz. Krieg", ["INŻ"], ["KRIEG"]]
  - ["Maska p.gaz. wz. Krieg", [""], ["KRIEG"]]
+ - ["[WET][SZT] 1P - Maska wz. Tempestus", ["WET", "SZT"], [""]]
