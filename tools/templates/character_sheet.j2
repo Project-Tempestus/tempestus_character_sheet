@@ -447,6 +447,19 @@
         </div>
       </div>
 
+      <div class="sheet-row">
+        <div class="sheet-skill-item">
+          <div class="sheet-skill-textname" style="width: 50%">
+            <h3 data-i18n="seals-u" style="text-align: right">
+              Pieczęci Czystości
+            </h3>
+          </div>
+          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
+            <input type="number" name="attr_seals" value="0" />
+          </div>
+        </div>
+      </div>
+
       {%raw %}
       <rolltemplate class="sheet-rolltemplate-test">
         <div class="sheet-template-container">
@@ -463,6 +476,33 @@
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll21}} {{computed::roll22}} {{computed::roll23}} {{computed::roll24}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll25}} {{computed::roll26}} {{computed::roll27}} {{computed::roll28}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll29}} {{computed::roll30}} {{computed::roll31}} {{computed::roll32}}</h4>
+           </div>
+           <div class="sheet-template-signature">
+           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
+            alt="restricted_access" style="height: 20px;" />
+          </div>
+        </div>
+      </rolltemplate>
+      <rolltemplate class="sheet-rolltemplate-ricochet">
+        <div class="sheet-template-container">
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">{{character_name}}</h4>
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Test: {{test_name}}</h4>
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center; color:var(--TempestusGreen)" class="sheet-template-text">Poziom cechy: {{character_skill}}</h4>
+          <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+          <div style="padding:2px;" class="sheet-results">
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll9}} {{computed::roll10}} {{computed::roll11}} {{computed::roll12}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll13}} {{computed::roll14}} {{computed::roll15}} {{computed::roll16}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll17}} {{computed::roll18}} {{computed::roll19}} {{computed::roll20}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll21}} {{computed::roll22}} {{computed::roll23}} {{computed::roll24}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll25}} {{computed::roll26}} {{computed::roll27}} {{computed::roll28}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll29}} {{computed::roll30}} {{computed::roll31}} {{computed::roll32}}</h4>
+           </div>
+          <div style="padding:2px;" class="sheet-results">
+            <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Szansa na rykoszet (96-100)</h4>
+            <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll33}}</h4>
            </div>
            <div class="sheet-template-signature">
            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
@@ -1127,11 +1167,12 @@
   on('clicked:button_shots', (info) => {
       getAttrs(["shots"], function(values) {
           var l_hits = values.shots;
-          var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+          var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
           var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
           for (let i = 1; i <= l_hits; i++) {
             roll_text += "{{" +"roll" + i + h_content +"}}";
           }
+          roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
           startRoll( roll_text, (results) => {
               console.log(results);
               finishRoll(
@@ -1147,11 +1188,12 @@
 <script type="text/worker">
   on('clicked:button_shot_5', (info) => {
       var l_hits = 5;
-      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
       for (let i = 1; i <= l_hits; i++) {
         roll_text += "{{" +"roll" + i + h_content +"}}";
       }
+      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
       startRoll( roll_text, (results) => {
           console.log(results);
           finishRoll(
@@ -1166,11 +1208,12 @@
 <script type="text/worker">
   on('clicked:button_shot_3', (info) => {
       var l_hits = 3;
-      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
       for (let i = 1; i <= l_hits; i++) {
         roll_text += "{{" +"roll" + i + h_content +"}}";
       }
+      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
       startRoll( roll_text, (results) => {
           console.log(results);
           finishRoll(
@@ -1185,11 +1228,12 @@
 <script type="text/worker">
   on('clicked:button_shot_2', (info) => {
       var l_hits = 2;
-      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
       for (let i = 1; i <= l_hits; i++) {
         roll_text += "{{" +"roll" + i + h_content +"}}";
       }
+      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
       startRoll( roll_text, (results) => {
           console.log(results);
           finishRoll(
@@ -1204,11 +1248,12 @@
 <script type="text/worker">
   on('clicked:button_shot_1', (info) => {
       var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
       for (let i = 1; i <= l_hits; i++) {
         roll_text += "{{" +"roll" + i + h_content +"}}";
       }
+      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
       startRoll( roll_text, (results) => {
           console.log(results);
           finishRoll(
@@ -1225,11 +1270,12 @@
 <script type="text/worker">
   on('clicked:button_marksmanship', (info) => {
       var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
+      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
       var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
       for (let i = 1; i <= l_hits; i++) {
         roll_text += "{{" +"roll" + i + h_content +"}}";
       }
+      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
       startRoll( roll_text, (results) => {
           console.log(results);
           finishRoll(
