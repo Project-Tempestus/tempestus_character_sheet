@@ -3,7 +3,7 @@ ITEM_NAME_TEXT: Rękawice
 INCLUDE_NONE: 1
 ITEM_OPTIONS:
  - ["2T - Wzmocnione Rękawice",[""],[""]]
- - ["[WET][SRŻ] - 2T Vostroyańskie Rękawice Płytowe",["WET","SRŻ"],["VOSTROYA"]]
+ - ["[WET]/[SRŻ] 2T - Vostroyańskie Rękawice Płytowe",["WET","SRŻ"],["VOSTROYA"]]
  - ["[GRE] 1T - Rękawice Grenadierów",["GRE"],[""]]
  - ["[INŻ] 1T - Rękawice z panelem technicznym",["INŻ"],[""]]
  - ["[CHR] 2T - Narthecium",["CHR"],[""]]

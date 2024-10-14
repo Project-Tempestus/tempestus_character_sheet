@@ -7,6 +7,6 @@ ITEM_OPTIONS:
  - ["2T - Pas z granatem", [""], [""]]
  - ["2T - Pas z kaburą", [""], [""]]
  - ["2T - Vox-Pas", [""], [""]]
- - ["[WET][SRŻ][INŻ] 4T - Pas-Auspex", ["WET", "SRŻ", "INŻ"], [""]]
+ - ["[WET]/[SRŻ]/[INŻ] 4T - Pas-Auspex", ["WET", "SRŻ", "INŻ"], [""]]
  - ["[SRŻ] 2T - Pas Oficerski", ["SRŻ"], [""]]
  - ["[CHR] 2T - Pas Medyczny", ["CHR"], [""]]
