@@ -1658,72 +1658,174 @@
 <script type="text/worker">
 
   const _metadata = {
-    "name" : "Project:Tempestus",
-    "type" : "Character Sheet",
-    "version" : "0.9.8"
+    name: 'Project:Tempestus',
+    type: 'Character Sheet',
+    version: '0.9.8',
   };
 
   const _ranks = {
-    "url_prefix" : "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/",
-    "list" : [
+    url_prefix:
+      'https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/',
+    list: [
       {
-        "name": "Gwardzista",
-        "url": "Ranga1_Gwardzista.png"
+        name: 'Gwardzista',
+        url: 'Ranga1_Gwardzista.png',
       },
       {
-        "name":"Starszy Gwardzista",
-        "url":"Ranga2_StarszyGwardzista.png"
+        name: 'Starszy Gwardzista',
+        url: 'Ranga2_StarszyGwardzista.png',
       },
       {
-        "name":"Kapral",
-        "url":"Ranga3_Kapral.png"
+        name: 'Kapral',
+        url: 'Ranga3_Kapral.png',
       },
       {
-        "name":"Starszy Kapral",
-        "url":"Ranga4_StarszyKapral.png"
+        name: 'Starszy Kapral',
+        url: 'Ranga4_StarszyKapral.png',
       },
       {
-        "name":"Plutonowy",
-        "url": "Ranga5_Plutonowy.png"
+        name: 'Plutonowy',
+        url: 'Ranga5_Plutonowy.png',
       },
       {
-        "name":"Starszy Plutonowy",
-        "url":"Ranga6_StarszyPlutonowy.png"
+        name: 'Starszy Plutonowy',
+        url: 'Ranga6_StarszyPlutonowy.png',
       },
       {
-        "name":"Sierżant",
-        "url":"Ranga7_Sierzant.png"
+        name: 'Sierżant',
+        url: 'Ranga7_Sierzant.png',
       },
       {
-        "name":"Starszy Sierżant",
-        "url":"Ranga8_StarszySierzant.png"
+        name: 'Starszy Sierżant',
+        url: 'Ranga8_StarszySierzant.png',
       },
       {
-        "name":"Sierżant Sztabowy",
-        "url":"Ranga9_SierzantSztabowy.png"
+        name: 'Sierżant Sztabowy',
+        url: 'Ranga9_SierzantSztabowy.png',
       },
       {
-        "name":"Podchorąży",
-        "url":"Ranga10_Podchorazy.png"
+        name: 'Podchorąży',
+        url: 'Ranga10_Podchorazy.png',
       },
       {
-        "name":"Chorąży",
-        "url":"Ranga11_Chorazy.png"
+        name: 'Chorąży',
+        url: 'Ranga11_Chorazy.png',
       },
       {
-        "name":"Podporucznik",
-        "url":"Ranga12_Podporucznik.png"
+        name: 'Podporucznik',
+        url: 'Ranga12_Podporucznik.png',
       },
       {
-        "name":"Porucznik",
-        "url":"Ranga13_Porucznik.png"
-      }
-    ]
+        name: 'Porucznik',
+        url: 'Ranga13_Porucznik.png',
+      },
+    ],
+  };
+
+  const _base_attrs = {
+    marksmanship: {
+      attr: 'marksmanship_base',
+      value: 15,
+    },
+    cqb: {
+      attr: 'cqb_base',
+      value: 40,
+    },
+    strength: {
+      attr: 'strength_base',
+      value: 40,
+    },
+    constitution: {
+      attr: 'constitution_base',
+      value: 40,
+    },
+    agility: {
+      attr: 'agility_base',
+      value: 40,
+    },
+    knowledge: {
+      attr: 'knowledge_base',
+      value: 30,
+    },
+    hp: {
+      attr: 'health-points_base',
+      value: 100,
+    },
+  };
+
+  const _regiments = {
+    Cadia: {
+      marksmanship: 5,
+      cqb: 5,
+      constitution: 5,
+      agility: 5,
+    },
+    Catachan: {
+      cqb: 10,
+      strength: 5,
+      agility: 5,
+      hp: 15,
+    },
+    Krieg: {
+      cqb: 5,
+      constitution: 10,
+      knowledge: 5,
+    },
+    Armageddon: {
+      agility: 10,
+      knowledge: 30,
+    },
+    Vostroya: {
+      constitution: 10,
+      strength: 10,
+      hp: 30,
+    },
+  };
+
+  const _classes = {
+    chirurgon: {
+      label: '[CHR] Chirurgon',
+      constitution: 15,
+      knowledge: 15,
+    },
+    engineer: {
+      label: '[INŻ] Inżynier',
+      strength: 10,
+      knowledge: 20,
+    },
+    grenadier: {
+      label: '[GRE] Grenadier',
+      strength: 15,
+      constitution: 15,
+    },
+
+    sargeant: {
+      label: '[SRŻ] Sierżant',
+      constitution: 10,
+      hp: 10,
+    },
+    scout: {
+      label: '[ZWD] Zwiadowca',
+      agility: 30,
+      knowledge: 10,
+    },
+    sharpshooter: {
+      label: '[STR] Strzelec',
+      marksmanship: 5,
+    },
+    stormtrooper: {
+      label: '[SZT] Szturmowiec',
+      cqb: 15,
+      agility: 15,
+    },
   };
 
   const game_config = {
-    "metadata" : _metadata,
-    "ranks": _ranks
+    metadata: _metadata,
+    ranks: _ranks,
+    base_attrs: _base_attrs,
+    regiments: _regiments,
+    classes: _classes
   };
 
   print_config = function(){
