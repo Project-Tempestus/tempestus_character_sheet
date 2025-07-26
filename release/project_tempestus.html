@@ -1655,234 +1655,6 @@
   });
 </script>
 
-
-<script type="text/worker">
-  on('clicked:button_hits', (info) => {
-      getAttrs(["hits"], function(values) {
-          var l_hits = values.hits;
-          var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-          var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-          for (let i = 1; i <= l_hits; i++) {
-            roll_text += "{{" +"roll" + i + h_content +"}}";
-          }
-          startRoll( roll_text, (results) => {
-              console.log(results);
-              finishRoll(
-                  results.rollId,
-                  {
-                  }
-              );
-          });
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_hit_5', (info) => {
-      var l_hits = 5;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_hit_3', (info) => {
-      var l_hits = 3;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_hit_2', (info) => {
-      var l_hits = 2;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_hit_1', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shots', (info) => {
-      getAttrs(["shots"], function(values) {
-          var l_hits = values.shots;
-          var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-          var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-          for (let i = 1; i <= l_hits; i++) {
-            roll_text += "{{" +"roll" + i + h_content +"}}";
-          }
-          roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-          startRoll( roll_text, (results) => {
-              console.log(results);
-              finishRoll(
-                  results.rollId,
-                  {
-                  }
-              );
-          });
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_5', (info) => {
-      var l_hits = 5;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_3', (info) => {
-      var l_hits = 3;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_2', (info) => {
-      var l_hits = 2;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_1', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:ricochet} {{prop_hit_location=[[0]]}} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          console.log(typeof(results))
-          let rollData = {};
-          let _prop_hit_location = "";
-
-          let location = results.results.roll1.result;
-          console.log("Location = ");
-          console.log(location);
-          if (location <= 10) {
-              _prop_hit_location = "HEAD";
-          } else if (location <= 50 && location > 10) {
-            _prop_hit_location = "TORSO";
-          } else if (location <= 90 && location > 50) {
-            _prop_hit_location = "KROCZ";
-          } else {
-            _prop_hit_location = "LEG";
-          }
-
-          // rollData.prop_hit_location = [_prop_hit_location,_prop_hit_location];
-          rollData.prop_hit_location = "<h4> HEMLO </h4>";
-          console.log("Again:");
-          console.log(results);
-          console.log(rollData);
-          finishRoll(
-              results.rollId,
-              rollData
-          );
-
-      });
-  });
-</script>
-
-<!-- Individual stats -->
-
-
-
-<!-- Rank system -->
 <script type="text/worker">
 
   const _metadata = {
@@ -2012,19 +1784,33 @@
     roll_text += "{{character_name=@{character_name}}}";
     roll_text += "{{test_name=" + test_name + "}}";
     roll_text += "{{character_skill=@{" + character_skill + "}}}";
-    for (let i = 1; i <= num_hits; i++) {
-      roll_text += "{{roll" + i +"="+ roll_formula +"}}";
-    }
 
     if(do_ricochet === true)
       roll_text += "{{roll_ricochet=[[1d100cs>96cf<96]]}}";
 
-    startRoll(roll_text, (results) => {
-        console.log(results);
-        finishRoll(
-            results.rollId,
-            {}
-        );
+    if (num_hits === "hits" || num_hits === "shots")
+      attr_num_hits = num_hits
+    else
+      attr_num_hits = "hits"
+
+    getAttrs([attr_num_hits], function(values) {
+      if (num_hits === "hits")
+        num_hits = values.hits;
+
+      if (num_hits === "shots")
+        num_hits = values.shots;
+
+      for (let i = 1; i <= num_hits; i++) {
+        roll_text += "{{roll" + i +"="+ roll_formula +"}}";
+      }
+
+      startRoll(roll_text, (results) => {
+          console.log(results);
+          finishRoll(
+              results.rollId,
+              {}
+          );
+      });
     });
   };
 
@@ -2036,6 +1822,17 @@
       roll_formula=roll_formula,
       num_hits=1,
       do_ricochet=false
+    );
+  };
+
+  var ricochet_rolls = function(test_name, character_skill, roll_formula, num_hits) {
+    ability_rolls(
+      template_name="ricochet",
+      test_name=test_name,
+      character_skill=character_skill,
+      roll_formula=roll_formula,
+      num_hits=num_hits,
+      do_ricochet=true
     );
   };
 
@@ -2053,21 +1850,22 @@
     change_rank(direction=+1)
   });
 
-  // Standard marksmanship is considered a multiple roll, because this template uses the ricochet roll
   on('clicked:button_marksmanship', function() {
-    single_roll(
+    ricochet_rolls(
       test_name="Strzelectwo",
       character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]"
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits = 1
     );
   });
 
 
   on('clicked:button_cqb', function() {
-    single_roll(
+    ricochet_rolls(
       test_name="Zwarcie",
       character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]"
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits = 1
     );
   });
 
@@ -2111,4 +1909,97 @@
     );
   });
 
+  on('clicked:button_hit_5', function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits=5
+    );
+  });
+
+  on('clicked:button_hit_3', function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits=3
+    );
+  });
+
+  on('clicked:button_hit_2', function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits=2
+    );
+  });
+
+  on('clicked:button_hit_1', function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits=1
+    );
+  });
+
+  on('clicked:button_shot_5', function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits=5
+    );
+  });
+
+  on('clicked:button_shot_3', function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits=3
+    );
+  });
+
+  on('clicked:button_shot_2', function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits=2
+    );
+  });
+
+  on('clicked:button_shot_1', function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits=1
+    );
+  });
+
+  on('clicked:button_hits', function() {
+    ability_rolls(
+      template_name="ricochet",
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits="hits",
+      do_ricochet=true
+    );
+  });
+
+  on('clicked:button_shots', function() {
+    ability_rolls(
+      template_name="ricochet",
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits="shots",
+      do_ricochet=true
+    );
+  });
 </script>
