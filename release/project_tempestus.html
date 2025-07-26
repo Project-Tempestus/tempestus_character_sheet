@@ -1752,19 +1752,15 @@
       let v_regiment = values["regiment"];
       let v_class = values["class"];
 
-      console.log(v_regiment);
-      console.log(v_class);
-
-      _base_attr_updates = {}
-
       var _class;
       for (var __class in game_config.classes) {
-          if (v_class == game_config.classes[__class].label)
+          if (v_class === game_config.classes[__class].label){
             _class = __class;
             break;
+          }
       }
-      console.log("Found class:")
-      console.log(_class);
+
+      var _base_attr_updates = {};
 
       for( var ability in game_config.base_attrs) {
         let attr = game_config.base_attrs[ability].attr
@@ -1776,32 +1772,33 @@
         else
           regiment_bonus = 0;
 
- //       if (ability in game_config.classes[_class])
- //         class_bonus = (game_config.classes[_class])[ability];
- //       else
- //         class_bonus = 0;
+        if (ability in game_config.classes[_class])
+          class_bonus = (game_config.classes[_class])[ability];
+        else
+          class_bonus = 0;
 
-        let ability_value = base_value + regiment_bonus; // + class_bonus;
+        let ability_value = base_value + regiment_bonus + class_bonus;
 
         _base_attr_updates[attr] = ability_value;
       }
-      console.log("Update dict:");
-      console.log(_base_attr_updates);
       setAttrs(_base_attr_updates);
 
-//      for (let i = 0; i < stat.length ; i++) {
-//          getAttrs([stat_base[i],stat_mod[i]], values => {
-//            console.log(values);
-//            let v_base = int(values[stat_base[i]]);
-//            let v_mod = int(values[stat_mod[i]]);
-//            let v = v_base + v_mod;
-//            setAttrs({
-//                [`${stat[i]}`]: v
-//            });
-//        });
-//      }
+      // FIXME: Connect to the game_config
+      var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+      var stat_mod = stat.map(i => i + "_modifier");
+      var stat_base = stat.map(i => i + "_base");
+      const int = score => parseInt(score, 10) || 0;
+      for (let i = 0; i < stat.length ; i++) {
+          getAttrs([stat_base[i],stat_mod[i]], values => {
+            let v_base = int(values[stat_base[i]]);
+            let v_mod = int(values[stat_mod[i]]);
+            let v = v_base + v_mod;
+            setAttrs({
+                [`${stat[i]}`]: v
+            });
+        });
+      }
     });
-
   };
 
   var ability_rolls = function(template_name, test_name, character_skill, roll_formula, num_hits=1, do_ricochet=false) {
