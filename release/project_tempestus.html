@@ -1502,160 +1502,6 @@
 </script>
 
 <script type="text/worker">
-  const int = score => parseInt(score, 10) || 0;
-
-  const a_regiment = "regiment";
-  const a_class = "class";
-
-  const a_marksmanship_base = "marksmanship_base";
-  const a_cqb_base = "cqb_base";
-  const a_strength_base = "strength_base";
-  const a_constitution_base = "constitution_base";
-  const a_agility_base = "agility_base";
-  const a_knowledge_base = "knowledge_base";
-  const a_hp_base = "health-points_base";
-
-  const BASE_MARKSMANSHIP = 15;
-  const BASE_CQB = 40;
-  const BASE_STRENGTH = 40;
-  const BASE_constitution = 40;
-  const BASE_AGILITY = 40;
-  const BASE_KNOWLEDGE = 30;
-  const BASE_HP = 100;
-
-  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
-  var stat_mod = stat.map(i => i + "_modifier");
-  var stat_base = stat.map(i => i + "_base");
-
-  on(`change:${a_regiment} change:${a_class} sheet:opened`, () => {
-    getAttrs([a_regiment, a_class], values => {
-      let v_regiment = values[a_regiment];
-      let v_class = values[a_class];
-
-      console.log(v_regiment);
-      console.log(v_class);
-
-
-      let marksmanship_regiment_bonus = 0;
-      let cqb_regiment_bonus = 0;
-      let strength_regiment_bonus = 0;
-      let constitution_regiment_bonus = 0;
-      let agility_regiment_bonus = 0;
-      let knowledge_regiment_bonus = 0;
-      let hp_regiment_bonus = 0;
-
-      if (v_regiment == "Cadia") {
-        marksmanship_regiment_bonus = 5;
-        cqb_regiment_bonus = 5;
-        constitution_regiment_bonus = 5;
-        agility_regiment_bonus = 5;
-      } else if (v_regiment == "Catachan") {
-        cqb_regiment_bonus = 10;
-        strength_regiment_bonus = 5;
-        agility_regiment_bonus = 5;
-        hp_regiment_bonus = 15;
-      } else if (v_regiment == "Krieg") {
-          cqb_regiment_bonus = 5;
-          constitution_regiment_bonus = 10;
-          knowledge_regiment_bonus = 5;
-      } else if (v_regiment == "Armageddon") {
-          agility_regiment_bonus = 10;
-          knowledge_regiment_bonus = 30;
-      } else if (v_regiment == "Vostroya") {
-          constitution_regiment_bonus = 10;
-          strength_regiment_bonus = 10;
-          hp_regiment_bonus = 30;
-      } else {
-          marksmanship_regiment_bonus = 0;
-          cqb_regiment_bonus = 0;
-          strength_regiment_bonus = 0;
-          constitution_regiment_bonus = 0;
-          agility_regiment_bonus = 0;
-          knowledge_regiment_bonus = 0;
-          hp_regiment_bonus = 0;
-      }
-
-      let marksmanship_class_bonus = 0;
-      let cqb_class_bonus = 0;
-      let strength_class_bonus = 0;
-      let constitution_class_bonus = 0;
-      let agility_class_bonus = 0;
-      let knowledge_class_bonus = 0;
-      let hp_class_bonus = 0;
-      if (v_class == "[CHR] Chirurgon") {
-          constitution_class_bonus = 15;
-          knowledge_class_bonus = 15;
-      } else if (v_class == "[INŻ] Inżynier") {
-          strength_class_bonus = 10;
-          knowledge_class_bonus = 20;
-      } else if (v_class == "[GRE] Grenadier") {
-          strength_class_bonus = 15;
-          constitution_class_bonus = 15;
-      } else if (v_class == "[SRŻ] Sierżant") {
-          constitution_class_bonus = 10;
-          hp_class_bonus = 10;
-      } else if (v_class == "[ZWD] Zwiadowca") {
-          agility_class_bonus = 30;
-          knowledge_class_bonus = 10;
-      } else if (v_class == "[STR] Strzelec") {
-          marksmanship_class_bonus = 5;
-      } else if (v_class == "[SZT] Szturmowiec") {
-          cqb_class_bonus = 15;
-          agility_class_bonus = 15;
-      } else {
-          marksmanship_class_bonus = 0;
-          cqb_class_bonus = 0;
-          strength_class_bonus = 0;
-          constitution_class_bonus = 0;
-          agility_class_bonus = 0;
-          knowledge_class_bonus = 0;
-          hp_class_bonus = 0;
-      }
-
-      let marksmanship_value = BASE_MARKSMANSHIP + marksmanship_regiment_bonus + marksmanship_class_bonus;
-      let cqb_value = BASE_CQB + cqb_regiment_bonus + cqb_class_bonus;
-      let strength_value = BASE_STRENGTH + strength_regiment_bonus + strength_class_bonus;
-      let constitution_value = BASE_constitution + constitution_regiment_bonus + constitution_class_bonus;
-      let agility_value = BASE_AGILITY + agility_regiment_bonus + agility_class_bonus;
-      let knowledge_value = BASE_KNOWLEDGE + knowledge_regiment_bonus + knowledge_class_bonus;
-      let hp_value = BASE_HP + hp_regiment_bonus + hp_class_bonus;
-
-
-      console.log(marksmanship_value);
-      console.log(cqb_value);
-      console.log(strength_value);
-      console.log(constitution_value);
-      console.log(agility_value);
-      console.log(knowledge_value);
-      console.log(hp_value);
-
-      setAttrs({
-        [`${a_marksmanship_base}`]: marksmanship_value,
-      });
-
-      setAttrs({ [`${a_cqb_base}`]: cqb_value });
-      setAttrs({ [`${a_strength_base}`]: strength_value });
-      setAttrs({ [`${a_constitution_base}`]: constitution_value});
-      setAttrs({ [`${a_agility_base}`]: agility_value });
-      setAttrs({ [`${a_knowledge_base}`]: knowledge_value});
-      setAttrs({ [`${a_hp_base}`]: hp_value});
-
-      for (let i = 0; i < stat.length ; i++) {
-          getAttrs([stat_base[i],stat_mod[i]], values => {
-            console.log(values);
-            let v_base = int(values[stat_base[i]]);
-            let v_mod = int(values[stat_mod[i]]);
-            let v = v_base + v_mod;
-            setAttrs({
-                [`${stat[i]}`]: v
-            });
-        });
-      }
-    });
-  });
-</script>
-
-<script type="text/worker">
 
   const _metadata = {
     name: 'Project:Tempestus',
@@ -1798,7 +1644,6 @@
       strength: 15,
       constitution: 15,
     },
-
     sargeant: {
       label: '[SRŻ] Sierżant',
       constitution: 10,
@@ -1855,6 +1700,27 @@
     });
   };
 
+  var set_default_regiment = function () {
+    getAttrs(['regiment'], values => {
+      let v_regiment = values['regiment'];
+      if (v_regiment === undefined)
+        v_regiment = Object.keys(game_config.regiments)[0];
+      setAttrs({ regiment: v_regiment });
+    });
+  };
+
+  var set_default_class = function () {
+    getAttrs(['class'], values => {
+      let v_class = values['class'];
+      if (v_class === undefined) {
+        var key = Object.keys(game_config.classes)[0];
+        v_class = game_config.classes[key].label;
+      }
+      setAttrs({ class: v_class });
+    });
+  };
+
+
   var change_rank = function(direction){
     if (direction !== 1 && direction !== -1)
       console.log("Unexpected direction, use +1 or -1");
@@ -1879,6 +1745,63 @@
         attr_rank
       );
     });
+  };
+
+  var update_guardsmen_stats = function(){
+    getAttrs(["regiment", "class"], values => {
+      let v_regiment = values["regiment"];
+      let v_class = values["class"];
+
+      console.log(v_regiment);
+      console.log(v_class);
+
+      _base_attr_updates = {}
+
+      var _class;
+      for (var __class in game_config.classes) {
+          if (v_class == game_config.classes[__class].label)
+            _class = __class;
+            break;
+      }
+      console.log("Found class:")
+      console.log(_class);
+
+      for( var ability in game_config.base_attrs) {
+        let attr = game_config.base_attrs[ability].attr
+        let base_value = game_config.base_attrs[ability].value
+        var regiment_bonus;
+        var class_bonus;
+        if (ability in game_config.regiments[v_regiment])
+          regiment_bonus = (game_config.regiments[v_regiment])[ability];
+        else
+          regiment_bonus = 0;
+
+ //       if (ability in game_config.classes[_class])
+ //         class_bonus = (game_config.classes[_class])[ability];
+ //       else
+ //         class_bonus = 0;
+
+        let ability_value = base_value + regiment_bonus; // + class_bonus;
+
+        _base_attr_updates[attr] = ability_value;
+      }
+      console.log("Update dict:");
+      console.log(_base_attr_updates);
+      setAttrs(_base_attr_updates);
+
+//      for (let i = 0; i < stat.length ; i++) {
+//          getAttrs([stat_base[i],stat_mod[i]], values => {
+//            console.log(values);
+//            let v_base = int(values[stat_base[i]]);
+//            let v_mod = int(values[stat_mod[i]]);
+//            let v = v_base + v_mod;
+//            setAttrs({
+//                [`${stat[i]}`]: v
+//            });
+//        });
+//      }
+    });
+
   };
 
   var ability_rolls = function(template_name, test_name, character_skill, roll_formula, num_hits=1, do_ricochet=false) {
@@ -1942,6 +1865,8 @@
   on(`sheet:opened`, function() {
     print_config();
     set_default_rank();
+    set_default_regiment();
+    set_default_class();
   });
 
   on(`clicked:rank_demotion`, function() {
@@ -2104,4 +2029,8 @@
       do_ricochet=true
     );
   });
+
+   on(`change:regiment change:class sheet:opened`, () => {
+    update_guardsmen_stats();
+   });
 </script>
