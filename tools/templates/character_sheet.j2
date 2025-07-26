@@ -1336,76 +1336,30 @@
     );
   });
 
-  on('clicked:button_hit_5', function() {
-    ricochet_rolls(
-      test_name="Zwarcie",
-      character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-      num_hits=5
-    );
+  var used_bursts = [1,2,3,5];
+
+  used_bursts.forEach(burst => {
+    var button_name = "button_shot_" + burst.toString();
+    on(`clicked:${button_name}`, function() {
+      ricochet_rolls(
+        test_name="Strzelectwo",
+        character_skill="marksmanship",
+        roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+        num_hits=burst
+      );
+    });
   });
 
-  on('clicked:button_hit_3', function() {
-    ricochet_rolls(
-      test_name="Zwarcie",
-      character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-      num_hits=3
-    );
-  });
-
-  on('clicked:button_hit_2', function() {
-    ricochet_rolls(
-      test_name="Zwarcie",
-      character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-      num_hits=2
-    );
-  });
-
-  on('clicked:button_hit_1', function() {
-    ricochet_rolls(
-      test_name="Zwarcie",
-      character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-      num_hits=1
-    );
-  });
-
-  on('clicked:button_shot_5', function() {
-    ricochet_rolls(
-      test_name="Strzelectwo",
-      character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-      num_hits=5
-    );
-  });
-
-  on('clicked:button_shot_3', function() {
-    ricochet_rolls(
-      test_name="Strzelectwo",
-      character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-      num_hits=3
-    );
-  });
-
-  on('clicked:button_shot_2', function() {
-    ricochet_rolls(
-      test_name="Strzelectwo",
-      character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-      num_hits=2
-    );
-  });
-
-  on('clicked:button_shot_1', function() {
-    ricochet_rolls(
-      test_name="Strzelectwo",
-      character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-      num_hits=1
-    );
+  used_bursts.forEach(burst => {
+    var button_name = "button_hit_" + burst.toString();
+    on(`clicked:${button_name}`, function() {
+      ricochet_rolls(
+        test_name="Zwarcie",
+        character_skill="cqb",
+        roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+        num_hits=burst
+      );
+    });
   });
 
   on('clicked:button_hits', function() {
