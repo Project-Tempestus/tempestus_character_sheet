@@ -129,7 +129,7 @@
               ></button>
             </div>
             <div class="sheet-item" style="justify-content: center; margin:5px;">
-              <input readonly name="attr_current_rank_name" value="Gwardzista"
+              <input readonly name="attr_current_rank_name" value="Rekrut"
               style="border:0px; font-family:'Courier New';font-size: large;
               font-weight: 600;"/>
             </div>
@@ -461,21 +461,14 @@
       </div>
 
       {%raw %}
-      <rolltemplate class="sheet-rolltemplate-test">
+            <rolltemplate class="sheet-rolltemplate-test">
         <div class="sheet-template-container">
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">{{character_name}}</h4>
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Test: {{test_name}}</h4>
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center; color:var(--TempestusGreen)" class="sheet-template-text">Poziom cechy: {{character_skill}}</h4>
           <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
           <div style="padding:2px;" class="sheet-results">
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll9}} {{computed::roll10}} {{computed::roll11}} {{computed::roll12}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll13}} {{computed::roll14}} {{computed::roll15}} {{computed::roll16}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll17}} {{computed::roll18}} {{computed::roll19}} {{computed::roll20}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll21}} {{computed::roll22}} {{computed::roll23}} {{computed::roll24}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll25}} {{computed::roll26}} {{computed::roll27}} {{computed::roll28}}</h4>
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll29}} {{computed::roll30}} {{computed::roll31}} {{computed::roll32}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}}</h4>
            </div>
            <div class="sheet-template-signature">
            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
@@ -502,7 +495,7 @@
           <div style="padding:2px;" class="sheet-results">
             <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Szansa na rykoszet (96-100)</h4>
             <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
-            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll33}}</h4>
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll_ricochet}}</h4>
            </div>
            <div class="sheet-template-signature">
            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
@@ -912,147 +905,294 @@
 </script>
 
 <script type="text/worker">
-  const int = score => parseInt(score, 10) || 0;
 
-  const a_regiment = "regiment";
-  const a_class = "class";
+  const _metadata = {
+    name: 'Project:Tempestus',
+    type: 'Character Sheet',
+    version: '0.9.8',
+  };
 
-  const a_marksmanship_base = "marksmanship_base";
-  const a_cqb_base = "cqb_base";
-  const a_strength_base = "strength_base";
-  const a_constitution_base = "constitution_base";
-  const a_agility_base = "agility_base";
-  const a_knowledge_base = "knowledge_base";
-  const a_hp_base = "health-points_base";
+  const _ranks = {
+    url_prefix:
+      'https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/',
+    list: [
+      {
+        name: 'Gwardzista',
+        url: 'Ranga1_Gwardzista.png',
+      },
+      {
+        name: 'Starszy Gwardzista',
+        url: 'Ranga2_StarszyGwardzista.png',
+      },
+      {
+        name: 'Kapral',
+        url: 'Ranga3_Kapral.png',
+      },
+      {
+        name: 'Starszy Kapral',
+        url: 'Ranga4_StarszyKapral.png',
+      },
+      {
+        name: 'Plutonowy',
+        url: 'Ranga5_Plutonowy.png',
+      },
+      {
+        name: 'Starszy Plutonowy',
+        url: 'Ranga6_StarszyPlutonowy.png',
+      },
+      {
+        name: 'Sierżant',
+        url: 'Ranga7_Sierzant.png',
+      },
+      {
+        name: 'Starszy Sierżant',
+        url: 'Ranga8_StarszySierzant.png',
+      },
+      {
+        name: 'Sierżant Sztabowy',
+        url: 'Ranga9_SierzantSztabowy.png',
+      },
+      {
+        name: 'Podchorąży',
+        url: 'Ranga10_Podchorazy.png',
+      },
+      {
+        name: 'Chorąży',
+        url: 'Ranga11_Chorazy.png',
+      },
+      {
+        name: 'Podporucznik',
+        url: 'Ranga12_Podporucznik.png',
+      },
+      {
+        name: 'Porucznik',
+        url: 'Ranga13_Porucznik.png',
+      },
+    ],
+  };
 
-  const BASE_MARKSMANSHIP = 15;
-  const BASE_CQB = 40;
-  const BASE_STRENGTH = 40;
-  const BASE_constitution = 40;
-  const BASE_AGILITY = 40;
-  const BASE_KNOWLEDGE = 30;
-  const BASE_HP = 100;
+  const _base_attrs = {
+    marksmanship: {
+      attr: 'marksmanship_base',
+      value: 15,
+    },
+    cqb: {
+      attr: 'cqb_base',
+      value: 40,
+    },
+    strength: {
+      attr: 'strength_base',
+      value: 40,
+    },
+    constitution: {
+      attr: 'constitution_base',
+      value: 40,
+    },
+    agility: {
+      attr: 'agility_base',
+      value: 40,
+    },
+    knowledge: {
+      attr: 'knowledge_base',
+      value: 30,
+    },
+    hp: {
+      attr: 'health-points_base',
+      value: 100,
+    },
+  };
 
-  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
-  var stat_mod = stat.map(i => i + "_modifier");
-  var stat_base = stat.map(i => i + "_base");
+  const _regiments = {
+    Cadia: {
+      marksmanship: 5,
+      cqb: 5,
+      constitution: 5,
+      agility: 5,
+    },
+    Catachan: {
+      cqb: 10,
+      strength: 5,
+      agility: 5,
+      hp: 15,
+    },
+    Krieg: {
+      cqb: 5,
+      constitution: 10,
+      knowledge: 5,
+    },
+    Armageddon: {
+      agility: 10,
+      knowledge: 30,
+    },
+    Vostroya: {
+      constitution: 10,
+      strength: 10,
+      hp: 30,
+    },
+  };
 
-  on(`change:${a_regiment} change:${a_class} sheet:opened`, () => {
-    getAttrs([a_regiment, a_class], values => {
-      let v_regiment = values[a_regiment];
-      let v_class = values[a_class];
+  const _classes = {
+    chirurgon: {
+      label: '[CHR] Chirurgon',
+      constitution: 15,
+      knowledge: 15,
+    },
+    engineer: {
+      label: '[INŻ] Inżynier',
+      strength: 10,
+      knowledge: 20,
+    },
+    grenadier: {
+      label: '[GRE] Grenadier',
+      strength: 15,
+      constitution: 15,
+    },
+    sargeant: {
+      label: '[SRŻ] Sierżant',
+      constitution: 10,
+      hp: 10,
+    },
+    scout: {
+      label: '[ZWD] Zwiadowca',
+      agility: 30,
+      knowledge: 10,
+    },
+    sharpshooter: {
+      label: '[STR] Strzelec',
+      marksmanship: 5,
+    },
+    stormtrooper: {
+      label: '[SZT] Szturmowiec',
+      cqb: 15,
+      agility: 15,
+    },
+  };
 
-      console.log(v_regiment);
-      console.log(v_class);
+  const game_config = {
+    metadata: _metadata,
+    ranks: _ranks,
+    base_attrs: _base_attrs,
+    regiments: _regiments,
+    classes: _classes
+  };
+
+  print_config = function(){
+    console.log("/* Global config");
+    console.log(game_config);
+    console.log("Global config */");
+  };
+
+  // We set the default rank for new characters or if the rank is deleted by accident.
+  var set_default_rank = function(){
+    const _rank_list = game_config.ranks.list;
+    const _default_rank = _rank_list[0];
+    const url = game_config.ranks.url_prefix + _default_rank.url;
+    const attr_rank = {
+        "current_rank": url,
+        "current_rank_name": _default_rank.name
+    };
+    getAttrs(["current_rank_name"], values => {
+      const id = _rank_list.findIndex((element) => element.name === values["current_rank_name"]);
+      if (id === -1) {
+        console.log("Set default rank to:");
+        console.log(attr_rank);
+        setAttrs(
+          attr_rank
+        );
+      }
+    });
+  };
+
+  var set_default_regiment = function () {
+    getAttrs(['regiment'], values => {
+      let v_regiment = values['regiment'];
+      if (v_regiment === undefined)
+        v_regiment = Object.keys(game_config.regiments)[0];
+      setAttrs({ regiment: v_regiment });
+    });
+  };
+
+  var set_default_class = function () {
+    getAttrs(['class'], values => {
+      let v_class = values['class'];
+      if (v_class === undefined) {
+        var key = Object.keys(game_config.classes)[0];
+        v_class = game_config.classes[key].label;
+      }
+      setAttrs({ class: v_class });
+    });
+  };
 
 
-      let marksmanship_regiment_bonus = 0;
-      let cqb_regiment_bonus = 0;
-      let strength_regiment_bonus = 0;
-      let constitution_regiment_bonus = 0;
-      let agility_regiment_bonus = 0;
-      let knowledge_regiment_bonus = 0;
-      let hp_regiment_bonus = 0;
+  var change_rank = function(direction){
+    if (direction !== 1 && direction !== -1)
+      console.log("Unexpected direction, use +1 or -1");
 
-      if (v_regiment == "Cadia") {
-        marksmanship_regiment_bonus = 5;
-        cqb_regiment_bonus = 5;
-        constitution_regiment_bonus = 5;
-        agility_regiment_bonus = 5;
-      } else if (v_regiment == "Catachan") {
-        cqb_regiment_bonus = 10;
-        strength_regiment_bonus = 5;
-        agility_regiment_bonus = 5;
-        hp_regiment_bonus = 15;
-      } else if (v_regiment == "Krieg") {
-          cqb_regiment_bonus = 5;
-          constitution_regiment_bonus = 10;
-          knowledge_regiment_bonus = 5;
-      } else if (v_regiment == "Armageddon") {
-          agility_regiment_bonus = 10;
-          knowledge_regiment_bonus = 30;
-      } else if (v_regiment == "Vostroya") {
-          constitution_regiment_bonus = 10;
-          strength_regiment_bonus = 10;
-          hp_regiment_bonus = 30;
-      } else {
-          marksmanship_regiment_bonus = 0;
-          cqb_regiment_bonus = 0;
-          strength_regiment_bonus = 0;
-          constitution_regiment_bonus = 0;
-          agility_regiment_bonus = 0;
-          knowledge_regiment_bonus = 0;
-          hp_regiment_bonus = 0;
+    const _rank_list = game_config.ranks.list;
+    getAttrs(["current_rank_name"], values => {
+      const id = _rank_list.findIndex((element) => element.name === values["current_rank_name"]);
+
+      let new_index = id + direction;
+      // Overflow
+      if (direction === 1 && new_index == _rank_list.length)
+          new_index = 0;
+      // Underflow
+      else if (direction === -1 && new_index === -1)
+          new_index = _rank_list.length-1;
+
+      const attr_rank = {
+          "current_rank": game_config.ranks.url_prefix + game_config.ranks.list[new_index].url,
+          "current_rank_name": game_config.ranks.list[new_index].name
+      };
+      setAttrs(
+        attr_rank
+      );
+    });
+  };
+
+  var update_guardsmen_stats = function(){
+    getAttrs(["regiment", "class"], values => {
+      let v_regiment = values["regiment"];
+      let v_class = values["class"];
+
+      var _class;
+      for (var __class in game_config.classes) {
+          if (v_class === game_config.classes[__class].label){
+            _class = __class;
+            break;
+          }
       }
 
-      let marksmanship_class_bonus = 0;
-      let cqb_class_bonus = 0;
-      let strength_class_bonus = 0;
-      let constitution_class_bonus = 0;
-      let agility_class_bonus = 0;
-      let knowledge_class_bonus = 0;
-      let hp_class_bonus = 0;
-      if (v_class == "[CHR] Chirurgon") {
-          constitution_class_bonus = 15;
-          knowledge_class_bonus = 15;
-      } else if (v_class == "[INŻ] Inżynier") {
-          strength_class_bonus = 10;
-          knowledge_class_bonus = 20;
-      } else if (v_class == "[GRE] Grenadier") {
-          strength_class_bonus = 15;
-          constitution_class_bonus = 15;
-      } else if (v_class == "[SRŻ] Sierżant") {
-          constitution_class_bonus = 10;
-          hp_class_bonus = 10;
-      } else if (v_class == "[ZWD] Zwiadowca") {
-          agility_class_bonus = 30;
-          knowledge_class_bonus = 10;
-      } else if (v_class == "[STR] Strzelec") {
-          marksmanship_class_bonus = 5;
-      } else if (v_class == "[SZT] Szturmowiec") {
-          cqb_class_bonus = 15;
-          agility_class_bonus = 15;
-      } else {
-          marksmanship_class_bonus = 0;
-          cqb_class_bonus = 0;
-          strength_class_bonus = 0;
-          constitution_class_bonus = 0;
-          agility_class_bonus = 0;
-          knowledge_class_bonus = 0;
-          hp_class_bonus = 0;
+      var _base_attr_updates = {};
+
+      for( var ability in game_config.base_attrs) {
+        let attr = game_config.base_attrs[ability].attr
+        let base_value = game_config.base_attrs[ability].value
+        var regiment_bonus;
+        var class_bonus;
+        if (ability in game_config.regiments[v_regiment])
+          regiment_bonus = (game_config.regiments[v_regiment])[ability];
+        else
+          regiment_bonus = 0;
+
+        if (ability in game_config.classes[_class])
+          class_bonus = (game_config.classes[_class])[ability];
+        else
+          class_bonus = 0;
+
+        let ability_value = base_value + regiment_bonus + class_bonus;
+
+        _base_attr_updates[attr] = ability_value;
       }
+      setAttrs(_base_attr_updates);
 
-      let marksmanship_value = BASE_MARKSMANSHIP + marksmanship_regiment_bonus + marksmanship_class_bonus;
-      let cqb_value = BASE_CQB + cqb_regiment_bonus + cqb_class_bonus;
-      let strength_value = BASE_STRENGTH + strength_regiment_bonus + strength_class_bonus;
-      let constitution_value = BASE_constitution + constitution_regiment_bonus + constitution_class_bonus;
-      let agility_value = BASE_AGILITY + agility_regiment_bonus + agility_class_bonus;
-      let knowledge_value = BASE_KNOWLEDGE + knowledge_regiment_bonus + knowledge_class_bonus;
-      let hp_value = BASE_HP + hp_regiment_bonus + hp_class_bonus;
-
-
-      console.log(marksmanship_value);
-      console.log(cqb_value);
-      console.log(strength_value);
-      console.log(constitution_value);
-      console.log(agility_value);
-      console.log(knowledge_value);
-      console.log(hp_value);
-
-      setAttrs({
-        [`${a_marksmanship_base}`]: marksmanship_value,
-      });
-
-      setAttrs({ [`${a_cqb_base}`]: cqb_value });
-      setAttrs({ [`${a_strength_base}`]: strength_value });
-      setAttrs({ [`${a_constitution_base}`]: constitution_value});
-      setAttrs({ [`${a_agility_base}`]: agility_value });
-      setAttrs({ [`${a_knowledge_base}`]: knowledge_value});
-      setAttrs({ [`${a_hp_base}`]: hp_value});
-
+      // FIXME: Connect to the game_config
+      var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+      var stat_mod = stat.map(i => i + "_modifier");
+      var stat_base = stat.map(i => i + "_base");
+      const int = score => parseInt(score, 10) || 0;
       for (let i = 0; i < stat.length ; i++) {
           getAttrs([stat_base[i],stat_mod[i]], values => {
-            console.log(values);
             let v_base = int(values[stat_base[i]]);
             let v_mod = int(values[stat_mod[i]]);
             let v = v_base + v_mod;
@@ -1062,543 +1202,190 @@
         });
       }
     });
-  });
-</script>
+  };
 
+  var ability_rolls = function(template_name, test_name, character_skill, roll_formula, num_hits=1, do_ricochet=false) {
+    var roll_text = "&{template:"+template_name+"}";
+    roll_text += "{{character_name=@{character_name}}}";
+    roll_text += "{{test_name=" + test_name + "}}";
+    roll_text += "{{character_skill=@{" + character_skill + "}}}";
 
-<script type="text/worker">
-  on('clicked:button_hits', (info) => {
-      getAttrs(["hits"], function(values) {
-          var l_hits = values.hits;
-          var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-          var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-          for (let i = 1; i <= l_hits; i++) {
-            roll_text += "{{" +"roll" + i + h_content +"}}";
-          }
-          startRoll( roll_text, (results) => {
-              console.log(results);
-              finishRoll(
-                  results.rollId,
-                  {
-                  }
-              );
-          });
-      });
-  });
-</script>
+    if(do_ricochet === true)
+      roll_text += "{{roll_ricochet=[[1d100cs>96cf<96]]}}";
 
-<script type="text/worker">
-  on('clicked:button_hit_5', (info) => {
-      var l_hits = 5;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
+    if (num_hits === "hits" || num_hits === "shots")
+      attr_num_hits = num_hits
+    else
+      attr_num_hits = "hits"
+
+    getAttrs([attr_num_hits], function(values) {
+      if (num_hits === "hits")
+        num_hits = values.hits;
+
+      if (num_hits === "shots")
+        num_hits = values.shots;
+
+      for (let i = 1; i <= num_hits; i++) {
+        roll_text += "{{roll" + i +"="+ roll_formula +"}}";
       }
-      startRoll( roll_text, (results) => {
+
+      startRoll(roll_text, (results) => {
           console.log(results);
           finishRoll(
               results.rollId,
-              {
-              }
+              {}
           );
       });
-  });
-</script>
+    });
+  };
 
-<script type="text/worker">
-  on('clicked:button_hit_3', (info) => {
-      var l_hits = 3;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
+  var single_roll = function(test_name, character_skill, roll_formula) {
+    ability_rolls(
+      template_name="test",
+      test_name=test_name,
+      character_skill=character_skill,
+      roll_formula=roll_formula,
+      num_hits=1,
+      do_ricochet=false
+    );
+  };
 
-<script type="text/worker">
-  on('clicked:button_hit_2', (info) => {
-      var l_hits = 2;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
+  var ricochet_rolls = function(test_name, character_skill, roll_formula, num_hits) {
+    ability_rolls(
+      template_name="ricochet",
+      test_name=test_name,
+      character_skill=character_skill,
+      roll_formula=roll_formula,
+      num_hits=num_hits,
+      do_ricochet=true
+    );
+  };
 
-<script type="text/worker">
-  on('clicked:button_hit_1', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shots', (info) => {
-      getAttrs(["shots"], function(values) {
-          var l_hits = values.shots;
-          var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-          var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-          for (let i = 1; i <= l_hits; i++) {
-            roll_text += "{{" +"roll" + i + h_content +"}}";
-          }
-          roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-          startRoll( roll_text, (results) => {
-              console.log(results);
-              finishRoll(
-                  results.rollId,
-                  {
-                  }
-              );
-          });
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_5', (info) => {
-      var l_hits = 5;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_3', (info) => {
-      var l_hits = 3;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_2', (info) => {
-      var l_hits = 2;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_shot_1', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<!-- Individual stats -->
-
-<script type="text/worker">
-  on('clicked:button_marksmanship', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:ricochet} {{test_name=Strzelectwo}} {{character_skill=@{marksmanship}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{marksmanship}cf>@{marksmanship}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      roll_text += "{{roll33=[[1d100cs>96cf<96]]}}";
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_cqb', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Zwarcie}} {{character_skill=@{cqb}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{cqb}cf>@{cqb}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_strength', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Siła}} {{character_skill=@{strength}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{strength}cf>@{strength}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_constitution', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Wytrzymałość}} {{character_skill=@{constitution}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{constitution}cf>@{constitution}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_agility', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Zwinność}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{agility}cf>@{agility}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_knowledge', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Wiedza}} {{character_skill=@{knowledge}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[1d100cs<@{knowledge}cf>@{knowledge}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<script type="text/worker">
-  on('clicked:button_initiative', (info) => {
-      var l_hits = 1;
-      var roll_text = "&{template:test} {{test_name=Inicjatywa}} {{character_skill=@{agility}}} {{character_name=@{character_name}}}";
-      var h_content = "=[[2d20cs>0+@{agility}]]";
-      for (let i = 1; i <= l_hits; i++) {
-        roll_text += "{{" +"roll" + i + h_content +"}}";
-      }
-      startRoll( roll_text, (results) => {
-          console.log(results);
-          finishRoll(
-              results.rollId,
-              {
-              }
-          );
-      });
-  });
-</script>
-
-<!-- Rank system -->
-
-<script type="text/worker">
-  const buttonlist = ["rank_promotion"];
-  const a_current_rank= "current_rank";
-  const a_current_rank_name= "current_rank_name";
-
-  const rankURLlist = [
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
-  ];
-  const rankNames = [
-    "Gwardzista",
-    "Starszy Gwardzista",
-    "Kapral",
-    "Starszy Kapral",
-    "Plutonowy",
-    "Starszy Plutonowy",
-    "Sierżant",
-    "Starszy Sierżant",
-    "Sierżant Sztabowy",
-    "Podchorąży",
-    "Chorąży",
-    "Podporucznik",
-    "Porucznik",
-  ]
-
-  const num_ranks = rankNames.length;
-
-  buttonlist.forEach(button => {
-      on(`clicked:${button}`, function() {
-        getAttrs([a_current_rank], values => {
-
-          curr_url = values[a_current_rank];
-          console.log("Current URL");
-          console.log(curr_url);
-
-          curr_index = rankURLlist.findIndex((element) => element == curr_url);
-          console.log("Current index");
-          console.log(curr_index);
-
-          if (curr_index ==  (num_ranks-1)) {
-            new_index = 0;
-          } else {
-            new_index = curr_index + 1;
-          }
-
-          console.log("New index");
-          console.log(new_index);
-
-          new_url = rankURLlist[new_index];
-          console.log("New URL");
-          console.log(new_url);
-
-          new_rank_name = rankNames[new_index];
-          setAttrs({ [`${a_current_rank}`]: new_url});
-          setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
-        });
-      });
-  });
-</script>
-
-<script type="text/worker">
-  const buttonlist = ["rank_demotion"];
-  const a_current_rank= "current_rank";
-  const a_current_rank_name= "current_rank_name";
-
-  const rankURLlist = [
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
-  ];
-  const rankNames = [
-    "Gwardzista",
-    "Starszy Gwardzista",
-    "Kapral",
-    "Starszy Kapral",
-    "Plutonowy",
-    "Starszy Plutonowy",
-    "Sierżant",
-    "Starszy Sierżant",
-    "Sierżant Sztabowy",
-    "Podchorąży",
-    "Chorąży",
-    "Podporucznik",
-    "Porucznik",
-  ]
-
-  const num_ranks = rankNames.length;
-
-  buttonlist.forEach(button => {
-      on(`clicked:${button}`, function() {
-        getAttrs([a_current_rank], values => {
-
-          curr_url = values[a_current_rank];
-          console.log("Current URL");
-          console.log(curr_url);
-
-          curr_index = rankURLlist.findIndex((element) => element == curr_url);
-          console.log("Current index");
-          console.log(curr_index);
-
-          if (curr_index ==  0 ) {
-            new_index = num_ranks - 1;
-          } else {
-            new_index = curr_index - 1;
-          }
-
-          console.log("New index");
-          console.log(new_index);
-
-          new_url = rankURLlist[new_index];
-          console.log("New URL");
-          console.log(new_url);
-
-          new_rank_name = rankNames[new_index];
-          setAttrs({ [`${a_current_rank}`]: new_url});
-          setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
-        });
-      });
-  });
-</script>
-
-<script type="text/worker">
-  const a_current_rank= "current_rank";
-  const a_current_rank_name= "current_rank_name";
-
-  const rankURLlist = [
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga1_Gwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga2_StarszyGwardzista.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga3_Kapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga4_StarszyKapral.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga5_Plutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga6_StarszyPlutonowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga7_Sierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga8_StarszySierzant.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga9_SierzantSztabowy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga10_Podchorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga11_Chorazy.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga12_Podporucznik.png",
-    "https://raw.githubusercontent.com/Project-Tempestus/assets/main/ranks/Ranga13_Porucznik.png",
-  ];
-  const rankNames = [
-    "Gwardzista",
-    "Starszy Gwardzista",
-    "Kapral",
-    "Starszy Kapral",
-    "Plutonowy",
-    "Starszy Plutonowy",
-    "Sierżant",
-    "Starszy Sierżant",
-    "Sierżant Sztabowy",
-    "Podchorąży",
-    "Chorąży",
-    "Podporucznik",
-    "Porucznik",
-  ]
-
-  const num_ranks = rankNames.length;
 
   on(`sheet:opened`, function() {
-    getAttrs([a_current_rank], values => {
-      curr_url = values[a_current_rank];
-      curr_index = rankURLlist.findIndex((element) => element == curr_url);
+    print_config();
+    set_default_rank();
+    set_default_regiment();
+    set_default_class();
+  });
 
-      if (curr_index ==  -1 ) {
-        new_index = 0;
-        new_url = rankURLlist[new_index];
-        console.log("New URL");
-        console.log(new_url);
+  on(`clicked:rank_demotion`, function() {
+    change_rank(direction=-1)
+  });
 
-        new_rank_name = rankNames[new_index];
-        setAttrs({ [`${a_current_rank}`]: new_url});
-        setAttrs({ [`${a_current_rank_name}`]: new_rank_name});
-      }
+  on(`clicked:rank_promotion`, function() {
+    change_rank(direction=+1)
+  });
+
+  on('clicked:button_marksmanship', function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits = 1
+    );
+  });
+
+
+  on('clicked:button_cqb', function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits = 1
+    );
+  });
+
+  on('clicked:button_strength', function() {
+    single_roll(
+      test_name="Siła",
+      character_skill="strength",
+      roll_formula="[[1d100cs<@{strength}cf>@{strength}]]"
+    );
+  });
+
+  on('clicked:button_constitution', function() {
+    single_roll(
+      test_name="Wytrzymałość",
+      character_skill="constitution",
+      roll_formula="[[1d100cs<@{constitution}cf>@{constitution}]]"
+    );
+  });
+
+  on('clicked:button_agility', function() {
+    single_roll(
+      test_name="Zwinność",
+      character_skill="agility",
+      roll_formula="[[1d100cs<@{agility}cf>@{agility}]]"
+    );
+  });
+
+  on('clicked:button_knowledge', function() {
+    single_roll(
+      test_name="Wiedza",
+      character_skill="knowledge",
+      roll_formula="[[1d100cs<@{knowledge}cf>@{knowledge}]]"
+    );
+  });
+
+  on('clicked:button_initiative', function() {
+    single_roll(
+      test_name="Inicjatywa",
+      character_skill="agility",
+      roll_formula="[[2d20cs>0+@{agility}]]"
+    );
+  });
+
+  var used_bursts = [1,2,3,5];
+
+  used_bursts.forEach(burst => {
+    var button_name = "button_shot_" + burst.toString();
+    on(`clicked:${button_name}`, function() {
+      ricochet_rolls(
+        test_name="Strzelectwo",
+        character_skill="marksmanship",
+        roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+        num_hits=burst
+      );
     });
   });
-</script>
 
+  used_bursts.forEach(burst => {
+    var button_name = "button_hit_" + burst.toString();
+    on(`clicked:${button_name}`, function() {
+      ricochet_rolls(
+        test_name="Zwarcie",
+        character_skill="cqb",
+        roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+        num_hits=burst
+      );
+    });
+  });
+
+  on('clicked:button_hits', function() {
+    ability_rolls(
+      template_name="ricochet",
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits="hits",
+      do_ricochet=true
+    );
+  });
+
+  on('clicked:button_shots', function() {
+    ability_rolls(
+      template_name="ricochet",
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits="shots",
+      do_ricochet=true
+    );
+  });
+
+   on(`change:regiment change:class sheet:opened`, () => {
+    update_guardsmen_stats();
+   });
+</script>
 {% endraw %}
