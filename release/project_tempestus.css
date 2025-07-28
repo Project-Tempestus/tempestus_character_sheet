@@ -580,7 +580,7 @@ div.sheet-item-armor-trio-right > *{
 	color: var(--TempestusGreen) !important;
 }
 .sheet-rolltemplate-locations .inlinerollresult{
-	display: list-item;
+	display: flex;
 	min-width: 75%;
 	/* min-height: 2em; */
 	text-align: left;
