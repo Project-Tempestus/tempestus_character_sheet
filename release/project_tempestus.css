@@ -591,33 +591,33 @@ div.sheet-item-armor-trio-right > *{
 	color: black !important;
 }
 .sheet-rolltemplate-locations .inlinerollresult .basicdiceroll {
-	border: 2px solid rgb(17, 192, 17);
 	background-color:rgb(17, 192, 17) !important;
 	color: black !important;
 	font-family: 'Courier New';
 	width: 28px;
+	border: none;
 }
 
 .sheet-rolltemplate-locations .inlinerollresult.fullcrit {
-	/* border: 2px solid rgb(17, 192, 17); */
 	background-color:black !important;
 	color:  rgb(17, 192, 17) !important;
 	font-family: 'Courier New';
+	border: none;
 }
-/*
+
 .sheet-rolltemplate-locations  .inlinerollresult.fullfail {
-	border: 2px solid #FF4019;
 	background-color:black !important;
 	color: #FF4019 !important;
 	font-family: 'Courier New';
-} */
+	border: none;
+}
 
-/* .sheet-rolltemplate-locations .inlinerollresult.importantroll {
-	border: 2px solid rgb(17, 192, 17);
+.sheet-rolltemplate-locations .inlinerollresult.importantroll {
 	background-color:black !important;
 	color:  rgb(17, 192, 17) !important;
 	font-family: 'Courier New';
-} */
+	border: none;
+}
 
 /* .sheet-rolltemplate-locations .sheet-template-signature{
 	display: flex;

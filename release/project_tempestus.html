@@ -1900,7 +1900,7 @@
     roll_loc = "&{template:locations}";
 
     for (let i = 1; i <= num_success; i++) {
-      roll_loc += "{{out_hit_location" + i + "=[[1d100cs<100]]}}";
+      roll_loc += "{{out_hit_location" + i + "=[[1d100cs<100cf>100]]}}";
     }
 
     startRoll(roll_loc, (results) => {
