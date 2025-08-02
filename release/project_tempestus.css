@@ -367,8 +367,12 @@ div.sheet-navigation-tabs{
 
 /* Roll template ricochet */
 .sheet-rolltemplate-ricochet  div.sheet-template-container {
-	border: 2px solid rgb(17, 192, 17) !important;
-	border-radius: 3px 3px 3px 3px;
+	border: solid rgb(17, 192, 17) !important;
+	border-top: 2px;
+	border-bottom: 0px;
+	border-left: 2px;
+	border-right: 2px;
+	/* border-radius: 3px 3px 3px 0px; */
 }
 .sheet-rolltemplate-ricochet  .sheet-template-header {
 	background-color: black;

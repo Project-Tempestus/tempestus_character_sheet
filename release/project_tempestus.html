@@ -522,7 +522,9 @@
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">{{character_name}}</h4>
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Test: {{test_name}}</h4>
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center; color:var(--TempestusGreen)" class="sheet-template-text">Poziom cechy: {{character_skill}}</h4>
-          <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+        </div>
+        <div class="sheet-template-container">
+          <!-- <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer"> -->
           <div style="padding:2px;" class="sheet-results">
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll1}} {{computed::roll2}} {{computed::roll3}} {{computed::roll4}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll5}} {{computed::roll6}} {{computed::roll7}} {{computed::roll8}}</h4>
@@ -533,15 +535,13 @@
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll25}} {{computed::roll26}} {{computed::roll27}} {{computed::roll28}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll29}} {{computed::roll30}} {{computed::roll31}} {{computed::roll32}}</h4>
           </div>
+        </div>
+        <div class="sheet-template-container">
           <div style="padding:2px;" class="sheet-results">
             <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Szansa na rykoszet (96-100)</h4>
-            <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+            <!-- <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer"> -->
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::roll_ricochet}}</h4>
            </div>
-           <div class="sheet-template-signature">
-           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
-            alt="restricted_access" style="height: 20px;" />
-          </div>
         </div>
       </rolltemplate>
       <rolltemplate class="sheet-rolltemplate-locations">
@@ -550,6 +550,10 @@
           <div style="padding:2px;" class="sheet-results">
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::out_hit_location1}} {{computed::out_hit_location2}} {{computed::out_hit_location3}} {{computed::out_hit_location4}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::out_hit_location5}} {{computed::out_hit_location6}} {{computed::out_hit_location7}} {{computed::out_hit_location8}}</h4>
+          </div>
+          <div class="sheet-template-signature">
+           <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
+            alt="restricted_access" style="height: 20px;" />
           </div>
         </div>
       </rolltemplate>
@@ -2109,6 +2113,14 @@
       num_hits="shots",
       do_ricochet=true
     );
+
+    getAttrs(["attr_to_mod"], values => {
+      var v = values["attr_to_mod"] + 1;
+      setAttrs({
+                  "attr_to_mod": v
+      })
+    });
+
   });
 
    on(`change:regiment change:class sheet:opened`, () => {
