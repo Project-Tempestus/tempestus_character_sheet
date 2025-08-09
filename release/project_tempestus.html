@@ -140,110 +140,151 @@
       </div>
     </div>
 
-    <!-- Shots rolls : 1,2,3,5, custom -->
-    <div class="sheet-shot-rolls">
-      <div class="sheet-row" style="
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          flex-wrap: nowrap;
-          flex-direction: row;
-          align-items: center;
-        ">
-        <h2 data-i18n="combat-u">Combat</h2>
-      </div>
-      <div class="sheet-row" style="
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          flex-wrap: nowrap;
-          flex-direction: row;
-          align-items: center;
-        ">
-        <div class="sheet-item">
-          <p data-i18n="weapon-u">Weapon</p>
-        </div>
-        <div class="sheet-item">
-          <p>x1</p>
-        </div>
-        <div class="sheet-item">
-          <p>x2</p>
-        </div>
-        <div class="sheet-item">
-          <p>x3</p>
-        </div>
-        <div class="sheet-item">
-          <p>x5</p>
-        </div>
-        <div class="sheet-item">
-          <p data-i18n="custom-u">Custom</p>
-        </div>
-        <div class="sheet-item">
-          <p data-i18n="xcustom-u">x{Custom}</p>
-        </div>
-      </div>
+    <!-- Shots rolls : 1, custom -->
+    <div class="sheet-shot-rolls" style="display:flex;">
+      <div style="width:80%">
 
-      <div class="sheet-row" style="
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          flex-wrap: nowrap;
-          flex-direction: row;
-          align-items: center;
-        ">
-        <div class="sheet-item">
-          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
-            alt="rifle_icon" style="height: 60px; width: 60px" />
+        <!-- Rifles -->
+        <div class="sheet-row" style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+          ">
+          <div class="sheet-item">
+            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
+              alt="rifle_icon" style="height: 60px; width: 60px" />
+          </div>
+          <div class="sheet-item">
+              <h3 data-i18n="marksmanship-u">Marksmanship</h3>
+          </div>
+          <div class="sheet-skill-item">
+
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_marksmanship_base" value="0" readonly />
+              <p>+</p>
+            </div>
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_marksmanship_modifier" value="0" />
+              <p>=</p>
+            </div>
+            <div class="sheet-skill-value">
+              <input type="number" name="attr_marksmanship" value="0" readonly />
+            </div>
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button  type="action" name="act_button_shot_1" class="roll_button"></button>
+          </div>
+          <div class="sheet-item">
+            <input type="number" name="attr_shots" />
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button  type="action" name="act_button_shots" class="roll_button"></button>
+          </div>
         </div>
-        <div class="sheet-item" style="height:63px;">
-          <button  type="action" name="act_button_shot_1" class="roll_button"></button>
+
+        <!-- Shotguns -->
+        <div class="sheet-row" style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+          ">
+          <div class="sheet-item">
+            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
+              alt="shotgun_icon" style="height: 60px; width: 60px" />
+          </div>
+          <div class="sheet-item">
+              <h3 data-i18n="shotgun-u">Shotgun</h3>
+          </div>
+          <div class="sheet-skill-item">
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_cqb_base" value="0" readonly />
+              <p>+</p>
+            </div>
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_shotgun_modifier" value="0" />
+              <p>=</p>
+            </div>
+            <div class="sheet-skill-value">
+              <input type="number" name="attr_shotgun" value="0" readonly />
+            </div>
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button type="action" name="act_button_hit_1" class="roll_button"></button>
+          </div>
+          <div class="sheet-item">
+            <input type="number" name="attr_hits" />
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button type="action" name="act_button_hits" class="roll_button"></button>
+          </div>
         </div>
-        <div class="sheet-item" style="height:63px;">
-          <button  type="action" name="act_button_shot_2" class="roll_button"></button>
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button  type="action" name="act_button_shot_3" class="roll_button"></button>
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button  type="action" name="act_button_shot_5" class="roll_button"></button>
-        </div>
-        <div class="sheet-item">
-          <input type="number" name="attr_shots" />
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button  type="action" name="act_button_shots" class="roll_button"></button>
+
+        <!-- CQB Combat -->
+        <div class="sheet-row" style="
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+          ">
+          <div class="sheet-item">
+            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
+              alt="shotgun_icon" style="height: 60px; width: 60px" />
+          </div>
+          <div class="sheet-item">
+              <h3 data-i18n="cqb-u">cqb</h3>
+          </div>
+          <div class="sheet-skill-item">
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_cqb_base" value="0" readonly />
+              <p>+</p>
+            </div>
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <input type="number" name="attr_cqb_modifier" value="0" />
+              <p>=</p>
+            </div>
+            <div class="sheet-skill-value">
+              <input type="number" name="attr_cqb" value="0" readonly />
+            </div>
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button type="action" name="act_button_hit_1" class="roll_button"></button>
+          </div>
+          <div class="sheet-item">
+            <input type="number" name="attr_hits" />
+          </div>
+          <div class="sheet-item" style="height:63px;">
+            <button type="action" name="act_button_hits" class="roll_button"></button>
+          </div>
         </div>
       </div>
-
-      <div class="sheet-row" style="
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          flex-wrap: nowrap;
-          flex-direction: row;
-          align-items: center;
-        ">
-        <div class="sheet-item">
-          <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
-            alt="shotgun_icon" style="height: 60px; width: 60px" />
+      <div style="width:20%; border: 1px white;">
+        <div class="sheet-row">
+          <div class="sheet-skill-item">
+            <div class="sheet-skill-textname" style="width: 50%">
+              <h3 data-i18n="initiative-u"  style="text-align: right">initiative</h3>
+            </div>
+            <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
+              <button style="line-height:2em;" type="action" name="act_button_initiative" class="roll_button"></button>
+            </div>
+          </div>
         </div>
-        <div class="sheet-item" style="height:63px;">
-          <button type="action" name="act_button_hit_1" class="roll_button"></button>
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button type="action" name="act_button_hit_2" class="roll_button"></button>
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button type="action" name="act_button_hit_3" class="roll_button"></button>
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button type="action" name="act_button_hit_5" class="roll_button"></button>
-        </div>
-        <div class="sheet-item">
-          <input type="number" name="attr_hits" />
-        </div>
-        <div class="sheet-item" style="height:63px;">
-          <button type="action" name="act_button_hits" class="roll_button"></button>
+        <div class="sheet-row">
+          <div class="sheet-skill-item">
+            <div class="sheet-skill-textname" style="width: 50%">
+              <h3 data-i18n="hit-location-u"  style="text-align: right">location</h3>
+            </div>
+            <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
+              <button style="line-height:2em;" type="action" name="act_button_location" class="roll_button"></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -319,49 +360,7 @@
         </div>
       </div>
 
-      <div class="sheet-row">
-        <div class="sheet-skill-item">
-          <div class="sheet-skill-textname">
-            <h3 data-i18n="marksmanship-u">Marksmanship</h3>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship_base" value="0" readonly />
-            <p>+</p>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship_modifier" value="0" />
-            <p>=</p>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_marksmanship" value="0" readonly />
-          </div>
-          <div class="sheet-skill-roll" style="line-height:2em;">
-            <button style="line-height:2em;" type="action" name="act_button_marksmanship" class="roll_button"></button>
-          </div>
-        </div>
-      </div>
 
-      <div class="sheet-row">
-        <div class="sheet-skill-item">
-          <div class="sheet-skill-textname">
-            <h3 data-i18n="cqb-u">cqb</h3>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb_base" value="0" readonly />
-            <p>+</p>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb_modifier" value="0" />
-            <p>=</p>
-          </div>
-          <div class="sheet-skill-value">
-            <input type="number" name="attr_cqb" value="0" readonly />
-          </div>
-          <div class="sheet-skill-roll" style="line-height:2em;">
-            <button style="line-height:2em;" type="action" name="act_button_cqb" class="roll_button"></button>
-          </div>
-        </div>
-      </div>
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
@@ -451,16 +450,7 @@
         </div>
       </div>
 
-      <div class="sheet-row">
-        <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width: 50%">
-            <h3 data-i18n="initiative-u"  style="text-align: right">initiative</h3>
-          </div>
-          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
-            <button style="line-height:2em;" type="action" name="act_button_initiative" class="roll_button"></button>
-          </div>
-        </div>
-      </div>
+
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
@@ -557,6 +547,19 @@
           </div>
           <h4>Quid pro quo: {{computed::out_has_quid_pro_quo}}</h4>
 
+          <div class="sheet-template-signature">
+            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
+              alt="restricted_access" style="height: 20px;" />
+          </div>
+        </div>
+      </rolltemplate>
+      <rolltemplate class="sheet-rolltemplate-location">
+        <div class="sheet-template-container">
+          <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Trafienia</h4>
+          <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+          <div style="padding:2px;" class="sheet-results">
+            <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::out_hit_location1}}</h4>
+          </div>
           <div class="sheet-template-signature">
             <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
               alt="restricted_access" style="height: 20px;" />
@@ -1941,9 +1944,9 @@
     });
   };
 
+  // Roll for hit locations diregarding quid_pro_quo
   var roll_hit_locations = function(num_success){
-    roll_loc = "&{template:locations}";
-    roll_loc += "{{out_has_quid_pro_quo=[[0]]}}";
+    roll_loc = "&{template:location}";
 
     for (let i = 1; i <= num_success; i++) {
       roll_loc += "{{out_hit_location" + i + "=[[1d100cs<100cf>100]]}}";
@@ -1956,7 +1959,7 @@
         var r = "out_hit_location"+i;
         rollData[r] = map_hit_location(results.results[r].result);
       }
-      rollData["out_has_quid_pro_quo"] = false;
+
       finishRoll(
           results.rollId,
           rollData
@@ -2092,25 +2095,6 @@
     change_rank(direction=+1)
   });
 
-  on('clicked:button_marksmanship', function() {
-    ricochet_rolls(
-      test_name="Strzelectwo",
-      character_skill="marksmanship",
-      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-      num_hits = 1
-    );
-  });
-
-
-  on('clicked:button_cqb', function() {
-    ricochet_rolls(
-      test_name="Zwarcie",
-      character_skill="cqb",
-      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-      num_hits = 1
-    );
-  });
-
   on('clicked:button_strength', function() {
     single_roll(
       test_name="Siła",
@@ -2151,7 +2135,7 @@
     );
   });
 
-  var used_bursts = [1,2,3,5];
+  var used_bursts = [1];
 
   used_bursts.forEach(burst => {
     var button_name = "button_shot_" + burst.toString();
@@ -2199,7 +2183,11 @@
     );
   });
 
-   on(`change:regiment change:class sheet:opened`, () => {
+  on('clicked:button_location', function() {
+    roll_hit_locations(1);
+  });
+
+  on(`change:regiment change:class sheet:opened`, () => {
     update_guardsmen_stats();
-   });
+  });
 </script>
