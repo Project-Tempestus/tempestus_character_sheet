@@ -140,36 +140,55 @@
       </div>
     </div>
 
-    <!-- Shots rolls : 1, custom -->
+    <!-- Combat -->
     <div class="sheet-shot-rolls" style="display:flex;">
-      <div style="width:80%">
+      <div style="width:75%">
+        <div class="combat_container">
 
-        <!-- Rifles -->
-        <div class="sheet-row" style="
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            align-items: center;
-          ">
-          <div class="sheet-item">
+          <!-- Helper row -->
+          <div class="sheet-item" style="min-height:60px; text-align: center;"></div>
+          <div class="sheet-item" style="min-height:60px; text-align: center;"></div>
+          <div class="sheet-item" style="min-height:60px; text-align: center;">
+            <h2 data-i18n="combat-u">Combat</h2>
+          </div>
+          <div class="sheet-item" style="min-height:60px; text-align: center;">
+            <h5>Atak pojedynczy</h5>
+          </div>
+          <div class="sheet-item" style="min-height:60px; text-align: center;">
+            <h5>Liczba ataków</h5>
+          </div>
+          <div class="sheet-item" style="min-height:60px; text-align: center;">
+            <h5>
+              Atak wielokrotny
+            </h5>
+          </div>
+
+          <div class="sheet-item" style="min-height:60px; min-width:60px">
             <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/rifle_icon.png"
               alt="rifle_icon" style="height: 60px; width: 60px" />
           </div>
           <div class="sheet-item">
               <h3 data-i18n="marksmanship-u">Marksmanship</h3>
           </div>
-          <div class="sheet-skill-item">
-
+          <div class="sheet-skill-item" style="padding: 0px;">
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_marksmanship_base" value="0" readonly />
-              <p>+</p>
             </div>
+
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <p style="margin: 0px;">+</p>
+            </div>
+
+
+
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_marksmanship_modifier" value="0" />
-              <p>=</p>
             </div>
+
+            <div class="sheet-skill-value" style="min-width:fit-content;">
+              <p style="margin: 0px;">=</p>
+            </div>
+
             <div class="sheet-skill-value">
               <input type="number" name="attr_marksmanship" value="0" readonly />
             </div>
@@ -183,32 +202,22 @@
           <div class="sheet-item" style="height:63px;">
             <button  type="action" name="act_button_shots" class="roll_button"></button>
           </div>
-        </div>
 
-        <!-- Shotguns -->
-        <div class="sheet-row" style="
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            align-items: center;
-          ">
-          <div class="sheet-item">
+         <div class="sheet-item" style="min-height:60px; min-width:60px">
             <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
               alt="shotgun_icon" style="height: 60px; width: 60px" />
           </div>
           <div class="sheet-item">
               <h3 data-i18n="shotgun-u">Shotgun</h3>
           </div>
-          <div class="sheet-skill-item">
+          <div class="sheet-skill-item" style="padding: 0px;">
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_cqb_shotgun_base" value="0" readonly />
-              <p>+</p>
+              <p style="margin: 0px;">+</p>
             </div>
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_cqb_shotgun_modifier" value="0" />
-              <p>=</p>
+              <p style="margin: 0px;">=</p>
             </div>
             <div class="sheet-skill-value">
               <input type="number" name="attr_cqb_shotgun" value="0" readonly />
@@ -223,32 +232,22 @@
           <div class="sheet-item" style="height:63px;">
             <button type="action" name="act_button_shotguns" class="roll_button"></button>
           </div>
-        </div>
 
-        <!-- CQB Combat -->
-        <div class="sheet-row" style="
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            align-items: center;
-          ">
-          <div class="sheet-item">
-            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/shotgun_icon.png"
-              alt="shotgun_icon" style="height: 60px; width: 60px" />
+          <div class="sheet-item" style="min-height:60px; min-width:60px">
+            <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/tokens/chainsword_icon.png"
+              alt="chainsword_icon" style="height: 60px; width: 60px" />
           </div>
           <div class="sheet-item">
               <h3 data-i18n="cqb-u">cqb</h3>
           </div>
-          <div class="sheet-skill-item">
+          <div class="sheet-skill-item" style="padding: 0px;">
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_cqb_base" value="0" readonly />
-              <p>+</p>
+              <p style="margin: 0px;">+</p>
             </div>
             <div class="sheet-skill-value" style="min-width:fit-content;">
               <input type="number" name="attr_cqb_modifier" value="0" />
-              <p>=</p>
+              <p style="margin: 0px;">=</p>
             </div>
             <div class="sheet-skill-value">
               <input type="number" name="attr_cqb" value="0" readonly />
@@ -257,22 +256,26 @@
           <div class="sheet-item" style="height:63px;">
             <button type="action" name="act_button_hit_1" class="roll_button"></button>
           </div>
-          <div class="sheet-item">
+          <div class="sheet-item" style="visibility:hidden;">
             <input type="number" name="attr_hits" />
           </div>
-          <div class="sheet-item" style="height:63px;">
+          <div class="sheet-item" style="height:63px;visibility:hidden;">
             <button type="action" name="act_button_hits" class="roll_button"></button>
           </div>
+
+
         </div>
+
+
       </div>
-      <div style="width:20%; border: 1px white;">
+      <div style="width:25%; border: 1px white; display: flex; flex-direction: column; justify-content: center;">
         <div class="sheet-row">
           <div class="sheet-skill-item">
             <div class="sheet-skill-textname" style="width: 50%">
               <h3 data-i18n="initiative-u"  style="text-align: right">initiative</h3>
             </div>
-            <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
-              <button style="line-height:2em;" type="action" name="act_button_initiative" class="roll_button"></button>
+            <div class="sheet-skill-value">
+              <button type="action" name="act_button_initiative" class="roll_button"></button>
             </div>
           </div>
         </div>
@@ -281,14 +284,15 @@
             <div class="sheet-skill-textname" style="width: 50%">
               <h3 data-i18n="hit-location-u"  style="text-align: right">location</h3>
             </div>
-            <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start;line-height:2em;">
-              <button style="line-height:2em;" type="action" name="act_button_location" class="roll_button"></button>
+            <div class="sheet-skill-value">
+              <button type="action" name="act_button_location" class="roll_button"></button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Extra Info -->
     <div class="sheet-extra-information">
       <div class="sheet-row">
         <div class="sheet-item">
@@ -328,17 +332,21 @@
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_strength_base" value="0" readonly />
-            <p>+</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">+</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_strength_modifier" value="0" />
-            <p>=</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">=</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_strength" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll" style="line-height:2em;">
-            <button style="line-height:2em;" type="action" name="act_button_strength" class="roll_button"></button>
+          <div class="sheet-skill-item">
+            <button type="action" name="act_button_strength" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -350,17 +358,21 @@
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_constitution_base" value="0" readonly />
-            <p>+</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">+</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_constitution_modifier" value="0" />
-            <p>=</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">=</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_constitution" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll" style="line-height:2em;">
-            <button style="line-height:2em;" type="action" name="act_button_constitution" class="roll_button"></button>
+          <div class="sheet-skill-item">
+            <button type="action" name="act_button_constitution" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -372,17 +384,21 @@
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_agility_base" value="0" readonly />
-            <p>+</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">+</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_agility_modifier" value="0" />
-            <p>=</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">=</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_agility" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll" style="line-height:2em;" >
-            <button  style="line-height:2em;" type="action" name="act_button_agility" class="roll_button"></button>
+          <div class="sheet-skill-item">
+            <button type="action" name="act_button_agility" class="roll_button"></button>
           </div>
         </div>
       </div>
@@ -394,67 +410,75 @@
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_knowledge_base" value="0" readonly />
-            <p>+</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">+</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_knowledge_modifier" value="0" />
-            <p>=</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">=</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_knowledge" value="0" readonly />
           </div>
-          <div class="sheet-skill-roll" style="line-height:2em;" >
-            <button  style="line-height:2em;"  type="action" name="act_button_knowledge" class="roll_button"></button>
+          <div class="sheet-skill-item">
+            <button type="action" name="act_button_knowledge" class="roll_button"></button>
           </div>
         </div>
       </div>
 
-      <div class="sheet-row">
+      <div class="sheet-row" style="margin-bottom: 10px;">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname">
+          <div class="sheet-skill-textname" style="width: 45%;">
             <h3 data-i18n="health-points-u">
               health-points
             </h3>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_health-points_base" value="0" readonly />
-            <p>+</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">+</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_health-points_modifier" value="0" />
-            <p>=</p>
+          </div>
+          <div class="sheet-skill-value" style="min-width:fit-content;">
+            <p style="margin: 0px;">=</p>
           </div>
           <div class="sheet-skill-value">
             <input type="number" name="attr_health-points" value="0" readonly />
           </div>
           <!-- Purposefully hidden button so that items are aligned -->
-          <div class="sheet-skill-roll" style="line-height:2em;" >
-            <button  style="line-height:2em; visibility:hidden;"  type="action" name="act_button_undefined" class="roll_unused"></button>
+          <div class="sheet-skill-item">
+            <button  style="visibility:hidden;"  type="action" name="act_button_undefined" class="roll_unused"></button>
           </div>
         </div>
       </div>
 
-      <div class="sheet-row">
+      <div class="sheet-row" style="margin-bottom: 10px;">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width: 50%">
-            <h3 data-i18n="cash-u" style="text-align: right">
+          <div class="sheet-skill-textname" style="width: 50%;">
+            <h3 data-i18n="cash-u">
               Imperialne Trony
             </h3>
           </div>
-          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
+          <div class="sheet-skill-value">
             <input type="number" name="attr_cash" value="10" />
           </div>
         </div>
       </div>
 
-      <div class="sheet-row">
+      <div class="sheet-row" style="margin-bottom: 10px;">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width: 50%">
-            <h3 data-i18n="seals-u" style="text-align: right">
+          <div class="sheet-skill-textname" style="width: 50%;">
+            <h3 data-i18n="seals-u">
               Pieczęci Czystości
             </h3>
           </div>
-          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
+          <div class="sheet-skill-value">
             <input type="number" name="attr_seals" value="0" />
           </div>
         </div>

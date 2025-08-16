@@ -122,7 +122,7 @@ p {
 /* Entrypoint grid */
 .sheet-entrypoint-grid{
 	display: grid;
-	grid-template-columns: max-content;
+	grid-template-columns: min-content;
 	grid-auto-rows: minmax(100px, auto);
 	grid-template-areas: "soldier-particulars soldier-particulars"
 		"shot-rolls shot-rolls"
@@ -147,7 +147,7 @@ div.sheet-gear
 	padding: 10px;
 }
 div.sheet-footer{
-	padding: 10px;
+	/* padding: 10px; */
 }
 div.sheet-soldier-particulars {
 	grid-area: soldier-particulars;
@@ -193,9 +193,11 @@ div.sheet-item-right {
 /* Skills */
 div.sheet-skill-item {
 	display: flex;
-	width: 100%;
-	justify-content: space-around;
-	padding: 8px;
+	/* width: 100%; */
+	justify-content: center;
+	align-items: center;
+	/* padding: 8px; */
+	/* height:100%; */
 }
 
 div.sheet-skill-textname {
@@ -203,12 +205,25 @@ div.sheet-skill-textname {
 }
 
 div.sheet-skill-value{
-	width: 15%;
+	/* width: 15%; */
+	/* height:100%; */
 	flex-direction: row;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
 }
+
+/* div.sheet-skill-value > input { */
+	/* margin: 0px; */
+	/* padding: 0px; */
+	/* height:33%; */
+/* } */
+
+/* div.sheet-skill-value > p { */
+	/* margin: 0px; */
+	/* padding: 0px; */
+	/* height:33%; */
+/* } */
 
 div.sheet-skill-roll {
 	width: 20%;
@@ -440,9 +455,11 @@ button[type=action].roll_button::before {
 	font-size:50px;
 	color:var(--TempestusGreen);
 	background-color:black;
+	height: 66px;
 }
 
 .ui-dialog .charsheet button[type=action].roll_button{
+	height: 66px;
 	width:66%;
 	line-height:5em;
 	border: 0px;
@@ -451,7 +468,7 @@ button[type=action].roll_button::before {
 }
 
 .ui-dialog .charsheet button[type=action].roll_button:hover{
-	scale:1.2;
+	scale:1.1;
 }
 
 .ui-dialog .charsheet button[type=roll].roll_button::before {
@@ -693,4 +710,17 @@ div.sheet-item-armor-trio-right > *{
 .sheet-rolltemplate-location .sheet-template-signature{
 	display: flex;
 	justify-content: center;
+}
+
+/* Combat container */
+.combat_container {
+  display: grid;
+  grid-template-columns: 10% 25% 30% 12% 11% 12%;
+  margin-bottom: 10px;
+}
+
+.combat_container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
