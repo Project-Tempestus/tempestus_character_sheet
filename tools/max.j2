@@ -1,0 +1,8 @@
+{# max.j2 #}
+{% for I in range(32) -%}
+<h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{'{{'}}computed::roll{{4*I+1}}{{'}}'}} {{'{{'}}computed::roll{{4*I+2}}{{'}}'}} {{'{{'}}computed::roll{{4*I+3}}{{'}}'}} {{'{{'}}computed::roll{{4*I+4}}{{'}}'}}</h4>
+{% endfor %}
+
+{% for I in range(32) -%}
+<h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{'{{'}}computed::out_hit_location{{4*I+1}}{{'}}'}} {{'{{'}}computed::out_hit_location{{4*I+2}}{{'}}'}} {{'{{'}}computed::out_hit_location{{4*I+3}}{{'}}'}} {{'{{'}}computed::out_hit_location{{4*I+4}}{{'}}'}}</h4>
+{% endfor %}
