@@ -203,25 +203,25 @@
           </div>
           <div class="sheet-skill-item">
             <div class="sheet-skill-value" style="min-width:fit-content;">
-              <input type="number" name="attr_cqb_base" value="0" readonly />
+              <input type="number" name="attr_cqb_shotgun_base" value="0" readonly />
               <p>+</p>
             </div>
             <div class="sheet-skill-value" style="min-width:fit-content;">
-              <input type="number" name="attr_shotgun_modifier" value="0" />
+              <input type="number" name="attr_cqb_shotgun_modifier" value="0" />
               <p>=</p>
             </div>
             <div class="sheet-skill-value">
-              <input type="number" name="attr_shotgun" value="0" readonly />
+              <input type="number" name="attr_cqb_shotgun" value="0" readonly />
             </div>
           </div>
           <div class="sheet-item" style="height:63px;">
-            <button type="action" name="act_button_hit_1" class="roll_button"></button>
+            <button type="action" name="act_button_shotgun_1" class="roll_button"></button>
           </div>
           <div class="sheet-item">
-            <input type="number" name="attr_hits" />
+            <input type="number" name="attr_shotgun_shots" />
           </div>
           <div class="sheet-item" style="height:63px;">
-            <button type="action" name="act_button_hits" class="roll_button"></button>
+            <button type="action" name="act_button_shotguns" class="roll_button"></button>
           </div>
         </div>
 
@@ -970,7 +970,7 @@
   const a_regiment = "regiment";
   const a_class = "class";
 
-  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge","health-points"];
+  var stat = ["marksmanship","cqb","cqb_shotgun","strength","constitution","agility","knowledge","health-points"];
   var stat_mod = stat.map(i => i + "_modifier");
   var stat_base = stat.map(i => i + "_base");
 
@@ -1067,6 +1067,10 @@
       attr: 'cqb_base',
       value: 40,
     },
+    cqb_shotgun: {
+      attr: 'cqb_shotgun_base',
+      value: 40,
+    },
     strength: {
       attr: 'strength_base',
       value: 40,
@@ -1093,17 +1097,20 @@
     Cadia: {
       marksmanship: 5,
       cqb: 5,
+      cqb_shotgun: 5,
       constitution: 5,
       agility: 5,
     },
     Catachan: {
       cqb: 10,
+      cqb_shotgun: 10,
       strength: 5,
       agility: 5,
       hp: 15,
     },
     Krieg: {
       cqb: 5,
+      cqb_shotgun: 5,
       constitution: 10,
       knowledge: 5,
     },
@@ -1151,6 +1158,7 @@
     stormtrooper: {
       label: '[SZT] Szturmowiec',
       cqb: 15,
+      cqb_shotgun: 15,
       agility: 15,
     },
   };
@@ -1274,7 +1282,7 @@
       setAttrs(_base_attr_updates);
 
       // FIXME: Connect to the game_config
-      var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge","health-points"];
+      var stat = ["marksmanship","cqb","cqb_shotgun","strength","constitution","agility","knowledge","health-points"];
       var stat_mod = stat.map(i => i + "_modifier");
       var stat_base = stat.map(i => i + "_base");
       const int = score => parseInt(score, 10) || 0;
@@ -1331,7 +1339,7 @@
     if(do_ricochet === true)
       roll_text += "{{roll_ricochet=[[1d100cs>96cf<96]]}}";
 
-    if (num_hits === "hits" || num_hits === "shots")
+    if (num_hits === "hits" || num_hits === "shots" || num_hits === "shotgun_shots")
       attr_num_hits = num_hits
     else
       attr_num_hits = "hits"
@@ -1343,6 +1351,9 @@
 
       if (num_hits === "shots")
         num_hits = values.shots;
+
+      if (num_hits === "shotgun_shots")
+        num_hits = values.shotgun_shots;
 
       for (let i = 1; i <= num_hits; i++) {
         roll_text += "{{roll" + i +"="+ roll_formula +"}}";
@@ -1366,7 +1377,6 @@
               } else {
                 roll_hit_locations(num_success);
               }
-
             };
           };
           finishRoll(
@@ -1379,7 +1389,7 @@
 
   // Roll for hit locations diregarding quid_pro_quo
   var roll_hit_locations = function(num_success){
-    roll_loc = "&{template:location}";
+    roll_loc = "&{template:locations}";
 
     for (let i = 1; i <= num_success; i++) {
       roll_loc += "{{out_hit_location" + i + "=[[1d100cs<100cf>100]]}}";
@@ -1568,30 +1578,31 @@
     );
   });
 
-  var used_bursts = [1];
-
-  used_bursts.forEach(burst => {
-    var button_name = "button_shot_" + burst.toString();
-    on(`clicked:${button_name}`, function() {
-      ricochet_rolls(
-        test_name="Strzelectwo",
-        character_skill="marksmanship",
-        roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
-        num_hits=burst
-      );
-    });
+  on(`clicked:button_shot_1`, function() {
+    ricochet_rolls(
+      test_name="Strzelectwo",
+      character_skill="marksmanship",
+      roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
+      num_hits=1
+    );
   });
 
-  used_bursts.forEach(burst => {
-    var button_name = "button_hit_" + burst.toString();
-    on(`clicked:${button_name}`, function() {
-      ricochet_rolls(
-        test_name="Zwarcie",
-        character_skill="cqb",
-        roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
-        num_hits=burst
-      );
-    });
+  on(`clicked:button_hit_1`, function() {
+    ricochet_rolls(
+      test_name="Zwarcie",
+      character_skill="cqb",
+      roll_formula="[[1d100cs<@{cqb}cf>@{cqb}]]",
+      num_hits=1
+    );
+  });
+
+  on(`clicked:button_shotgun_1`, function() {
+    ricochet_rolls(
+      test_name="Strzelba",
+      character_skill="cqb_shotgun",
+      roll_formula="[[1d100cs<@{cqb_shotgun}cf>@{cqb_shotgun}]]",
+      num_hits=1
+    );
   });
 
   on('clicked:button_hits', function() {
@@ -1612,6 +1623,17 @@
       character_skill="marksmanship",
       roll_formula="[[1d100cs<@{marksmanship}cf>@{marksmanship}]]",
       num_hits="shots",
+      do_ricochet=true
+    );
+  });
+
+  on('clicked:button_shotguns', function() {
+    ability_rolls(
+      template_name="ricochet",
+      test_name="Strzelby",
+      character_skill="cqb_shotgun",
+      roll_formula="[[1d100cs<@{cqb_shotgun}cf>@{cqb_shotgun}]]",
+      num_hits="shotgun_shots",
       do_ricochet=true
     );
   });
