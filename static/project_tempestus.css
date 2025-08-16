@@ -619,7 +619,10 @@ div.sheet-item-armor-trio-right > *{
 	border: none;
 }
 
-
+.sheet-rolltemplate-locations .sheet-template-signature{
+	display: flex;
+	justify-content: center;
+}
 
 /* Roll template location */
 .sheet-rolltemplate-location  div.sheet-template-container {
@@ -685,4 +688,9 @@ div.sheet-item-armor-trio-right > *{
 	color:  rgb(17, 192, 17) !important;
 	font-family: 'Courier New';
 	border: none;
+}
+
+.sheet-rolltemplate-location .sheet-template-signature{
+	display: flex;
+	justify-content: center;
 }
