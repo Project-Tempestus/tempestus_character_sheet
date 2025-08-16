@@ -550,3 +550,139 @@ div.sheet-item-armor-trio-right > *{
 #chkbox_pref_uniform{
 	color:var(--TempestusGreen);
 }
+
+/* Sheet template locations*/
+
+/* Roll template ricochet */
+.sheet-rolltemplate-locations  div.sheet-template-container {
+	border: 2px solid rgb(17, 192, 17) !important;
+	border-radius: 3px 3px 3px 3px;
+}
+.sheet-rolltemplate-locations  .sheet-template-header {
+	background-color: black;
+	color:rgb(17, 192, 17) !important;
+	padding: 2px;
+	border-bottom: 1px dashed rgb(17, 192, 17);
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-locations div {
+	padding: 5px;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-locations  div:nth-child(odd) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-locations div:nth-child(even) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-locations .inlinerollresult{
+	display: flex;
+	min-width: 75%;
+	/* min-height: 2em; */
+	text-align: left;
+	/* margin-bottom: 5px; */
+	/* border: 2px solid black; */
+	border: none;
+	background-color:white !important;
+	color: black !important;
+}
+.sheet-rolltemplate-locations .inlinerollresult .basicdiceroll {
+	background-color:rgb(17, 192, 17) !important;
+	color: black !important;
+	font-family: 'Courier New';
+	width: 28px;
+	border: none;
+}
+
+.sheet-rolltemplate-locations .inlinerollresult.fullcrit {
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
+	font-family: 'Courier New';
+	border: none;
+}
+
+.sheet-rolltemplate-locations  .inlinerollresult.fullfail {
+	background-color:black !important;
+	color: #FF4019 !important;
+	font-family: 'Courier New';
+	border: none;
+}
+
+.sheet-rolltemplate-locations .inlinerollresult.importantroll {
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
+	font-family: 'Courier New';
+	border: none;
+}
+
+
+
+/* Roll template location */
+.sheet-rolltemplate-location  div.sheet-template-container {
+	border: 2px solid rgb(17, 192, 17) !important;
+	border-radius: 3px 3px 3px 3px;
+}
+.sheet-rolltemplate-location  .sheet-template-header {
+	background-color: black;
+	color:rgb(17, 192, 17) !important;
+	padding: 2px;
+	border-bottom: 1px dashed rgb(17, 192, 17);
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-location div {
+	padding: 5px;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-location  div:nth-child(odd) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-location div:nth-child(even) {
+	background-color: black;
+	color: var(--TempestusGreen) !important;
+}
+.sheet-rolltemplate-location .inlinerollresult{
+	display: flex;
+	min-width: 75%;
+	/* min-height: 2em; */
+	text-align: left;
+	/* margin-bottom: 5px; */
+	/* border: 2px solid black; */
+	border: none;
+	background-color:white !important;
+	color: black !important;
+}
+.sheet-rolltemplate-location .inlinerollresult .basicdiceroll {
+	background-color:rgb(17, 192, 17) !important;
+	color: black !important;
+	font-family: 'Courier New';
+	width: 28px;
+	border: none;
+}
+
+.sheet-rolltemplate-location .inlinerollresult.fullcrit {
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
+	font-family: 'Courier New';
+	border: none;
+}
+
+.sheet-rolltemplate-location  .inlinerollresult.fullfail {
+	background-color:black !important;
+	color: #FF4019 !important;
+	font-family: 'Courier New';
+	border: none;
+}
+
+.sheet-rolltemplate-location .inlinerollresult.importantroll {
+	background-color:black !important;
+	color:  rgb(17, 192, 17) !important;
+	font-family: 'Courier New';
+	border: none;
+}
