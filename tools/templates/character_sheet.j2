@@ -24,8 +24,8 @@
 </div>
 <!-- Tabs -->
 <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="entrypoint" />
-<input type="hidden" name="attr_has_quid_pro_quo" value="false" />
-<input type="hidden" name="attr_has_catachan_knife" value="false" />
+<input type="hidden" name="attr_has_quid_pro_quo" value="0" />
+<input type="hidden" name="attr_has_catachan_knife" value="0" />
 <div class="sheet-navigation-tabs">
   <button type="action" name="act_entrypoint" data-i18n="entrypoint-name-u" class="tab-button">
     Main tab
@@ -411,13 +411,25 @@
 
       <div class="sheet-row">
         <div class="sheet-skill-item">
-          <div class="sheet-skill-textname" style="width: 50%">
-            <h3 data-i18n="health-points-u" style="text-align: right">
+          <div class="sheet-skill-textname">
+            <h3 data-i18n="health-points-u">
               health-points
             </h3>
           </div>
-          <div class="sheet-skill-value" style="width: 33%; justify-content: flex-start">
+          <div class="sheet-skill-value">
             <input type="number" name="attr_health-points_base" value="0" readonly />
+            <p>+</p>
+          </div>
+          <div class="sheet-skill-value">
+            <input type="number" name="attr_health-points_modifier" value="0" />
+            <p>=</p>
+          </div>
+          <div class="sheet-skill-value">
+            <input type="number" name="attr_health-points" value="0" readonly />
+          </div>
+          <!-- Purposefully hidden button so that items are aligned -->
+          <div class="sheet-skill-roll" style="line-height:2em;" >
+            <button  style="line-height:2em; visibility:hidden;"  type="action" name="act_button_undefined" class="roll_unused"></button>
           </div>
         </div>
       </div>
@@ -499,12 +511,13 @@
         <div class="sheet-template-container">
           <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:center" class="sheet-template-text">Trafienia</h4>
           <hr style="border-top: 1px dashed rgb(17, 192, 17) !important;margin:5px; height:5px;"id="rolltemplate-header-spacer">
+          {{#rollGreater() computed::out_has_quid_pro_quo 0}}
+            <h4 style="font-family: 'Courier New';color:rgb(17, 192, 17) !important;margin:3px;text-align:left" class="sheet-template-text">Quid pro quo: &#10004;</h4>
+          {{/rollGreater() computed::out_has_quid_pro_quo 0}}
           <div style="padding:2px;" class="sheet-results">
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::out_hit_location1}} {{computed::out_hit_location2}} {{computed::out_hit_location3}} {{computed::out_hit_location4}}</h4>
             <h4 style="text-align:center; margin:3px;" class="sheet-template-text">{{computed::out_hit_location5}} {{computed::out_hit_location6}} {{computed::out_hit_location7}} {{computed::out_hit_location8}}</h4>
           </div>
-          <h4>Quid pro quo: {{computed::out_has_quid_pro_quo}}</h4>
-
           <div class="sheet-template-signature">
             <img src="https://raw.githubusercontent.com/Project-Tempestus/assets/main/wh40k/winged_skull.png"
               alt="restricted_access" style="height: 20px;" />
@@ -903,7 +916,7 @@
   const a_regiment = "regiment";
   const a_class = "class";
 
-  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+  var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge","health-points"];
   var stat_mod = stat.map(i => i + "_modifier");
   var stat_base = stat.map(i => i + "_base");
 
@@ -1207,7 +1220,7 @@
       setAttrs(_base_attr_updates);
 
       // FIXME: Connect to the game_config
-      var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge"];
+      var stat = ["marksmanship","cqb","strength","constitution","agility","knowledge","health-points"];
       var stat_mod = stat.map(i => i + "_modifier");
       var stat_base = stat.map(i => i + "_base");
       const int = score => parseInt(score, 10) || 0;
@@ -1235,7 +1248,7 @@
       console.log(__attr_list);
       getAttrs(__attr_list, function(values) {
         console.log(values);
-        exists = Object.values(values).includes("Quid pro quo");
+        exists = Object.values(values).includes("Quid pro quo") ? 1 : 0;
         console.log("skill exists? " + exists);
         setAttrs({
           "has_quid_pro_quo" : exists
@@ -1270,7 +1283,7 @@
       attr_num_hits = "hits"
 
     getAttrs([attr_num_hits, "has_quid_pro_quo"], function(values) {
-      console.log("DOES HE ACTUALL HAVE IT 1 " + values.has_quid_pro_quo);
+      console.log("Guardsman has quid_pro_quo: " + values.has_quid_pro_quo);
       if (num_hits === "hits")
         num_hits = values.hits;
 
@@ -1294,8 +1307,7 @@
           }
           if(do_ricochet === true) {
             if (num_success > 0){
-              console.log("DOES HE ACTUALL HAVE IT " + values.has_quid_pro_quo);
-              if (values.has_quid_pro_quo === true) {
+              if (values.has_quid_pro_quo === 1) {
                 roll_hit_locations_q(num_success);
               } else {
                 roll_hit_locations(num_success);
@@ -1368,7 +1380,7 @@
         }
         rollData[r] = rs[choice];
       }
-      rollData["out_has_quid_pro_quo"] = true;
+      rollData["out_has_quid_pro_quo"] = 1;
       finishRoll(
           results.rollId,
           rollData
