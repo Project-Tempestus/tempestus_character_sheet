@@ -23,5 +23,6 @@ FILES_DICT = {
     "MASK": "gear/rynsztunek_9_maska.yml",
     "FIREARM": "gear/rynsztunek_10_bron_dluga.yml",
     "PISTOL": "gear/rynsztunek_11_bron_krotka.yml",
+    "PISTOL_OFFHAND": "gear/rynsztunek_11_bron_krotka_2.yml",
     "SPECIAL_SKILL": "skill/special_skill.yml",
 }
