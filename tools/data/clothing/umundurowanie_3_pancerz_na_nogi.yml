@@ -8,3 +8,5 @@ ITEM_OPTIONS:
  - ["[GRE] 2T - Nagolenniki Grenadierów",["GRE"],[""]]
  - ["[ZWD] 2T - Pancerz Zwiadowczy",["ZWD"],[""]]
  - ["[WET][SZT] 3P - Nagolenniki wz. Tempestus", ["WET", "SZT"], [""]]
+ - ["[WET][GRE] 3P - Nagolenniki Frontowe", ["WET","GRE"], [""]]
+ - ["[WET][ZWD] 3P - Nagolenniki Wojażerskie", ["WET","ZWD"], [""]]

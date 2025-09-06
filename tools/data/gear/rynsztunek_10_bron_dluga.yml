@@ -32,3 +32,4 @@ ITEM_OPTIONS:
  - ["6T - Karabin Wyborowy - wz. Rozgrzeszenie", ["STR"], [""]]
  - ["[WET] 20T - Hot-Shot wz. Tempestus", ["WET"], [""]]
  - ["[WET] 15T - Miotacz Plazmy", ["WET"], [""]]
+ - ["[WET] 20T - Hellgun", ["WET", "GRE"], [""]]
