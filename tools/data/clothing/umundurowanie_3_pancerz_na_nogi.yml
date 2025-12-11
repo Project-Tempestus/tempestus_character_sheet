@@ -10,3 +10,5 @@ ITEM_OPTIONS:
  - ["[WET][SZT] 3P - Nagolenniki wz. Tempestus", ["WET", "SZT"], [""]]
  - ["[WET][GRE] 3P - Nagolenniki Frontowe", ["WET","GRE"], [""]]
  - ["[WET][ZWD] 3P - Nagolenniki Wojażerskie", ["WET","ZWD"], [""]]
+ - ["[WET][STR] 3P - Nagolenniki Cadiańskie", ["WET", "STR"], ["CADIA"]]
+

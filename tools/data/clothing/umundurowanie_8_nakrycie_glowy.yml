@@ -23,3 +23,4 @@ ITEM_OPTIONS:
  - ["[WET][SZT] 2P - Hełm wz. Tempestus", ["WET", "SZT"], [""]]
  - ["[WET][GRE] 3P - Ciężki Hełm Altynus",["WET", "GRE"],[""]]
  - ["[WET][ZWD] 3P - Auger Optima",["WET", "ZWD"],[""]]
+ - ["[WET][STR] 2P - Hełm Kasrkina", ["WET", "STR"], ["CADIA"]]
