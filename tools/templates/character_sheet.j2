@@ -33,6 +33,14 @@
   <button type="action" name="act_personal" data-i18n="personal-name-u" class="tab-button">
     Personal tab
   </button>
+  <input type="checkbox" name="attr_is_servitorium_enabled" value="true" style="display:none;" />
+  <button type="action" name="act_servitorium" data-i18n="servitorium-name-u" class="tab-button">
+    Servitorium
+  </button>
+  <input type="checkbox" name="attr_is_command_center_enabled" value="true" style="display:none;" />
+  <button type="action" name="act_command_center" data-i18n="command-center-name-u" class="tab-button">
+    Command Center
+  </button>
 </div>
 
 <!-- /////// -->
@@ -943,6 +951,24 @@
   </div>
 </div>
 
+<!-- /////// -->
+<!-- Tab three -->
+<!-- /////// -->
+<div class="sheet-servitorium">
+  <div>
+    <p>Servitorium is in construction</p>
+  </div>
+</div>
+
+<!-- /////// -->
+<!-- Tab four -->
+<!-- /////// -->
+<div class="sheet-command-center">
+  <div>
+  <p>Command Center is in construction</p>
+  </div>
+</div>
+
 <!-- Aquila -->
 <div class="sheet-footer">
   <div class="sheet-row">
@@ -951,28 +977,16 @@
         style="height: 100px" />
     </div>
     <div class="sheet-item">
-      <h4>"Szkło pęka pod uderzeniem młota, stal z wdzięcznością staje się śmiertelną bronią."</h4>
+      <h4>"Zstępujemy bez miłości, zabijamy bez wyboru."</h4>
     </div>
     <div class="sheet-item">
-      <h5>- Psalm 519-H, Dziękczynienie Duchowi Maszyny </h5>
+      <h5>- Motto, Kompania I Batalion IX Elizjańskich Sił Uderzeniowych</h5>
     </div>
   </div>
 
 </div>
 
 {% raw %}
-<!-- Manage tabs -->
-<script type="text/worker">
-  const buttonlist = ["entrypoint","personal"];
-  buttonlist.forEach(button => {
-      on(`clicked:${button}`, function() {
-          setAttrs({
-              sheetTab: button
-          });
-      });
-  });
-</script>
-
 <!-- Update total skill value if modifier changes -->
 <script type="text/worker">
   const int = score => parseInt(score, 10) || 0;
@@ -1132,6 +1146,11 @@
       constitution: 10,
       strength: 10,
       hp: 30,
+    },
+    Elysium: {
+      // TODO: Add bonuses for Elysium regiment
+      agility: 20,
+      knowledge: 10,
     },
   };
 
@@ -1307,6 +1326,57 @@
         });
       }
     });
+  };
+
+  // Tabs handling
+  const buttonlist = ["entrypoint","personal"];
+  buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+          setAttrs({
+              sheetTab: button
+          });
+      });
+  });
+
+  // We only let engineers access servitorium
+  const engineerButtonList = ["servitorium"];
+  engineerButtonList.forEach(button => {
+    on(`clicked:${button}`, function() {
+      getAttrs(["class"], values => {
+        console.log(values);
+        if (values['class'] == game_config.classes['engineer'].label) {
+          setAttrs({
+            sheetTab: button
+          });
+        };
+        });
+      });
+  });
+
+  // We only let sargeants access command center
+  const sargeantButtonList = ["command_center"];
+  sargeantButtonList.forEach(button => {
+    on(`clicked:${button}`, function() {
+      getAttrs(["class"], values => {
+        console.log(values);
+        if (values['class'] == game_config.classes['sargeant'].label) {
+          setAttrs({
+            sheetTab: button
+          });
+        };
+        });
+      });
+  });
+
+  var update_button_visibility = function(){
+    getAttrs(["class"], values => {
+        var is_engineer = values['class'] === game_config.classes['engineer'].label;
+        var is_sargeant = values['class'] === game_config.classes['sargeant'].label;
+          setAttrs({
+            is_servitorium_enabled: is_engineer ? "true" : "false",
+            is_command_center_enabled: is_sargeant ? "true" : "false"
+          });
+      });
   };
 
   // Quid pro Quo
@@ -1654,6 +1724,7 @@
 
   on(`change:regiment change:class sheet:opened`, () => {
     update_guardsmen_stats();
+    update_button_visibility();
   });
 </script>
 {% endraw %}
