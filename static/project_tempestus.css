@@ -40,12 +40,16 @@ p {
 
 /* Tabs */
 .sheet-entrypoint,
-.sheet-personal
+.sheet-personal,
+.sheet-servitorium,
+.sheet-command-center
 {
     display: none;
 }
 .sheet-tabstoggle[value="entrypoint"] ~ div.sheet-entrypoint,
-.sheet-tabstoggle[value="personal"] ~ div.sheet-personal {
+.sheet-tabstoggle[value="personal"] ~ div.sheet-personal,
+.sheet-tabstoggle[value="servitorium"] ~ div.sheet-servitorium,
+.sheet-tabstoggle[value="command_center"] ~ div.sheet-command-center {
     display: block;
 }
 
@@ -723,4 +727,20 @@ div.sheet-item-armor-trio-right > *{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*Servitorium*/
+input[name="attr_is_servitorium_enabled"]:not(:checked)
+~ button[name="act_servitorium"] {
+  background-color: #676767;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+/*Command Center*/
+input[name="attr_is_command_center_enabled"]:not(:checked)
+~ button[name="act_command_center"] {
+  background-color: #676767;
+  color: #FFFFFF;
+  opacity: 0.8;
 }
